@@ -1,0 +1,60 @@
+---
+title: "Dataset Metadata: The 'Golden 100' Air-Gapped Intelligence Benchmark"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Dataset Overview:** This dataset consists of 200 inference rows derived from 100 unique industrial images. It is designed to evaluate the "Intelligence Floor" of sub-3B parameter VLMs by applying a "Constraint Injection" protocol, testing both optical perception and dynamic logic adherence.
+
+#### **1. Data Dictionary (Column Descriptions)**
+
+| Column Name | Data Type | Description |
+|-------------------|-------------|--------------------------------------|
+| **`index`** | Integer | The unique row identifier for the inference task. |
+| **`image_id`** | String | The specific filename of the image being evaluated, corresponding to the raw visual data. |
+| **`category`** | Categorical | The industrial domain of the asset (either an analog gauge or structural pipeline). |
+| **`artifact_tag`** | Categorical | The primary visual stressor/challenge present in the image, acting as the independent variable for hardware testing. |
+| **`ground_truth_value`** | Numeric / String | The raw, objective measurement or physical state observed in the image (e.g., `0.15` or `Corroded/Leak`). |
+| **`unit`** | String | The measurement scale for gauges (e.g., `bar`, `psi`, `kPa`). For pipelines, this is marked as `NA`. |
+| **`logic_constraint`** | String | The verbal Standard Operating Procedure (SOP) injected into the prompt. This forces the model to evaluate the image conditionally. |
+| **`expected_value`** | String | A concatenated string of the `ground_truth_value` and `unit`. Serves as the baseline target for measuring OCR/Perception accuracy (ANLS). |
+| **`rule_id`** | Categorical | An identifier indicating which of the two contrasting logic constraints is being applied to the image. |
+| **`reasoning`** | String | The "Ground Truth Rationale." A step-by-step logical deduction (Perception → Comparison → Verdict) used as the baseline for Chain-of-Thought (CoT) prompting. |
+| **`hard_case_flag`** | Binary (0/1) | A binary indicator defining whether the image represents a standard condition (`0`) or a severe visual challenge (`1`). |
+| **`expected_verdict`** | Categorical | The final "Actionable Status" derived from combining the `ground_truth_value` and the `logic_constraint`. |
+
+#### **2. Categorical Variable Breakdown**
+
+To perform a rigorous **Systematic Error Analysis**, the categorical variables are strictly defined as follows:
+
+**`category`**
+
+-   **`guage`**: Represents analog instrumentation tasks testing quantitative perception and numeric logic (e.g., "Is X \> Y?"). *(Note: Retained your exact spelling from the CSV).*
+-   **`pipeline`**: Represents structural integrity tasks testing qualitative perception and the model's resistance to "Visual Priming" (e.g., ignoring harmless rust).
+
+**`artifact_tag`** (The Visual Stressors)
+
+-   **`None`**: A clear, well-lit, direct-angle image. Acts as the control group.
+-   **`Oblique Angle`**: The image is taken at an angle , testing the model's 3D spatial reasoning for pointer localization.
+-   **`Glare`**: Specular reflection (light bouncing off glass/metal) obscures parts of the asset.
+-   \*\*`Low Resolution` / `Low Contrast**`: Blurry or poorly lit images testing the model's visual compression limits (especially critical under the 384px cap).
+-   **`Obstruction`**: Physical blockages (dirt, grease, or broken glass) obscuring the dial.
+-   **`Texture Overlap`**: Specific to pipelines, where rust blends into the color of the pipe, making boundary detection difficult.
+
+**`rule_id`**
+
+-   **`Rule A`**: Typically the strict or "Out-of-Limit" boundary (e.g., "Alert on any rust" or a low pressure limit).
+-   **`Rule B`**: The permissive or "In-Limit" boundary (e.g., "Surface rust is acceptable" or a high pressure limit).
+
+**`hard_case_flag`**
+
+-   **`1` (True)**: Assigned to images featuring severe geometric or lighting distortions (Oblique Angle, Glare, Low Resolution). These test the "Resolution Specialists" like MiniCPM-V against baseline models.
+-   **`0` (False)**: Assigned to images with clear visibility (`None`), where any failure is purely a logic or reasoning failure, not a visual one.
+
+**`expected_verdict`**
+
+-   **`SAFE`**: The asset condition complies with the injected `logic_constraint`.
+-   **`UNSAFE`**: The asset condition violates the injected `logic_constraint` and requires an alert.

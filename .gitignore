@@ -1,0 +1,35 @@
+# Environments
+minicpm_env/
+ragenv/
+.env
+.venv/
+env/
+venv/
+
+# Large Model Files and Secondary Repos
+models/
+Janus/
+
+# Results and Outputs
+results/
+generated_samples/
+*.csv
+*.xlsx
+!Dataset/*.xlsx
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*.ipynb
+
+# Documentation and Metadata
+docs/
+GEMINI.md
+
+# OS / IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
