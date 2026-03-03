@@ -5,6 +5,8 @@ ragenv/
 .venv/
 env/
 venv/
+four_models/
+minicpm/
 
 # Large Model Files and Secondary Repos
 models/
