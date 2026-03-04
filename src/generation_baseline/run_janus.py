@@ -2,8 +2,31 @@ import torch
 import os
 import sys
 from PIL import Image
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, BitsAndBytesConfig
 from inference_utils import load_preprocessed_metadata, get_standard_prompt, save_results
+
+# 0. Runtime Patch for attrdict (Compatibility Fix)
+# Janus depends on 'attrdict', which is broken/missing on Python 3.10+.
+# Instead of modifying the Janus source or installing a dead package,
+# we provide a local replacement at runtime.
+from types import ModuleType
+import sys
+
+class AttrDict(dict):
+    """A simple dict subclass that allows dot notation."""
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for k, v in self.items():
+            if isinstance(v, dict) and not isinstance(v, AttrDict):
+                self[k] = AttrDict(v)
+    def __getattr__(self, key):
+        try: return self[key]
+        except KeyError: raise AttributeError(key)
+    def __setattr__(self, key, value): self[key] = value
+
+attrdict_module = ModuleType("attrdict")
+attrdict_module.AttrDict = AttrDict
+sys.modules["attrdict"] = attrdict_module
 
 # 1. Path Resolution for Janus
 # The notebook environment uses a local 'Janus' folder in the root
@@ -20,24 +43,33 @@ else:
     sys.exit(1)
 
 # 2. Setup Device
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 # 3. Load Model & Processor
 local_model_path = "models/Janus"
-print(f"Loading Janus-Pro-1B model from {local_model_path}...")
+print(f"Loading Janus model from {local_model_path}...")
 
 # We load the CUSTOM processor that comes with the Janus repo
 vl_chat_processor: VLChatProcessor = VLChatProcessor.from_pretrained(local_model_path)
 tokenizer = vl_chat_processor.tokenizer
 
+# 4-bit Quantization for sub-4GB VRAM compatibility (GTX 1060 optimized)
+quantization_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_compute_dtype=torch.float16,
+    bnb_4bit_use_double_quant=True,
+    bnb_4bit_quant_type="nf4",
+)
+
+# Official DeepSeek Way: Use MultiModalityCausalLM directly
 vl_gpt = MultiModalityCausalLM.from_pretrained(
     local_model_path, 
     trust_remote_code=True, 
-    torch_dtype=torch.bfloat16 if device == "cuda" else torch.float32,
-    device_map="auto" if device == "cuda" else None
+    quantization_config=quantization_config if device.startswith("cuda") else None,
+    device_map=device if device.startswith("cuda") else None,
 ).eval()
 
-print(f"Model loaded on {device}.")
+print(f"Model loaded successfully on {device}.")
 
 # 4. Load Data
 dataset = load_preprocessed_metadata()
@@ -70,7 +102,7 @@ for i, item in enumerate(dataset):
     # Use the official processor to handle the formatting
     prepare_inputs = vl_chat_processor(
         conversations=messages, images=[image], force_batchify=True
-    ).to(vl_gpt.device, torch.bfloat16 if device == "cuda" else torch.float32)
+    ).to(vl_gpt.device, torch.float16 if device.startswith("cuda") else torch.float32)
     
     # Generate
     with torch.no_grad():

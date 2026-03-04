@@ -13,11 +13,7 @@ models/
 Janus/
 
 # Results and Outputs
-results/
-generated_samples/
-*.csv
-*.xlsx
-!Dataset/*.xlsx
+
 
 # Python / Jupyter
 __pycache__/

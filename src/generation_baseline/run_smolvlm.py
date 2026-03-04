@@ -47,12 +47,21 @@ for i, item in enumerate(dataset):
     
     # Prepare Prompt
     standard_prompt = get_standard_prompt(constraint)
+    user_content = standard_prompt.replace("System: You are an industrial auditor. ", "")
+    
+    # Few-shot example to guide the small model
+    example_format = (
+        "Example:\nUser: Alert if pressure > 0.5 bar. [Image of 0.6 bar]\n"
+        "Assistant: Reasoning: The needle points to 0.6. 0.6 is greater than 0.5.\n"
+        "Final Verdict: UNSAFE"
+    )
+
     messages = [
         {
             "role": "user",
             "content": [
                 {"type": "image"},
-                {"type": "text", "text": standard_prompt}
+                {"type": "text", "text": f"You are an industrial safety auditor. {example_format}\n\nTask: {user_content}\nAlways end with exactly one of: 'Final Verdict: SAFE' or 'Final Verdict: UNSAFE'. Keep reasoning under 2 sentences."}
             ]
         }
     ]
@@ -61,22 +70,36 @@ for i, item in enumerate(dataset):
     prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
     
     # Process Inputs
-    inputs = processor(text=prompt, images=image, return_tensors="pt").to(device)
+    # Nudging the model to start with reasoning
+    prompt_with_nudge = prompt + "Reasoning: "
+    inputs = processor(text=prompt_with_nudge, images=image, return_tensors="pt").to(device)
     
     # Generate Response
     with torch.no_grad():
         generate_ids = model.generate(
             **inputs,
-            max_new_tokens=256,
-            do_sample=False,
+            max_new_tokens=128,
+            do_sample=True,
+            temperature=0.2,
             repetition_penalty=1.1  # SGP Standard
         )
     
-    output_text = processor.batch_decode(generate_ids, skip_special_tokens=True)[0]
+    # Trim prompt from output to extract only the assistant's response
+    # For SmolVLM, the generate_ids contains the full sequence.
+    generated_ids_trimmed = [
+        out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generate_ids)
+    ]
+    output_text = processor.batch_decode(
+        generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+    )[0]
     
-    # Extract response (processor.apply_chat_template might include the prompt in decode, 
-    # but SmolVLM batch_decode usually gives the full message including Assistant: ...)
-    # If the prompt is included, we might want to trim it.
+    # Clean up any leftover "Assistant:" or "Assistant: " prefix if the model generated it
+    output_text = output_text.strip()
+    if output_text.lower().startswith("assistant:"):
+        output_text = output_text[len("assistant:"):].strip()
+    
+    # Prepend our nudge back to the output text so the CSV shows the full logical flow
+    output_text = "Reasoning: " + output_text
     
     # Store result
     result_entry = item.copy()
