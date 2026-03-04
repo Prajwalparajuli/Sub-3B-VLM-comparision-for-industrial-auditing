@@ -36,6 +36,8 @@ def save_results(results, model_name):
 
 # Export the functions from this file to be used in other files
 if __name__ == "__main__":
-    load_preprocessed_metadata()
-    get_standard_prompt()
-    save_results()
+    # These are placeholders for illustration. Do not run this file directly.
+    # To test, uncomment and provide valid path/data:
+    # print(load_preprocessed_metadata("src/ingestion/clean_metadata.json"))
+    # print(get_standard_prompt("No helmets allowed"))
+    pass

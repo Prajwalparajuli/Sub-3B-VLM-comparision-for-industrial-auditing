@@ -36,7 +36,7 @@ def run_preprocessing():
 
             # Copy the metadata from the excel file
             entry = item.copy()
-            entry['processed_path'] = os.path.abspath(save_path)
+            entry['processed_path'] = save_path.replace("\\", "/") # Use forward slashes for cross-platform compatibility
             entry['constraint'] = entry.get('artifact_tag', 'Safety Violation')
 
             # Handle 'NaN' for JSON compatibility

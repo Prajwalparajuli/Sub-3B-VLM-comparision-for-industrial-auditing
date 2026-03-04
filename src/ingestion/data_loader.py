@@ -24,10 +24,13 @@ def load_dataset_from_metadata(base_path, excel_filename = "data_label_constrain
     # Use glob patterns (e.g. *.jpg) instead of just extensions
     patterns = ["*.jpg", "*.jpeg", "*.png", "*.bmp", "*.JPG", "*.PNG"]
 
+    # Project root is the parent of the folder passed in (e.g. parent of 'Dataset')
+    project_root = base_folder.resolve().parent
+
     for pattern in patterns:
         for img_path in base_folder.rglob(pattern):
-            # Store file names and absolute paths as dictionary
-            image_locations[img_path.name] = str(img_path.absolute())
+            # Store relative paths for portability, using resolve() to ensure subpath check works
+            image_locations[img_path.name] = str(img_path.resolve().relative_to(project_root)).replace("\\", "/")
 
     # Match the excel rows to the actual file paths
     final_data_list = []

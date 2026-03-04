@@ -12,8 +12,8 @@
         "reasoning": "Value is 0.15. 0.15 > 0.10.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (1).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (1).jpg",
+        "full_path": "Dataset/Guages/guage (1).jpg",
+        "processed_path": "Data_Preprocessed/guage (1).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -29,8 +29,8 @@
         "reasoning": "Value is 0.15. 0.15 < 0.20.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (1).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (1).jpg",
+        "full_path": "Dataset/Guages/guage (1).jpg",
+        "processed_path": "Data_Preprocessed/guage (1).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -46,8 +46,8 @@
         "reasoning": "Value is 0. 0 < 0.05.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (10).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (10).jpg",
+        "full_path": "Dataset/Guages/guage (10).jpg",
+        "processed_path": "Data_Preprocessed/guage (10).jpg",
         "constraint": null
     },
     {
@@ -63,8 +63,8 @@
         "reasoning": "Value is 0. System is non-pressurized.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (10).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (10).jpg",
+        "full_path": "Dataset/Guages/guage (10).jpg",
+        "processed_path": "Data_Preprocessed/guage (10).jpg",
         "constraint": null
     },
     {
@@ -80,8 +80,8 @@
         "reasoning": "Value is 25. 25 > 20.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (11).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (11).jpg",
+        "full_path": "Dataset/Guages/guage (11).jpg",
+        "processed_path": "Data_Preprocessed/guage (11).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -97,8 +97,8 @@
         "reasoning": "Value is 25. 25 < 30.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (11).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (11).jpg",
+        "full_path": "Dataset/Guages/guage (11).jpg",
+        "processed_path": "Data_Preprocessed/guage (11).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -114,8 +114,8 @@
         "reasoning": "Value is 100. 100 > 80.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (12).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (12).jpg",
+        "full_path": "Dataset/Guages/guage (12).jpg",
+        "processed_path": "Data_Preprocessed/guage (12).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -131,8 +131,8 @@
         "reasoning": "Value is 100. 100 < 120.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (12).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (12).jpg",
+        "full_path": "Dataset/Guages/guage (12).jpg",
+        "processed_path": "Data_Preprocessed/guage (12).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -148,8 +148,8 @@
         "reasoning": "Value is 2. 2 > 1.5.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (13).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (13).jpg",
+        "full_path": "Dataset/Guages/guage (13).jpg",
+        "processed_path": "Data_Preprocessed/guage (13).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -165,8 +165,8 @@
         "reasoning": "Value is 2. 2 < 3.0.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (13).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (13).jpg",
+        "full_path": "Dataset/Guages/guage (13).jpg",
+        "processed_path": "Data_Preprocessed/guage (13).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -182,8 +182,8 @@
         "reasoning": "Value is 18. 18 > 14.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (14).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (14).jpg",
+        "full_path": "Dataset/Guages/guage (14).jpg",
+        "processed_path": "Data_Preprocessed/guage (14).jpg",
         "constraint": null
     },
     {
@@ -199,8 +199,8 @@
         "reasoning": "Value is 18. 18 < 22.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (14).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (14).jpg",
+        "full_path": "Dataset/Guages/guage (14).jpg",
+        "processed_path": "Data_Preprocessed/guage (14).jpg",
         "constraint": null
     },
     {
@@ -216,8 +216,8 @@
         "reasoning": "Value is 0. 0 < 5.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (15).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (15).jpg",
+        "full_path": "Dataset/Guages/guage (15).jpg",
+        "processed_path": "Data_Preprocessed/guage (15).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -233,8 +233,8 @@
         "reasoning": "Value is 0. System is at 0.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (15).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (15).jpg",
+        "full_path": "Dataset/Guages/guage (15).jpg",
+        "processed_path": "Data_Preprocessed/guage (15).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -250,8 +250,8 @@
         "reasoning": "Value is 125. 125 > 100.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (16).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (16).jpg",
+        "full_path": "Dataset/Guages/guage (16).jpg",
+        "processed_path": "Data_Preprocessed/guage (16).jpg",
         "constraint": null
     },
     {
@@ -267,8 +267,8 @@
         "reasoning": "Value is 125. 125 < 150.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (16).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (16).jpg",
+        "full_path": "Dataset/Guages/guage (16).jpg",
+        "processed_path": "Data_Preprocessed/guage (16).jpg",
         "constraint": null
     },
     {
@@ -284,8 +284,8 @@
         "reasoning": "Value is 200. 200 > 160.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (17).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (17).jpg",
+        "full_path": "Dataset/Guages/guage (17).jpg",
+        "processed_path": "Data_Preprocessed/guage (17).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -301,8 +301,8 @@
         "reasoning": "Value is 200. 200 < 240.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (17).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (17).jpg",
+        "full_path": "Dataset/Guages/guage (17).jpg",
+        "processed_path": "Data_Preprocessed/guage (17).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -318,8 +318,8 @@
         "reasoning": "Value is 30. 30 > 24.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (18).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (18).jpg",
+        "full_path": "Dataset/Guages/guage (18).jpg",
+        "processed_path": "Data_Preprocessed/guage (18).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -335,8 +335,8 @@
         "reasoning": "Value is 30. 30 < 36.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (18).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (18).jpg",
+        "full_path": "Dataset/Guages/guage (18).jpg",
+        "processed_path": "Data_Preprocessed/guage (18).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -352,8 +352,8 @@
         "reasoning": "Value is 2.2. 2.2 > 1.7.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (19).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (19).jpg",
+        "full_path": "Dataset/Guages/guage (19).jpg",
+        "processed_path": "Data_Preprocessed/guage (19).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -369,8 +369,8 @@
         "reasoning": "Value is 2.2. 2.2 < 2.7.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (19).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (19).jpg",
+        "full_path": "Dataset/Guages/guage (19).jpg",
+        "processed_path": "Data_Preprocessed/guage (19).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -386,8 +386,8 @@
         "reasoning": "Value is 0. 0 < 2.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (2).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (2).jpg",
+        "full_path": "Dataset/Guages/guage (2).jpg",
+        "processed_path": "Data_Preprocessed/guage (2).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -403,8 +403,8 @@
         "reasoning": "Value is 0. System pressure is at 0.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (2).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (2).jpg",
+        "full_path": "Dataset/Guages/guage (2).jpg",
+        "processed_path": "Data_Preprocessed/guage (2).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -420,8 +420,8 @@
         "reasoning": "Value is 4. 4 > 3.0.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (20).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (20).jpg",
+        "full_path": "Dataset/Guages/guage (20).jpg",
+        "processed_path": "Data_Preprocessed/guage (20).jpg",
         "constraint": "Glare"
     },
     {
@@ -437,8 +437,8 @@
         "reasoning": "Value is 4. 4 < 5.0.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (20).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (20).jpg",
+        "full_path": "Dataset/Guages/guage (20).jpg",
+        "processed_path": "Data_Preprocessed/guage (20).jpg",
         "constraint": "Glare"
     },
     {
@@ -454,8 +454,8 @@
         "reasoning": "Value is 2.5. 2.5 > 2.0.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (21).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (21).jpg",
+        "full_path": "Dataset/Guages/guage (21).jpg",
+        "processed_path": "Data_Preprocessed/guage (21).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -471,8 +471,8 @@
         "reasoning": "Value is 2.5. 2.5 < 3.0.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (21).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (21).jpg",
+        "full_path": "Dataset/Guages/guage (21).jpg",
+        "processed_path": "Data_Preprocessed/guage (21).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -488,8 +488,8 @@
         "reasoning": "Value is 1.5. 1.5 > 1.2.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (22).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (22).jpg",
+        "full_path": "Dataset/Guages/guage (22).jpg",
+        "processed_path": "Data_Preprocessed/guage (22).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -505,8 +505,8 @@
         "reasoning": "Value is 1.5. 1.5 < 1.8.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (22).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (22).jpg",
+        "full_path": "Dataset/Guages/guage (22).jpg",
+        "processed_path": "Data_Preprocessed/guage (22).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -522,8 +522,8 @@
         "reasoning": "Value is 23. 23 > 18.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (23).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (23).jpg",
+        "full_path": "Dataset/Guages/guage (23).jpg",
+        "processed_path": "Data_Preprocessed/guage (23).jpg",
         "constraint": null
     },
     {
@@ -539,8 +539,8 @@
         "reasoning": "Value is 23. 23 < 28.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (23).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (23).jpg",
+        "full_path": "Dataset/Guages/guage (23).jpg",
+        "processed_path": "Data_Preprocessed/guage (23).jpg",
         "constraint": null
     },
     {
@@ -556,8 +556,8 @@
         "reasoning": "Value is 1. 1 > 0.8.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (24).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (24).jpg",
+        "full_path": "Dataset/Guages/guage (24).jpg",
+        "processed_path": "Data_Preprocessed/guage (24).jpg",
         "constraint": null
     },
     {
@@ -573,8 +573,8 @@
         "reasoning": "Value is 1. 1 < 1.2.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (24).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (24).jpg",
+        "full_path": "Dataset/Guages/guage (24).jpg",
+        "processed_path": "Data_Preprocessed/guage (24).jpg",
         "constraint": null
     },
     {
@@ -590,8 +590,8 @@
         "reasoning": "Value is 0. 0 < 5.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (25).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (25).jpg",
+        "full_path": "Dataset/Guages/guage (25).jpg",
+        "processed_path": "Data_Preprocessed/guage (25).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -607,8 +607,8 @@
         "reasoning": "Value is 0. System is at 0.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (25).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (25).jpg",
+        "full_path": "Dataset/Guages/guage (25).jpg",
+        "processed_path": "Data_Preprocessed/guage (25).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -624,8 +624,8 @@
         "reasoning": "Value is 400. 400 > 320.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (26).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (26).jpg",
+        "full_path": "Dataset/Guages/guage (26).jpg",
+        "processed_path": "Data_Preprocessed/guage (26).jpg",
         "constraint": null
     },
     {
@@ -641,8 +641,8 @@
         "reasoning": "Value is 400. 400 < 480.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (26).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (26).jpg",
+        "full_path": "Dataset/Guages/guage (26).jpg",
+        "processed_path": "Data_Preprocessed/guage (26).jpg",
         "constraint": null
     },
     {
@@ -658,8 +658,8 @@
         "reasoning": "Value is 1000. 1000 > 800.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (27).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (27).jpg",
+        "full_path": "Dataset/Guages/guage (27).jpg",
+        "processed_path": "Data_Preprocessed/guage (27).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -675,8 +675,8 @@
         "reasoning": "Value is 1000. 1000 < 1200.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (27).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (27).jpg",
+        "full_path": "Dataset/Guages/guage (27).jpg",
+        "processed_path": "Data_Preprocessed/guage (27).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -692,8 +692,8 @@
         "reasoning": "Value is 125. 125 > 100.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (28).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (28).jpg",
+        "full_path": "Dataset/Guages/guage (28).jpg",
+        "processed_path": "Data_Preprocessed/guage (28).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -709,8 +709,8 @@
         "reasoning": "Value is 125. 125 < 150.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (28).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (28).jpg",
+        "full_path": "Dataset/Guages/guage (28).jpg",
+        "processed_path": "Data_Preprocessed/guage (28).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -726,8 +726,8 @@
         "reasoning": "Value is 0. 0 < 5.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (29).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (29).jpg",
+        "full_path": "Dataset/Guages/guage (29).jpg",
+        "processed_path": "Data_Preprocessed/guage (29).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -743,8 +743,8 @@
         "reasoning": "Value is 0. Vacuum is at 0.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (29).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (29).jpg",
+        "full_path": "Dataset/Guages/guage (29).jpg",
+        "processed_path": "Data_Preprocessed/guage (29).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -760,8 +760,8 @@
         "reasoning": "Value is 22. 22 > 17.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (3).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (3).jpg",
+        "full_path": "Dataset/Guages/guage (3).jpg",
+        "processed_path": "Data_Preprocessed/guage (3).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -777,8 +777,8 @@
         "reasoning": "Value is 22. 22 < 27.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (3).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (3).jpg",
+        "full_path": "Dataset/Guages/guage (3).jpg",
+        "processed_path": "Data_Preprocessed/guage (3).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -794,8 +794,8 @@
         "reasoning": "Value is 22. 22 > 17.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (30).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (30).jpg",
+        "full_path": "Dataset/Guages/guage (30).jpg",
+        "processed_path": "Data_Preprocessed/guage (30).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -811,8 +811,8 @@
         "reasoning": "Value is 22. 22 < 27.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (30).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (30).jpg",
+        "full_path": "Dataset/Guages/guage (30).jpg",
+        "processed_path": "Data_Preprocessed/guage (30).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -828,8 +828,8 @@
         "reasoning": "Value is 0.02. 0.02 > 0.01.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (31).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (31).jpg",
+        "full_path": "Dataset/Guages/guage (31).jpg",
+        "processed_path": "Data_Preprocessed/guage (31).jpg",
         "constraint": "Glare/ Oblique Angle"
     },
     {
@@ -845,8 +845,8 @@
         "reasoning": "Value is 0.02. 0.02 < 0.03.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (31).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (31).jpg",
+        "full_path": "Dataset/Guages/guage (31).jpg",
+        "processed_path": "Data_Preprocessed/guage (31).jpg",
         "constraint": "Glare/ Oblique Angle"
     },
     {
@@ -862,8 +862,8 @@
         "reasoning": "Value is 0.8. 0.8 > 0.6.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (32).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (32).jpg",
+        "full_path": "Dataset/Guages/guage (32).jpg",
+        "processed_path": "Data_Preprocessed/guage (32).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -879,8 +879,8 @@
         "reasoning": "Value is 0.8. 0.8 < 1.0.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (32).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (32).jpg",
+        "full_path": "Dataset/Guages/guage (32).jpg",
+        "processed_path": "Data_Preprocessed/guage (32).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -896,8 +896,8 @@
         "reasoning": "Value is 3.6. 3.6 > 2.8.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (33).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (33).jpg",
+        "full_path": "Dataset/Guages/guage (33).jpg",
+        "processed_path": "Data_Preprocessed/guage (33).jpg",
         "constraint": "Glare"
     },
     {
@@ -913,8 +913,8 @@
         "reasoning": "Value is 3.6. 3.6 < 4.4.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (33).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (33).jpg",
+        "full_path": "Dataset/Guages/guage (33).jpg",
+        "processed_path": "Data_Preprocessed/guage (33).jpg",
         "constraint": "Glare"
     },
     {
@@ -930,8 +930,8 @@
         "reasoning": "Value is 83. 83 > 66.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (34).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (34).jpg",
+        "full_path": "Dataset/Guages/guage (34).jpg",
+        "processed_path": "Data_Preprocessed/guage (34).jpg",
         "constraint": "Oblique Angle/ Low Resolution"
     },
     {
@@ -947,8 +947,8 @@
         "reasoning": "Value is 83. 83 < 100.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (34).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (34).jpg",
+        "full_path": "Dataset/Guages/guage (34).jpg",
+        "processed_path": "Data_Preprocessed/guage (34).jpg",
         "constraint": "Oblique Angle/ Low Resolution"
     },
     {
@@ -964,8 +964,8 @@
         "reasoning": "Value is 35. 35 > 28.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (35).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (35).jpg",
+        "full_path": "Dataset/Guages/guage (35).jpg",
+        "processed_path": "Data_Preprocessed/guage (35).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -981,8 +981,8 @@
         "reasoning": "Value is 35. 35 < 42.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (35).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (35).jpg",
+        "full_path": "Dataset/Guages/guage (35).jpg",
+        "processed_path": "Data_Preprocessed/guage (35).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -998,8 +998,8 @@
         "reasoning": "Value is 0.1. 0.1 > 0.08.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (36).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (36).jpg",
+        "full_path": "Dataset/Guages/guage (36).jpg",
+        "processed_path": "Data_Preprocessed/guage (36).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -1015,8 +1015,8 @@
         "reasoning": "Value is 0.1. 0.1 < 0.12.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (36).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (36).jpg",
+        "full_path": "Dataset/Guages/guage (36).jpg",
+        "processed_path": "Data_Preprocessed/guage (36).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -1032,8 +1032,8 @@
         "reasoning": "Value is 160. 160 > 128.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (37).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (37).jpg",
+        "full_path": "Dataset/Guages/guage (37).jpg",
+        "processed_path": "Data_Preprocessed/guage (37).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -1049,8 +1049,8 @@
         "reasoning": "Value is 160. 160 < 192.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (37).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (37).jpg",
+        "full_path": "Dataset/Guages/guage (37).jpg",
+        "processed_path": "Data_Preprocessed/guage (37).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -1066,8 +1066,8 @@
         "reasoning": "Value is 60. 60 > 48.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (38).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (38).jpg",
+        "full_path": "Dataset/Guages/guage (38).jpg",
+        "processed_path": "Data_Preprocessed/guage (38).jpg",
         "constraint": null
     },
     {
@@ -1083,8 +1083,8 @@
         "reasoning": "Value is 60. 60 < 72.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (38).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (38).jpg",
+        "full_path": "Dataset/Guages/guage (38).jpg",
+        "processed_path": "Data_Preprocessed/guage (38).jpg",
         "constraint": null
     },
     {
@@ -1100,8 +1100,8 @@
         "reasoning": "Value is 155. 155 > 124.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (39).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (39).jpg",
+        "full_path": "Dataset/Guages/guage (39).jpg",
+        "processed_path": "Data_Preprocessed/guage (39).jpg",
         "constraint": null
     },
     {
@@ -1117,8 +1117,8 @@
         "reasoning": "Value is 155. 155 < 186.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (39).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (39).jpg",
+        "full_path": "Dataset/Guages/guage (39).jpg",
+        "processed_path": "Data_Preprocessed/guage (39).jpg",
         "constraint": null
     },
     {
@@ -1134,8 +1134,8 @@
         "reasoning": "Value is 90. 90 > 72.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (4).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (4).jpg",
+        "full_path": "Dataset/Guages/guage (4).jpg",
+        "processed_path": "Data_Preprocessed/guage (4).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -1151,8 +1151,8 @@
         "reasoning": "Value is 90. 90 < 108.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (4).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (4).jpg",
+        "full_path": "Dataset/Guages/guage (4).jpg",
+        "processed_path": "Data_Preprocessed/guage (4).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -1168,8 +1168,8 @@
         "reasoning": "Value is 53. 53 > 42.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (40).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (40).jpg",
+        "full_path": "Dataset/Guages/guage (40).jpg",
+        "processed_path": "Data_Preprocessed/guage (40).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -1185,8 +1185,8 @@
         "reasoning": "Value is 53. 53 < 64.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (40).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (40).jpg",
+        "full_path": "Dataset/Guages/guage (40).jpg",
+        "processed_path": "Data_Preprocessed/guage (40).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -1202,8 +1202,8 @@
         "reasoning": "Value is 75. 75 > 60.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (41).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (41).jpg",
+        "full_path": "Dataset/Guages/guage (41).jpg",
+        "processed_path": "Data_Preprocessed/guage (41).jpg",
         "constraint": "Glare"
     },
     {
@@ -1219,8 +1219,8 @@
         "reasoning": "Value is 75. 75 < 90.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (41).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (41).jpg",
+        "full_path": "Dataset/Guages/guage (41).jpg",
+        "processed_path": "Data_Preprocessed/guage (41).jpg",
         "constraint": "Glare"
     },
     {
@@ -1236,8 +1236,8 @@
         "reasoning": "Value is 25. 25 > 20.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (42).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (42).jpg",
+        "full_path": "Dataset/Guages/guage (42).jpg",
+        "processed_path": "Data_Preprocessed/guage (42).jpg",
         "constraint": null
     },
     {
@@ -1253,8 +1253,8 @@
         "reasoning": "Value is 25. 25 < 30.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (42).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (42).jpg",
+        "full_path": "Dataset/Guages/guage (42).jpg",
+        "processed_path": "Data_Preprocessed/guage (42).jpg",
         "constraint": null
     },
     {
@@ -1270,8 +1270,8 @@
         "reasoning": "Value is 43. 43 > 34.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (43).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (43).jpg",
+        "full_path": "Dataset/Guages/guage (43).jpg",
+        "processed_path": "Data_Preprocessed/guage (43).jpg",
         "constraint": null
     },
     {
@@ -1287,8 +1287,8 @@
         "reasoning": "Value is 43. 43 < 52.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (43).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (43).jpg",
+        "full_path": "Dataset/Guages/guage (43).jpg",
+        "processed_path": "Data_Preprocessed/guage (43).jpg",
         "constraint": null
     },
     {
@@ -1304,8 +1304,8 @@
         "reasoning": "Value is 50. 50 > 40.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (44).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (44).jpg",
+        "full_path": "Dataset/Guages/guage (44).jpg",
+        "processed_path": "Data_Preprocessed/guage (44).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -1321,8 +1321,8 @@
         "reasoning": "Value is 50. 50 < 60.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (44).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (44).jpg",
+        "full_path": "Dataset/Guages/guage (44).jpg",
+        "processed_path": "Data_Preprocessed/guage (44).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -1338,8 +1338,8 @@
         "reasoning": "Value is 25. 25 > 20.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (45).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (45).jpg",
+        "full_path": "Dataset/Guages/guage (45).jpg",
+        "processed_path": "Data_Preprocessed/guage (45).jpg",
         "constraint": null
     },
     {
@@ -1355,8 +1355,8 @@
         "reasoning": "Value is 25. 25 < 30.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (45).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (45).jpg",
+        "full_path": "Dataset/Guages/guage (45).jpg",
+        "processed_path": "Data_Preprocessed/guage (45).jpg",
         "constraint": null
     },
     {
@@ -1372,8 +1372,8 @@
         "reasoning": "Value is 2.2. 2.2 > 1.7.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (46).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (46).jpg",
+        "full_path": "Dataset/Guages/guage (46).jpg",
+        "processed_path": "Data_Preprocessed/guage (46).jpg",
         "constraint": "Glare"
     },
     {
@@ -1389,8 +1389,8 @@
         "reasoning": "Value is 2.2. 2.2 < 2.7.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (46).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (46).jpg",
+        "full_path": "Dataset/Guages/guage (46).jpg",
+        "processed_path": "Data_Preprocessed/guage (46).jpg",
         "constraint": "Glare"
     },
     {
@@ -1406,8 +1406,8 @@
         "reasoning": "Value is 40. 40 > 32.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (47).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (47).jpg",
+        "full_path": "Dataset/Guages/guage (47).jpg",
+        "processed_path": "Data_Preprocessed/guage (47).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -1423,8 +1423,8 @@
         "reasoning": "Value is 40. 40 < 48.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (47).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (47).jpg",
+        "full_path": "Dataset/Guages/guage (47).jpg",
+        "processed_path": "Data_Preprocessed/guage (47).jpg",
         "constraint": "Obstruction"
     },
     {
@@ -1440,8 +1440,8 @@
         "reasoning": "Value is 0.17. 0.17 > 0.13.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (48).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (48).jpg",
+        "full_path": "Dataset/Guages/guage (48).jpg",
+        "processed_path": "Data_Preprocessed/guage (48).jpg",
         "constraint": "Glare/ Oblique Angle"
     },
     {
@@ -1457,8 +1457,8 @@
         "reasoning": "Value is 0.17. 0.17 < 0.21.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (48).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (48).jpg",
+        "full_path": "Dataset/Guages/guage (48).jpg",
+        "processed_path": "Data_Preprocessed/guage (48).jpg",
         "constraint": "Glare/ Oblique Angle"
     },
     {
@@ -1474,8 +1474,8 @@
         "reasoning": "Value is 35. 35 > 28.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (49).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (49).jpg",
+        "full_path": "Dataset/Guages/guage (49).jpg",
+        "processed_path": "Data_Preprocessed/guage (49).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -1491,8 +1491,8 @@
         "reasoning": "Value is 35. 35 < 42.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (49).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (49).jpg",
+        "full_path": "Dataset/Guages/guage (49).jpg",
+        "processed_path": "Data_Preprocessed/guage (49).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -1508,8 +1508,8 @@
         "reasoning": "Value is 70. 70 > 56.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (5).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (5).jpg",
+        "full_path": "Dataset/Guages/guage (5).jpg",
+        "processed_path": "Data_Preprocessed/guage (5).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -1525,8 +1525,8 @@
         "reasoning": "Value is 70. 70 < 84.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (5).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (5).jpg",
+        "full_path": "Dataset/Guages/guage (5).jpg",
+        "processed_path": "Data_Preprocessed/guage (5).jpg",
         "constraint": "Low Contrast"
     },
     {
@@ -1542,8 +1542,8 @@
         "reasoning": "Value is 4.8. 4.8 > 3.8.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (50).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (50).jpg",
+        "full_path": "Dataset/Guages/guage (50).jpg",
+        "processed_path": "Data_Preprocessed/guage (50).jpg",
         "constraint": null
     },
     {
@@ -1559,8 +1559,8 @@
         "reasoning": "Value is 4.8. 4.8 < 5.8.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (50).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (50).jpg",
+        "full_path": "Dataset/Guages/guage (50).jpg",
+        "processed_path": "Data_Preprocessed/guage (50).jpg",
         "constraint": null
     },
     {
@@ -1576,8 +1576,8 @@
         "reasoning": "Value is 34. 34 > 27.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (6).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (6).jpg",
+        "full_path": "Dataset/Guages/guage (6).jpg",
+        "processed_path": "Data_Preprocessed/guage (6).jpg",
         "constraint": "Glare/ Oblique Angle"
     },
     {
@@ -1593,8 +1593,8 @@
         "reasoning": "Value is 34. 34 < 41.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (6).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (6).jpg",
+        "full_path": "Dataset/Guages/guage (6).jpg",
+        "processed_path": "Data_Preprocessed/guage (6).jpg",
         "constraint": "Glare/ Oblique Angle"
     },
     {
@@ -1610,8 +1610,8 @@
         "reasoning": "Value is 1.3. 1.3 > 1.0.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (7).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (7).jpg",
+        "full_path": "Dataset/Guages/guage (7).jpg",
+        "processed_path": "Data_Preprocessed/guage (7).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -1627,8 +1627,8 @@
         "reasoning": "Value is 1.3. 1.3 < 1.6.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (7).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (7).jpg",
+        "full_path": "Dataset/Guages/guage (7).jpg",
+        "processed_path": "Data_Preprocessed/guage (7).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -1644,8 +1644,8 @@
         "reasoning": "Value is 0. 0 < 5.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (8).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (8).jpg",
+        "full_path": "Dataset/Guages/guage (8).jpg",
+        "processed_path": "Data_Preprocessed/guage (8).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -1661,8 +1661,8 @@
         "reasoning": "Value is 0. System is at 0.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (8).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (8).jpg",
+        "full_path": "Dataset/Guages/guage (8).jpg",
+        "processed_path": "Data_Preprocessed/guage (8).jpg",
         "constraint": "Oblique Angle"
     },
     {
@@ -1678,8 +1678,8 @@
         "reasoning": "Value is 86. 86 > 68.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (9).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (9).jpg",
+        "full_path": "Dataset/Guages/guage (9).jpg",
+        "processed_path": "Data_Preprocessed/guage (9).jpg",
         "constraint": "Oblique Angle/ Obstruction"
     },
     {
@@ -1695,8 +1695,8 @@
         "reasoning": "Value is 86. 86 < 104.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Guages\\guage (9).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\guage (9).jpg",
+        "full_path": "Dataset/Guages/guage (9).jpg",
+        "processed_path": "Data_Preprocessed/guage (9).jpg",
         "constraint": "Oblique Angle/ Obstruction"
     },
     {
@@ -1712,8 +1712,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (1).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (1).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (1).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (1).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -1729,8 +1729,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (1).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (1).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (1).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (1).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -1746,8 +1746,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (10).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (10).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (10).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (10).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -1763,8 +1763,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (10).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (10).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (10).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (10).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -1780,8 +1780,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (11).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (11).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (11).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (11).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -1797,8 +1797,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (11).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (11).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (11).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (11).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -1814,8 +1814,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (12).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (12).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (12).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (12).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -1831,8 +1831,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (12).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (12).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (12).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (12).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -1848,8 +1848,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (13).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (13).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (13).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (13).jpg",
         "constraint": "Glare"
     },
     {
@@ -1865,8 +1865,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (13).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (13).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (13).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (13).jpg",
         "constraint": "Glare"
     },
     {
@@ -1882,8 +1882,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (14).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (14).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (14).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (14).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -1899,8 +1899,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (14).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (14).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (14).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (14).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -1916,8 +1916,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (15).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (15).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (15).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (15).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -1933,8 +1933,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (15).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (15).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (15).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (15).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -1950,8 +1950,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (16).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (16).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (16).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (16).jpg",
         "constraint": null
     },
     {
@@ -1967,8 +1967,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (16).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (16).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (16).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (16).jpg",
         "constraint": null
     },
     {
@@ -1984,8 +1984,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (17).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (17).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (17).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (17).jpg",
         "constraint": null
     },
     {
@@ -2001,8 +2001,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (17).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (17).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (17).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (17).jpg",
         "constraint": null
     },
     {
@@ -2018,8 +2018,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (18).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (18).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (18).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (18).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2035,8 +2035,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (18).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (18).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (18).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (18).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2052,8 +2052,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (19).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (19).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (19).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (19).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2069,8 +2069,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (19).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (19).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (19).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (19).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2086,8 +2086,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (2).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (2).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (2).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (2).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2103,8 +2103,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (2).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (2).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (2).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (2).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2120,8 +2120,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (20).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (20).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (20).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (20).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2137,8 +2137,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (20).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (20).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (20).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (20).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2154,8 +2154,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (21).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (21).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (21).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (21).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2171,8 +2171,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (21).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (21).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (21).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (21).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2188,8 +2188,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (22).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (22).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (22).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (22).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2205,8 +2205,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (22).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (22).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (22).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (22).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2222,8 +2222,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (23).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (23).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (23).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (23).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2239,8 +2239,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (23).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (23).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (23).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (23).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2256,8 +2256,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (24).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (24).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (24).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (24).jpg",
         "constraint": null
     },
     {
@@ -2273,8 +2273,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (24).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (24).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (24).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (24).jpg",
         "constraint": null
     },
     {
@@ -2290,8 +2290,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (25).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (25).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (25).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (25).jpg",
         "constraint": "Unclear image"
     },
     {
@@ -2307,8 +2307,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (25).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (25).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (25).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (25).jpg",
         "constraint": "Unclear image"
     },
     {
@@ -2324,8 +2324,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (3).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (3).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (3).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (3).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2341,8 +2341,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (3).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (3).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (3).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (3).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2358,8 +2358,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (4).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (4).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (4).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (4).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2375,8 +2375,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (4).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (4).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (4).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (4).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2392,8 +2392,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (5).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (5).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (5).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (5).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2409,8 +2409,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (5).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (5).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (5).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (5).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2426,8 +2426,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (6).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (6).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (6).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (6).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2443,8 +2443,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (6).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (6).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (6).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (6).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2460,8 +2460,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (7).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (7).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (7).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (7).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2477,8 +2477,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (7).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (7).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (7).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (7).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2494,8 +2494,8 @@
         "reasoning": "Image shows corrosion or damage.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (8).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (8).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (8).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (8).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2511,8 +2511,8 @@
         "reasoning": "Critical structural defect is visible.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (8).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (8).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (8).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (8).jpg",
         "constraint": "Texture Overlap"
     },
     {
@@ -2528,8 +2528,8 @@
         "reasoning": "Surface oxidation/rust is present.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (9).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (9).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (9).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (9).jpg",
         "constraint": null
     },
     {
@@ -2545,8 +2545,8 @@
         "reasoning": "Image shows surface rust but no critical defects.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Defected\\pipe_corroded (9).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_corroded (9).jpg",
+        "full_path": "Dataset/Pipes/Defected/pipe_corroded (9).jpg",
+        "processed_path": "Data_Preprocessed/pipe_corroded (9).jpg",
         "constraint": null
     },
     {
@@ -2562,8 +2562,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (1).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (1).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (1).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (1).jpg",
         "constraint": null
     },
     {
@@ -2579,8 +2579,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (1).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (1).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (1).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (1).jpg",
         "constraint": null
     },
     {
@@ -2596,8 +2596,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (10).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (10).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (10).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (10).jpg",
         "constraint": null
     },
     {
@@ -2613,8 +2613,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (10).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (10).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (10).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (10).jpg",
         "constraint": null
     },
     {
@@ -2630,8 +2630,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (11).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (11).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (11).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (11).jpg",
         "constraint": null
     },
     {
@@ -2647,8 +2647,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (11).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (11).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (11).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (11).jpg",
         "constraint": null
     },
     {
@@ -2664,8 +2664,8 @@
         "reasoning": "Surface oxidation/rust is present.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (12).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (12).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (12).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (12).jpg",
         "constraint": null
     },
     {
@@ -2681,8 +2681,8 @@
         "reasoning": "Image shows surface rust but no critical defects.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (12).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (12).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (12).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (12).jpg",
         "constraint": null
     },
     {
@@ -2698,8 +2698,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (13).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (13).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (13).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (13).jpg",
         "constraint": "Glare"
     },
     {
@@ -2715,8 +2715,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (13).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (13).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (13).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (13).jpg",
         "constraint": "Glare"
     },
     {
@@ -2732,8 +2732,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (14).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (14).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (14).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (14).jpg",
         "constraint": null
     },
     {
@@ -2749,8 +2749,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (14).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (14).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (14).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (14).jpg",
         "constraint": null
     },
     {
@@ -2766,8 +2766,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (15).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (15).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (15).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (15).jpg",
         "constraint": null
     },
     {
@@ -2783,8 +2783,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (15).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (15).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (15).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (15).jpg",
         "constraint": null
     },
     {
@@ -2800,8 +2800,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (16).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (16).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (16).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (16).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2817,8 +2817,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (16).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (16).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (16).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (16).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2834,8 +2834,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (17).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (17).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (17).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (17).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2851,8 +2851,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (17).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (17).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (17).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (17).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2868,8 +2868,8 @@
         "reasoning": "Surface oxidation/rust is present.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (18).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (18).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (18).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (18).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2885,8 +2885,8 @@
         "reasoning": "Image shows surface rust but no critical defects.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (18).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (18).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (18).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (18).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -2902,8 +2902,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (19).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (19).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (19).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (19).jpg",
         "constraint": null
     },
     {
@@ -2919,8 +2919,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (19).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (19).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (19).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (19).jpg",
         "constraint": null
     },
     {
@@ -2936,8 +2936,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (2).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (2).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (2).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (2).jpg",
         "constraint": null
     },
     {
@@ -2953,8 +2953,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (2).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (2).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (2).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (2).jpg",
         "constraint": null
     },
     {
@@ -2970,8 +2970,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (20).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (20).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (20).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (20).jpg",
         "constraint": null
     },
     {
@@ -2987,8 +2987,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (20).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (20).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (20).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (20).jpg",
         "constraint": null
     },
     {
@@ -3004,8 +3004,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (21).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (21).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (21).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (21).jpg",
         "constraint": null
     },
     {
@@ -3021,8 +3021,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (21).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (21).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (21).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (21).jpg",
         "constraint": null
     },
     {
@@ -3038,8 +3038,8 @@
         "reasoning": "Surface oxidation/rust is present.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (22).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (22).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (22).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (22).jpg",
         "constraint": null
     },
     {
@@ -3055,8 +3055,8 @@
         "reasoning": "Image shows surface rust but no critical defects.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (22).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (22).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (22).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (22).jpg",
         "constraint": null
     },
     {
@@ -3072,8 +3072,8 @@
         "reasoning": "Surface oxidation/rust is present.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (23).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (23).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (23).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (23).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -3089,8 +3089,8 @@
         "reasoning": "Image shows surface rust but no critical defects.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (23).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (23).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (23).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (23).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -3106,8 +3106,8 @@
         "reasoning": "Surface oxidation/rust is present.",
         "hard_case_flag": 0,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (24).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (24).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (24).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (24).jpg",
         "constraint": null
     },
     {
@@ -3123,8 +3123,8 @@
         "reasoning": "Image shows surface rust but no critical defects.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (24).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (24).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (24).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (24).jpg",
         "constraint": null
     },
     {
@@ -3140,8 +3140,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (25).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (25).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (25).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (25).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -3157,8 +3157,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (25).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (25).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (25).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (25).jpg",
         "constraint": "Low Resolution"
     },
     {
@@ -3174,8 +3174,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (3).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (3).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (3).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (3).jpg",
         "constraint": null
     },
     {
@@ -3191,8 +3191,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (3).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (3).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (3).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (3).jpg",
         "constraint": null
     },
     {
@@ -3208,8 +3208,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (4).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (4).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (4).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (4).jpg",
         "constraint": null
     },
     {
@@ -3225,8 +3225,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (4).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (4).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (4).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (4).jpg",
         "constraint": null
     },
     {
@@ -3242,8 +3242,8 @@
         "reasoning": "Surface oxidation/rust is present.",
         "hard_case_flag": 1,
         "expected_verdict": "UNSAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (5).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (5).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (5).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (5).jpg",
         "constraint": "Distorted"
     },
     {
@@ -3259,8 +3259,8 @@
         "reasoning": "Image shows surface rust but no critical defects.",
         "hard_case_flag": 1,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (5).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (5).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (5).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (5).jpg",
         "constraint": "Distorted"
     },
     {
@@ -3276,8 +3276,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (6).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (6).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (6).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (6).jpg",
         "constraint": null
     },
     {
@@ -3293,8 +3293,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (6).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (6).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (6).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (6).jpg",
         "constraint": null
     },
     {
@@ -3310,8 +3310,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (7).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (7).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (7).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (7).jpg",
         "constraint": null
     },
     {
@@ -3327,8 +3327,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (7).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (7).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (7).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (7).jpg",
         "constraint": null
     },
     {
@@ -3344,8 +3344,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (8).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (8).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (8).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (8).jpg",
         "constraint": null
     },
     {
@@ -3361,8 +3361,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (8).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (8).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (8).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (8).jpg",
         "constraint": null
     },
     {
@@ -3378,8 +3378,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (9).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (9).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (9).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (9).jpg",
         "constraint": null
     },
     {
@@ -3395,8 +3395,8 @@
         "reasoning": "Surface is clean and nominal.",
         "hard_case_flag": 0,
         "expected_verdict": "SAFE",
-        "full_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Dataset\\Pipes\\Non defected\\pipe_non_corroded (9).jpg",
-        "processed_path": "C:\\Users\\prajw\\Desktop\\Advanced ML\\Sub 3B VLM comparision for industrial auditing\\Data_Preprocessed\\pipe_non_corroded (9).jpg",
+        "full_path": "Dataset/Pipes/Non defected/pipe_non_corroded (9).jpg",
+        "processed_path": "Data_Preprocessed/pipe_non_corroded (9).jpg",
         "constraint": null
     }
 ]
