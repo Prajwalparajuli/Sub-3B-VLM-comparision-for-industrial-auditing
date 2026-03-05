@@ -1,15 +1,26 @@
+# ── PyTorch (CUDA 12.4) ──────────────────────────
 --extra-index-url https://download.pytorch.org/whl/cu124
 torch==2.6.0+cu124
 torchvision==0.21.0+cu124
 torchaudio==2.6.0+cu124
-transformers>=4.45.0,<5.0.0
+
+# ── Core ML / Transformers ───────────────────────
+# MiniCPM-V-2 remote code tested against 4.40;
+# versions >=4.45 break its custom modeling files.
+transformers==4.40.2
 accelerate==1.12.0
 bitsandbytes==0.49.1
+
+# ── Vision / Tokenizer ──────────────────────────
 pillow==12.0.0
 sentencepiece
 timm
+
+# ── Data / IO ────────────────────────────────────
 pandas
 openpyxl
+
+# ── HuggingFace ecosystem ───────────────────────
 huggingface_hub
 einops
 peft

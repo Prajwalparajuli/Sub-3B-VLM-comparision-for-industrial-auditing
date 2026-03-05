@@ -67,21 +67,14 @@ def download_internvl2(models_dir):
         print("InternVL2 already exists.")
 
 def download_minicpm(models_dir):
-    """BAP: 4-bit for 2.0B+ models"""
+    """BAP: Download full-precision weights; 4-bit quantization happens at inference time.
+    Uses snapshot_download so no GPU is required during download (runs under ragenv)."""
+    from huggingface_hub import snapshot_download
     model_id = "openbmb/MiniCPM-V-2"
     save_path = os.path.join(models_dir, "MiniCPM")
     if not os.path.exists(save_path):
-        print(f"Downloading {model_id}...")
-        tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
-        quant_config = BitsAndBytesConfig(load_in_4bit=True)
-        model = AutoModel.from_pretrained(
-            model_id,
-            trust_remote_code=True,
-            quantization_config=quant_config,
-            device_map="auto"
-        )
-        tokenizer.save_pretrained(save_path)
-        model.save_pretrained(save_path)
+        print(f"Downloading {model_id} via snapshot_download (full precision)...")
+        snapshot_download(repo_id=model_id, local_dir=save_path, local_dir_use_symlinks=False)
         print(f"Saved to {save_path}")
     else:
         print("MiniCPM already exists.")
