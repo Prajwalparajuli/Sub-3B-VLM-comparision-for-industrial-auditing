@@ -79,7 +79,7 @@ results = []
 print(f"Starting inference on {len(dataset)} images...")
 for i, item in enumerate(dataset):
     image_path = item.get("processed_path")
-    constraint = item.get("constraint")
+    constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
     
     if not image_path or not os.path.exists(image_path):
         print(f"WARNING: Skipping missing image: {image_path}")
