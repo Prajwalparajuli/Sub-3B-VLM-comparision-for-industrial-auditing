@@ -1,8 +1,12 @@
+import os
+# Force single-GPU mode: prevents bitsandbytes/accelerate from spreading layers
+# across cuda:0 and cuda:1, which causes torch.gather failures in beam search.
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
 import torch
 import gc
 import types
 import math
-import os
 from PIL import Image
 from transformers import AutoModel, AutoTokenizer, BitsAndBytesConfig
 from inference_utils import load_preprocessed_metadata, get_standard_prompt, save_results
@@ -10,6 +14,7 @@ from inference_utils import load_preprocessed_metadata, get_standard_prompt, sav
 # 1. Setup Device
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using device: {device}")
+
 
 # 2. Load Model & Tokenizer
 local_model_path = "models/MiniCPM"
