@@ -1,0 +1,13 @@
+artifact_tag,SmolVLM_acc,SmolVLM_correct,SmolVLM_wrong,SmolVLM_no_verdict,SmolVLM_total,InternVL2_acc,InternVL2_correct,InternVL2_wrong,InternVL2_no_verdict,InternVL2_total,Janus_acc,Janus_correct,Janus_wrong,Janus_no_verdict,Janus_total,Qwen2-VL_acc,Qwen2-VL_correct,Qwen2-VL_wrong,Qwen2-VL_no_verdict,Qwen2-VL_total,MiniCPM_acc,MiniCPM_correct,MiniCPM_wrong,MiniCPM_no_verdict,MiniCPM_total
+Clean,0.1912,13,26,29,68,0.3676,25,38,5,68,0.5735,39,19,10,68,0.4118,28,35,5,68,0.5882,40,21,7,68
+Distorted,0.0,0,1,1,2,0.0,0,2,0,2,0.5,1,1,0,2,0.0,0,0,2,2,0.5,1,1,0,2
+Glare,0.3333,4,5,3,12,0.5,6,6,0,12,0.4167,5,6,1,12,0.25,3,9,0,12,0.4167,5,6,1,12
+Glare/ Oblique Angle,0.5,3,3,0,6,0.6667,4,2,0,6,0.5,3,3,0,6,0.5,3,3,0,6,0.3333,2,4,0,6
+Low Contrast,0.5,6,5,1,12,0.5833,7,5,0,12,0.4167,5,7,0,12,0.4167,5,6,1,12,0.4167,5,6,1,12
+Low Resolution,0.0556,2,11,23,36,0.3611,13,16,7,36,0.3056,11,10,15,36,0.1667,6,30,0,36,0.3611,13,14,9,36
+Oblique Angle,0.4,12,11,7,30,0.6,18,11,1,30,0.4667,14,16,0,30,0.5,15,15,0,30,0.5333,16,8,6,30
+Oblique Angle/ Low Resolution,0.0,0,2,0,2,0.5,1,1,0,2,0.5,1,1,0,2,0.5,1,1,0,2,0.5,1,1,0,2
+Oblique Angle/ Obstruction,1.0,2,0,0,2,0.5,1,1,0,2,0.5,1,1,0,2,0.5,1,1,0,2,0.5,1,0,1,2
+Obstruction,0.5,5,4,1,10,0.5,5,4,1,10,0.5,5,5,0,10,0.4,4,5,1,10,0.5,5,5,0,10
+Texture Overlap,0.1667,3,4,11,18,0.2222,4,13,1,18,0.1667,3,12,3,18,0.1111,2,7,9,18,0.4444,8,10,0,18
+Unclear image,0.0,0,0,2,2,0.0,0,2,0,2,0.0,0,2,0,2,0.0,0,2,0,2,0.0,0,2,0,2

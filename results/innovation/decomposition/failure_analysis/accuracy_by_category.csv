@@ -1,0 +1,3 @@
+category,SmolVLM_acc,SmolVLM_total,InternVL2_acc,InternVL2_total,Janus_acc,Janus_total,Qwen2-VL_acc,Qwen2-VL_total,MiniCPM_acc,MiniCPM_total
+guage,0.49,100,0.51,100,0.24,100,0.53,100,0.48,100
+pipeline,0.41,100,0.3,100,0.15,100,0.8,100,0.7,100

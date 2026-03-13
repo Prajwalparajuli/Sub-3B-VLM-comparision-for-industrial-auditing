@@ -1,0 +1,6 @@
+model,images_profiled,avg_peak_vram_gb,max_peak_vram_gb,avg_inference_time_sec,images_per_minute
+smolvlm,50,0.997,0.997,1.96,30.69
+internvl2,50,1.403,1.403,6.45,9.3
+janus,50,1.922,1.923,7.58,7.91
+qwen2_vl,50,2.123,2.161,7.62,7.88
+minicpm,50,4.51,4.524,10.61,5.65

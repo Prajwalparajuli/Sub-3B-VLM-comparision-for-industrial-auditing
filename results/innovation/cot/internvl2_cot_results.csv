@@ -1,0 +1,1739 @@
+index,image_id,category,artifact_tag,ground_truth_value,unit,logic_constraint,expected_value,rule_id,reasoning,hard_case_flag,expected_verdict,full_path,processed_path,constraint,model_response
+1,guage (1).jpg,guage,Oblique Angle,0.15,bar,Alert if pressure exceeds 0.10 bar.,0.15 bar,Rule A,Value is 0.15. 0.15 > 0.10.,1,UNSAFE,Dataset/Guages/guage (1).jpg,Data_Preprocessed/guage (1).jpg,Oblique Angle,"Step 1: Observations:
+- The gauge is a pressure gauge.
+- It has a white face with black markings and numbers indicating the pressure range from 0 to 1.5 bar.
+
+Step 2: Rule Application:
+The safety rule states that if the pressure exceeds 0.10 bar, an alert should be given.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+2,guage (1).jpg,guage,Oblique Angle,0.15,bar,Alert if pressure exceeds 0.20 bar.,0.15 bar,Rule B,Value is 0.15. 0.15 < 0.20.,1,SAFE,Dataset/Guages/guage (1).jpg,Data_Preprocessed/guage (1).jpg,Oblique Angle,"Step 1: Observations:
+- The gauge is a pressure gauge.
+- It has a white face with black markings and numbers indicating the pressure range from 0 to 1.5 bar.
+
+Step 2: Rule Application:
+The safety rule states that an alert should be given if the pressure exceeds 0.20 bar. Since the pressure reading on the gauge is 1.0 bar, which falls within the safe limit of 0.20 bar, there is no need for an alert.
+
+Step 3: Verdict:
+Final Verdict: SAFE"
+3,guage (10).jpg,guage,,0,bar,Alert if pressure is above 0.05 bar.,0 bar,Rule A,Value is 0. 0 < 0.05.,0,SAFE,Dataset/Guages/guage (10).jpg,Data_Preprocessed/guage (10).jpg,,"Step 1 - Observation:
+The image shows a pressure gauge attached to a blue pipe. The gauge is mounted on the blue pipe and has a red needle pointing slightly above the 0.5 bar mark.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading is above 0.05 bar, an alert should be shown.
+Observation: The pressure reading of the gauge is just below the 0.5 bar mark, which falls within the safe range for industrial applications.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+4,guage (10).jpg,guage,,0,bar,Alert if system is non-pressurized (0 bar).,0 bar,Rule B,Value is 0. System is non-pressurized.,0,UNSAFE,Dataset/Guages/guage (10).jpg,Data_Preprocessed/guage (10).jpg,,"Step 1 - Observation:
+The image shows a pressure gauge attached to a blue pipe. The gauge is mounted on the blue pipe and has a red needle pointing towards the ""0"" mark, indicating that the system is non-pressurized at 0 bar.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the system is non-pressurized (0 bar), an alert should be shown.
+Observation: The gauge is set to 0 bar, which means the system is not pressurized.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+5,guage (11).jpg,guage,Oblique Angle,25,kPa,Normal range is < 20 kPa. Alert if over.,25 kPa,Rule A,Value is 25. 25 > 20.,1,UNSAFE,Dataset/Guages/guage (11).jpg,Data_Preprocessed/guage (11).jpg,Oblique Angle,"Step 1 - Observations:
+- The gauge is a pressure gauge with a white face and black numbers.
+- It has two red adjustment knobs on the left side, one for setting the pressure and another for adjusting the needle position.
+
+Step 2 - Rule Application: 
+The normal range of this gauge is < 20 kPa. If the pressure reading exceeds this range, an alert should be shown to notify the user that there might be an issue or danger due to overpressure.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+6,guage (11).jpg,guage,Oblique Angle,25,kPa,Normal range is < 30 kPa. Alert if over.,25 kPa,Rule B,Value is 25. 25 < 30.,1,SAFE,Dataset/Guages/guage (11).jpg,Data_Preprocessed/guage (11).jpg,Oblique Angle,"Step 1 - Observations:
+- The gauge is a pressure gauge with a white face and black numbers.
+- It has two red adjustment knobs, one on the left side (red) and another on the right side (blue).
+- The scale of the gauge ranges from 0 to 30 kPa.
+
+Step 2 - Rule Application: 
+The normal range for this gauge is < 30 kPa. If the reading exceeds this range, an alert should be shown.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+7,guage (12).jpg,guage,Oblique Angle,100,,Alert if reading exceeds 80 NA.,100 NA,Rule A,Value is 100. 100 > 80.,1,UNSAFE,Dataset/Guages/guage (12).jpg,Data_Preprocessed/guage (12).jpg,Oblique Angle,Final Verdict: UNSAFE
+8,guage (12).jpg,guage,Oblique Angle,100,,Alert if reading exceeds 120 NA.,100 NA,Rule B,Value is 100. 100 < 120.,1,SAFE,Dataset/Guages/guage (12).jpg,Data_Preprocessed/guage (12).jpg,Oblique Angle,Final Verdict: UNSAFE
+9,guage (13).jpg,guage,Obstruction,2,bar,Operating limit is 1.5 bar. Alert if over.,2 bar,Rule A,Value is 2. 2 > 1.5.,1,UNSAFE,Dataset/Guages/guage (13).jpg,Data_Preprocessed/guage (13).jpg,Obstruction,"Step 1 - Observation:
+- The image shows two industrial gauges mounted on metal pipes.
+- Both gauges have a red and black dial with numerical readings and unit indicators (bar).
+- The gauge on the left has a numeric reading of approximately 2.5 bar, while the one on the right has a numeric reading of approximately 3.0 bar.
+
+Step 2 - Rule Application: 
+Operating limit is 1.5 bar. Alert if over.
+
+Observation: Yes, both gauges are within the operating limit of 1.5 bar, as indicated by their readings.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+10,guage (13).jpg,guage,Obstruction,2,bar,Operating limit is 3.0 bar. Alert if over.,2 bar,Rule B,Value is 2. 2 < 3.0.,1,SAFE,Dataset/Guages/guage (13).jpg,Data_Preprocessed/guage (13).jpg,Obstruction,"Step 1 - Observations:
+- The gauge on the left is showing a reading of approximately 2.5 bar.
+- The gauge on the right is also showing a reading of approximately 3.0 bar.
+
+Step 2 - Rule Application: 
+Operating limit is 3.0 bar. Alert if over. Since both gauges are within the operating limit, there is no need to alert or take any action.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+11,guage (14).jpg,guage,,18,lbf/in2,Alert if pressure exceeds 14 lbf/in2.,18 lbf/in2,Rule A,Value is 18. 18 > 14.,0,UNSAFE,Dataset/Guages/guage (14).jpg,Data_Preprocessed/guage (14).jpg,,"Step 1: Observations:
+- The gauge is a pressure gauge.
+- It has a scale from 0 to 14 lbf/in², with markings at intervals of 2 lbf/in² (5, 10, 15).
+- The needle is pointing slightly above the 10 mark.
+
+Step 2: Rule Application:
+The safety rule states that an alert should be given if the pressure exceeds 14 lbf/in². Since the pressure reading is just below this threshold, it does not meet the rule.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+12,guage (14).jpg,guage,,18,lbf/in2,Alert if pressure exceeds 22 lbf/in2.,18 lbf/in2,Rule B,Value is 18. 18 < 22.,0,SAFE,Dataset/Guages/guage (14).jpg,Data_Preprocessed/guage (14).jpg,,"Step 1 - Observation:
+The image shows a gauge with the following numeric reading and unit:
+
+- Gauge: 20 lbf/in²
+- Unit: kN/m²
+
+Step 2 - Rule Application:
+According to the safety rule, ""Alert if pressure exceeds 22 lbf/in²,"" we need to determine whether the observation from Step 1 (the gauge's reading) meets this requirement.
+
+Since the gauge is showing a pressure of 20 lbf/in², which falls within the range specified by the rule (22 lbf/in²), it does not meet the alert condition. Therefore, the final verdict is:
+
+Final Verdict: UNSAFE"
+13,guage (15).jpg,guage,Low Resolution,0,,Alert if reading is above 5 NA.,0 NA,Rule A,Value is 0. 0 < 5.,1,SAFE,Dataset/Guages/guage (15).jpg,Data_Preprocessed/guage (15).jpg,Low Resolution,"Step 1 - Observation:
+- The image shows three gauge gauges mounted on a dark surface.
+- Each gauge has a red needle indicating the reading, and they are connected to metal pipes with brass fittings.
+
+Step 2 - Rule Application: 
+The safety rule is: Alert if reading is above 5 NA. 
+
+Observation: The numeric readings of the gauges are not above 5 NA (not applicable).
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+14,guage (15).jpg,guage,Low Resolution,0,,Alert if system is at 0 NA.,0 NA,Rule B,Value is 0. System is at 0.,1,UNSAFE,Dataset/Guages/guage (15).jpg,Data_Preprocessed/guage (15).jpg,Low Resolution,"Step 1 - Observation:
+The image shows three pressure gauges mounted on a dark surface. The gauges are circular with white backgrounds and red markings, and they have black numbers indicating the units of measurement (pressure in psi). Each gauge has two red lines pointing to the top, which likely indicate the readings.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the system is at 0 N/A (zero), an alert should be given. Since all three gauges read 0 N/A, there is no indication that the system is at zero N/A.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+15,guage (16).jpg,guage,,125,kN/m2,Alert if value exceeds 100 kN/m2.,125 kN/m2,Rule A,Value is 125. 125 > 100.,0,UNSAFE,Dataset/Guages/guage (16).jpg,Data_Preprocessed/guage (16).jpg,,"Step 1 - Observation:
+The image shows a gauge with a numeric reading of ""15"" and an indication that it is in the ""DANGER"" zone. The unit of measurement is not specified.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the value exceeds 100 kN/m², the alert should be given.
+Observation: The gauge's needle is pointing at approximately 15 kN/m².
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+16,guage (16).jpg,guage,,125,kN/m2,Alert if value exceeds 150 kN/m2.,125 kN/m2,Rule B,Value is 125. 125 < 150.,0,SAFE,Dataset/Guages/guage (16).jpg,Data_Preprocessed/guage (16).jpg,,"Step 1 - Observation:
+The image shows a gauge with a numeric reading of 150 kN/m2. The unit is in kilonewtons per square meter (kN/m²).
+
+Step 2 - Rule Application: 
+According to the safety rule, if the value exceeds 150 kN/m², it should be alert.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+17,guage (17).jpg,guage,Oblique Angle,200,psi,Alert if pressure is > 160 psi.,200 psi,Rule A,Value is 200. 200 > 160.,1,UNSAFE,Dataset/Guages/guage (17).jpg,Data_Preprocessed/guage (17).jpg,Oblique Angle,Final Verdict: UNSAFE
+18,guage (17).jpg,guage,Oblique Angle,200,psi,Alert if pressure is > 240 psi.,200 psi,Rule B,Value is 200. 200 < 240.,1,SAFE,Dataset/Guages/guage (17).jpg,Data_Preprocessed/guage (17).jpg,Oblique Angle,Final Verdict: UNSAFE
+19,guage (18).jpg,guage,Oblique Angle,30,,Alert if reading exceeds 24 NA.,30 NA,Rule A,Value is 30. 30 > 24.,1,UNSAFE,Dataset/Guages/guage (18).jpg,Data_Preprocessed/guage (18).jpg,Oblique Angle,Final Verdict: UNSAFE
+20,guage (18).jpg,guage,Oblique Angle,30,,Alert if reading exceeds 36 NA.,30 NA,Rule B,Value is 30. 30 < 36.,1,SAFE,Dataset/Guages/guage (18).jpg,Data_Preprocessed/guage (18).jpg,Oblique Angle,"Step 1: 
+- Observation:
+  - The image shows a gauge with a needle pointing to approximately 36.0 NA.
+  - The gauge is mounted on a blue pipe.
+
+Step 2:
+- Rule Application:
+  - According to the safety rule, if the reading exceeds 36 NA, an alert should be shown.
+
+Step 3:
+- Verdict:
+  - Final Verdict: SAFE"
+21,guage (19).jpg,guage,Oblique Angle,2.2,liter,Alert if level is > 1.7 liter.,2.2 liter,Rule A,Value is 2.2. 2.2 > 1.7.,1,UNSAFE,Dataset/Guages/guage (19).jpg,Data_Preprocessed/guage (19).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a hand holding a red pipe with a blue pressure gauge attached to it. The gauge is mounted on a blue and white plastic pipe that has a rough surface, indicating possible wear or damage.
+
+Step 2 - Rule Application: 
+The level of the pressure gauge reading is above the safe limit of 1.7 liters per square meter (L/sqm). This means the pressure is higher than what is considered safe in industrial settings.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+22,guage (19).jpg,guage,Oblique Angle,2.2,liter,Alert if level is > 2.7 liter.,2.2 liter,Rule B,Value is 2.2. 2.2 < 2.7.,1,SAFE,Dataset/Guages/guage (19).jpg,Data_Preprocessed/guage (19).jpg,Oblique Angle,"Step 1 - OBSERVATION:
+The image shows a hand holding a red pipe with a blue and white gauge attached to it. The gauge is mounted on a blue flexible hose that connects the red pipe.
+
+Observation: The numeric reading of the gauge is approximately 2.7 liters, which falls within the safe range for this type of measurement (2.7-3.5 liters).
+
+Step 2 - RULE APPLICATION:
+The safety rule states that if the level is > 2.7 liter, an alert should be shown.
+
+Step 3 - VERDICT:
+Final Verdict: SAFE"
+23,guage (2).jpg,guage,Oblique Angle,0,kg/cm2,Alert if value exceeds 2 kg/cm2.,0 kg/cm2,Rule A,Value is 0. 0 < 2.,1,SAFE,Dataset/Guages/guage (2).jpg,Data_Preprocessed/guage (2).jpg,Oblique Angle,"Step 1 - OBSERVATION:
+The image shows a pressure gauge with a white body and red markings. The gauge has a black needle pointing to approximately 2 kg/cm².
+
+Step 2 - RULE APPLICATION: According to the safety rule, if the value exceeds 2 kg/cm², an alert should be given.
+Observation: The needle is pointing just above 2 kg/cm².
+Rule Application: Yes, the observation meets the rule as the value does not exceed 2 kg/cm².
+
+Step 3 - VERDICT: FINAL Verdict: SAFE"
+24,guage (2).jpg,guage,Oblique Angle,0,kg/cm2,Alert if system pressure drops to 0 kg/cm2.,0 kg/cm2,Rule B,Value is 0. System pressure is at 0.,1,UNSAFE,Dataset/Guages/guage (2).jpg,Data_Preprocessed/guage (2).jpg,Oblique Angle,"Step 1 - OBSERVATION:
+The image shows a pressure gauge with a white body and black markings. The gauge has a red scale ranging from 0 to 60 kg/cm², marked in increments of 10.
+
+Step 2 - RULE APPLICATION: 
+According to the safety rule, if the system pressure drops below 0 kg/cm², an alert should be given.
+
+Observation: The gauge is set at approximately 45 kg/cm².
+Rule Application: Since the gauge is set at 45 kg/cm² (which is above the safe operating pressure), an alert should be given.
+
+Final Verdict: SAFE"
+25,guage (20).jpg,guage,Glare,4,kgf/cm2,Alert if needle is past 3.0 kgf/cm2.,4 kgf/cm2,Rule A,Value is 4. 4 > 3.0.,1,UNSAFE,Dataset/Guages/guage (20).jpg,Data_Preprocessed/guage (20).jpg,Glare,"Step 1 - Observation:
+The image shows a gauge with a needle pointing to approximately 3.0 kgf/cm2.
+
+Step 2 - Rule Application: 
+The safety rule is: Alert if needle is past 3.0 kgf/cm2.
+Observation: The needle of the gauge is just above 3.0 kgf/cm2, which falls within the safe threshold for this rule.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+26,guage (20).jpg,guage,Glare,4,kgf/cm2,Alert if needle is past 5.0 kgf/cm2.,4 kgf/cm2,Rule B,Value is 4. 4 < 5.0.,1,SAFE,Dataset/Guages/guage (20).jpg,Data_Preprocessed/guage (20).jpg,Glare,"Step 1 - Observation:
+The image shows a gauge mounted on a pipe. The gauge is set to 5 kgf/cm2, which falls within the safe range for industrial gauges.
+
+Step 2 - Rule Application: 
+The rule states that if the needle of the gauge is past 5.0 kgf/cm2, an alert should be given.
+Observation: The needle of the gauge is just above 5.0 kgf/cm2.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+27,guage (21).jpg,guage,Low Contrast,2.5,kPa,Alert if reading exceeds 2.0 kPa.,2.5 kPa,Rule A,Value is 2.5. 2.5 > 2.0.,1,UNSAFE,Dataset/Guages/guage (21).jpg,Data_Preprocessed/guage (21).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a metallic gauge mounted on a pipe. The gauge is set to 2.0 kPa.
+
+Step 2 - Rule Application: 
+The safety rule states that an alert should be given if the reading exceeds 2.0 kPa. Since the reading of the gauge is 2.0 kPa, it does not exceed this threshold.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+28,guage (21).jpg,guage,Low Contrast,2.5,kPa,Alert if reading exceeds 3.0 kPa.,2.5 kPa,Rule B,Value is 2.5. 2.5 < 3.0.,1,SAFE,Dataset/Guages/guage (21).jpg,Data_Preprocessed/guage (21).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a metallic gauge mounted on a pipe. The gauge has a white face with black markings and is set to measure pressure in kilopascals (kPa). The reading displayed on the gauge is approximately 3.0 kPa.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the reading exceeds 3.0 kPa, an alert should be shown.
+Observation: The gauge's reading of 3.0 kPa falls within the threshold for exceeding the safe limit, so an alert should be shown.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+29,guage (22).jpg,guage,Oblique Angle,1.5,Pa,Alert if value > 1.2 Pa.,1.5 Pa,Rule A,Value is 1.5. 1.5 > 1.2.,1,UNSAFE,Dataset/Guages/guage (22).jpg,Data_Preprocessed/guage (22).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a man working on a wall with various pipes and fittings. The man is wearing a yellow hard hat, safety glasses, and a blue shirt. He appears to be adjusting or inspecting the pipe.
+
+Step 2 - Rule Application: 
+The value of the gauge reading is 1.2 Pa (pounds per square inch). This value falls within the safe range for pressure gauges, which typically have readings between 0.5 and 1.5 Pa.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+30,guage (22).jpg,guage,Oblique Angle,1.5,Pa,Alert if value > 1.8 Pa.,1.5 Pa,Rule B,Value is 1.5. 1.5 < 1.8.,1,SAFE,Dataset/Guages/guage (22).jpg,Data_Preprocessed/guage (22).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a man working on a wall with various pipes and fittings. The man is wearing a yellow hard hat, safety glasses, and a blue shirt. He appears to be adjusting or inspecting the pipe.
+
+Step 2 - Rule Application: 
+The value of the gauge reading is 1.8 Pa. According to the safety rule, if the value exceeds 1.8 Pa, an alert should be shown.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+31,guage (23).jpg,guage,,23,celcius,Alert if temperature exceeds 18 celcius.,23 celcius,Rule A,Value is 23. 23 > 18.,0,UNSAFE,Dataset/Guages/guage (23).jpg,Data_Preprocessed/guage (23).jpg,,"Step 1 - Observation:
+The image shows a gauge mounted on a metal pipe. The gauge is displaying a temperature reading of approximately 40 degrees Celsius.
+
+Step 2 - Rule Application: 
+Alert if temperature exceeds 18 celcius.
+Observation: The temperature reading displayed by the gauge is close to 18 degrees Celsius, which falls within the threshold for an alert.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+32,guage (23).jpg,guage,,23,celcius,Alert if temperature exceeds 28 celcius.,23 celcius,Rule B,Value is 23. 23 < 28.,0,SAFE,Dataset/Guages/guage (23).jpg,Data_Preprocessed/guage (23).jpg,,"Step 1 - Observation:
+The image shows a large industrial gauge mounted on a metal pipe. The gauge is set to approximately 60 degrees Celsius.
+
+Step 2 - Rule Application: 
+Alert if temperature exceeds 28 celcius.
+Observation: The gauge indicates that the temperature is close to 60 degrees Celsius, which falls within the threshold for an alert at 28 degrees Celsius.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+33,guage (24).jpg,guage,,1,bar,Alert if pressure exceeds 0.8 bar.,1 bar,Rule A,Value is 1. 1 > 0.8.,0,UNSAFE,Dataset/Guages/guage (24).jpg,Data_Preprocessed/guage (24).jpg,,"Step 1 - Observation:
+The gauge is a pressure gauge with the following numeric reading: 0.8 bar.
+
+Unit: Bar
+
+Step 2 - Rule Application:
+According to the safety rule, if the pressure exceeds 0.8 bar, an alert should be given.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+34,guage (24).jpg,guage,,1,bar,Alert if pressure exceeds 1.2 bar.,1 bar,Rule B,Value is 1. 1 < 1.2.,0,SAFE,Dataset/Guages/guage (24).jpg,Data_Preprocessed/guage (24).jpg,,"Step 1 - Observation:
+The gauge is a pressure gauge with the following numeric reading: 1.5 bar.
+
+Unit: Bar
+
+Step 2 - Rule Application:
+According to the safety rule, if the pressure exceeds 1.2 bar, an alert should be given.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+35,guage (25).jpg,guage,Oblique Angle,0,,Alert if reading is > 5 NA.,0 NA,Rule A,Value is 0. 0 < 5.,1,SAFE,Dataset/Guages/guage (25).jpg,Data_Preprocessed/guage (25).jpg,Oblique Angle,"Step 1: 
+- Observations:
+    - Gauge 1: The gauge is reading approximately 2.5 bar.
+    - Gauge 2: The gauge is reading approximately 3.0 bar.
+
+- Rule Application:
+    - Alert if reading is > 5 NA (Not Applicable).
+
+Step 2:
+- Observation of the physical surface condition:
+    - Gauge 1: The surface appears to be smooth and shiny, with no visible signs of corrosion or damage.
+    - Gauge 2: The surface also looks smooth but slightly worn compared to Gauge 1.
+
+- Rule Application:
+    - No rule application since both gauges are in good condition.
+
+Step 3:
+- Verdict:
+    - Final Verdict: UNSAFE"
+36,guage (25).jpg,guage,Oblique Angle,0,,Alert if system is at 0 NA.,0 NA,Rule B,Value is 0. System is at 0.,1,UNSAFE,Dataset/Guages/guage (25).jpg,Data_Preprocessed/guage (25).jpg,Oblique Angle,"Step 1: 
+- Observations:
+    - The gauge on the left is showing a reading of approximately 0.5.
+    - The gauge on the right is also showing a reading of approximately 0.5.
+
+Step 2:
+- Rule Application: Alert if system is at 0 NA (zero).
+- Observation: Both gauges are showing readings of 0.5, which indicates that the system is not operating within its operational range.
+
+Step 3:
+- Verdict: Final Verdict: UNSAFE"
+37,guage (26).jpg,guage,,400,kPa,Alert if value is > 320 kPa.,400 kPa,Rule A,Value is 400. 400 > 320.,0,UNSAFE,Dataset/Guages/guage (26).jpg,Data_Preprocessed/guage (26).jpg,,"Step 1 - Observation:
+The image shows a pressure gauge attached to a pipe. The gauge is mounted on a metal bracket and has a white dial with black markings indicating the unit of measurement (kPa). The reading displayed on the gauge is approximately 320 kPa.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the value is > 320 kPa, an alert should be shown.
+Observation: The reading on the gauge is indeed above the threshold for safe operation at 320 kPa.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+38,guage (26).jpg,guage,,400,kPa,Alert if value is > 480 kPa.,400 kPa,Rule B,Value is 400. 400 < 480.,0,SAFE,Dataset/Guages/guage (26).jpg,Data_Preprocessed/guage (26).jpg,,Final Verdict: UNSAFE
+39,guage (27).jpg,guage,Oblique Angle,1000,mbar,Alert if pressure exceeds 800 mbar.,1000 mbar,Rule A,Value is 1000. 1000 > 800.,1,UNSAFE,Dataset/Guages/guage (27).jpg,Data_Preprocessed/guage (27).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a pressure gauge placed on a wooden surface. The gauge is circular with a white face and black markings, indicating the unit of measurement as millibars (mbar). The needle of the gauge is pointing slightly above the 800 mark.
+
+Step 2 - Rule Application:
+According to the safety rule, if the pressure exceeds 800 mbar, an alert should be given. Since the pressure reading is just below this threshold, it does not meet the rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+40,guage (27).jpg,guage,Oblique Angle,1000,mbar,Alert if pressure exceeds 1200 mbar.,1000 mbar,Rule B,Value is 1000. 1000 < 1200.,1,SAFE,Dataset/Guages/guage (27).jpg,Data_Preprocessed/guage (27).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a pressure gauge placed on a wooden surface. The gauge is circular with a white face and black markings, indicating the unit of measurement as millibars (mbar). The reading displayed on the gauge is approximately 400 mbar.
+
+Step 2 - Rule Application:
+According to the safety rule, if the pressure exceeds 1200 mbar, an alert should be given. Since the current reading on the gauge is close to this threshold, it does not meet the rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+41,guage (28).jpg,guage,Oblique Angle,125,psi,Alert if pressure exceeds 100 psi.,125 psi,Rule A,Value is 125. 125 > 100.,1,UNSAFE,Dataset/Guages/guage (28).jpg,Data_Preprocessed/guage (28).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a pressure gauge attached to a pipe. The gauge is mounted on a black plastic casing and has a red adjustment knob.
+
+Step 2 - Rule Application: 
+The safety rule states that an alert should be given if the pressure exceeds 100 psi.
+Observation: The pressure reading of the gauge is approximately 105 psi (105 + 32 = 137).
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+42,guage (28).jpg,guage,Oblique Angle,125,psi,Alert if pressure exceeds 150 psi.,125 psi,Rule B,Value is 125. 125 < 150.,1,SAFE,Dataset/Guages/guage (28).jpg,Data_Preprocessed/guage (28).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a pressure gauge attached to a pipe. The gauge is mounted on a black plastic casing with a red cap and has a white dial that displays the reading in psi (pounds per square inch). The scale of the gauge ranges from 0 to 200, marked at intervals of 50.
+
+Step 2 - Rule Application: 
+The safety rule states that an alert should be given if the pressure exceeds 150 psi. Since the pressure reading displayed by the gauge is within this range, there is no immediate danger or need for immediate attention.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+43,guage (29).jpg,guage,Oblique Angle,0,in hg,Alert if vacuum > 5 in hg.,0 in hg,Rule A,Value is 0. 0 < 5.,1,SAFE,Dataset/Guages/guage (29).jpg,Data_Preprocessed/guage (29).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a pressure gauge mounted on a white pipe. The gauge is in the center of the image and has a red background with black markings.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the vacuum level is above 5 inches of mercury (in hg), an alert should be shown.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+44,guage (29).jpg,guage,Oblique Angle,0,in hg,Alert if vacuum drops to 0 in hg.,0 in hg,Rule B,Value is 0. Vacuum is at 0.,1,UNSAFE,Dataset/Guages/guage (29).jpg,Data_Preprocessed/guage (29).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a pressure gauge mounted on a white pipe. The gauge has a red needle pointing to approximately 20 psi (psi). 
+
+Step 2 - Rule Application: 
+According to the safety rule, if the vacuum drops below 0 in Hg, an alert should be given.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+45,guage (3).jpg,guage,Low Contrast,22,bar,Alert if pressure > 17 bar.,22 bar,Rule A,Value is 22. 22 > 17.,1,UNSAFE,Dataset/Guages/guage (3).jpg,Data_Preprocessed/guage (3).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a gauge with a scale ranging from 0 to 40, marked in millibars (bar). The needle is pointing at approximately 25.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading exceeds 17 bar, an alert should be given. In this case, the pressure reading is 25 bar.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+46,guage (3).jpg,guage,Low Contrast,22,bar,Alert if pressure > 27 bar.,22 bar,Rule B,Value is 22. 22 < 27.,1,SAFE,Dataset/Guages/guage (3).jpg,Data_Preprocessed/guage (3).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a gauge with a scale from 0 to 40, marked in millibars (bar). The needle is pointing at approximately 27.5 bar.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading exceeds 27 bar, an alert should be given.
+Observation: The pressure reading is just above the threshold of 27 bar.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+47,guage (30).jpg,guage,Oblique Angle,22,psi,Alert if pressure > 17 psi.,22 psi,Rule A,Value is 22. 22 > 17.,1,UNSAFE,Dataset/Guages/guage (30).jpg,Data_Preprocessed/guage (30).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a red fire hydrant with a white gauge mounted on top. The gauge is displaying the pressure reading as ""30 psi"" and has markings for different levels of pressure, ranging from 0 to 50 psi.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading exceeds 17 psi, an alert should be given. In this case, the pressure reading is 30 psi, which falls within the range of 17 psi to 24 psi.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+48,guage (30).jpg,guage,Oblique Angle,22,psi,Alert if pressure > 27 psi.,22 psi,Rule B,Value is 22. 22 < 27.,1,SAFE,Dataset/Guages/guage (30).jpg,Data_Preprocessed/guage (30).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a red fire hydrant with a white gauge mounted on top. The gauge is displaying the pressure reading as 27 psi.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading exceeds 27 psi, an alert should be given.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+49,guage (31).jpg,guage,Glare/ Oblique Angle,0.02,Mpa,Alert if > 0.01 Mpa.,0.02 Mpa,Rule A,Value is 0.02. 0.02 > 0.01.,1,UNSAFE,Dataset/Guages/guage (31).jpg,Data_Preprocessed/guage (31).jpg,Glare/ Oblique Angle,"Step 1 - Observation:
+The image shows a pressure gauge mounted on a blue pipe. The gauge is in the center of the image, and its reading is approximately 0.02 MPa.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading exceeds 0.01 MPa, an alert should be shown.
+Observation: The pressure reading is 0.02 MPa.
+Rule Application: Yes, the observation meets the rule because it exceeds the threshold set by the safety rule (0.01 MPa).
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+50,guage (31).jpg,guage,Glare/ Oblique Angle,0.02,Mpa,Alert if > 0.03 Mpa.,0.02 Mpa,Rule B,Value is 0.02. 0.02 < 0.03.,1,SAFE,Dataset/Guages/guage (31).jpg,Data_Preprocessed/guage (31).jpg,Glare/ Oblique Angle,"Step 1 - Observation:
+The image shows a pressure gauge mounted on a blue pipe. The gauge is in the center of the image, and its reading is approximately 0.03 MPa.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading exceeds 0.03 MPa, an alert should be shown.
+Observation: The pressure reading is 0.03 MPa.
+Rule Application: Yes, the observation satisfies the rule as it falls within the threshold of 0.03 MPa.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+51,guage (32).jpg,guage,Low Resolution,0.8,bar,Alert if > 0.6 bar.,0.8 bar,Rule A,Value is 0.8. 0.8 > 0.6.,1,UNSAFE,Dataset/Guages/guage (32).jpg,Data_Preprocessed/guage (32).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a gauge with a white face and black numbers. The scale is marked in millimeters (mm). The reading on the gauge is approximately 3 mm.
+
+Step 2 - Rule Application:
+According to the safety rule, if the pressure reading exceeds 0.6 bar, an alert should be given.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+52,guage (32).jpg,guage,Low Resolution,0.8,bar,Alert if > 1.0 bar.,0.8 bar,Rule B,Value is 0.8. 0.8 < 1.0.,1,SAFE,Dataset/Guages/guage (32).jpg,Data_Preprocessed/guage (32).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a gauge with a numeric reading of approximately 3.0 and an additional measurement marked as ""bar"" indicating the pressure is above atmospheric pressure.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading is greater than or equal to 1.0 bar, an alert should be shown.
+Observation: The pressure reading is approximately 3.0, which is within the range for a pressure reading above atmospheric pressure (approximately 1.0 bar).
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+53,guage (33).jpg,guage,Glare,3.6,bar,Alert if > 2.8 bar.,3.6 bar,Rule A,Value is 3.6. 3.6 > 2.8.,1,UNSAFE,Dataset/Guages/guage (33).jpg,Data_Preprocessed/guage (33).jpg,Glare,"Step 1 - Observation:
+The gauge is a pressure gauge with a scale ranging from 0 to 3.5 bar, marked in millibars (MPa). The needle of the gauge is pointing slightly above the 2.8 MPa mark.
+
+Step 2 - Rule Application: 
+According to the safety rule, an alert should be given if the reading exceeds 2.8 MPa.
+Observation: The pressure reading is just below the threshold for exceeding the safe limit.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+54,guage (33).jpg,guage,Glare,3.6,bar,Alert if > 4.4 bar.,3.6 bar,Rule B,Value is 3.6. 3.6 < 4.4.,1,SAFE,Dataset/Guages/guage (33).jpg,Data_Preprocessed/guage (33).jpg,Glare,"Step 1 - Observation:
+The gauge is a pressure gauge with a scale ranging from 0 to 4.4 bar, marked in millibars (MPa). The needle of the gauge is pointing slightly above the 0.5 mark.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure reading exceeds 4.4 MPa, an alert should be given.
+Observation: The pressure reading is just below the threshold for exceeding the safe limit, so it does not meet the rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+55,guage (34).jpg,guage,Oblique Angle/ Low Resolution,83,kPa,Alert if pressure exceeds 66 kPa.,83 kPa,Rule A,Value is 83. 83 > 66.,1,UNSAFE,Dataset/Guages/guage (34).jpg,Data_Preprocessed/guage (34).jpg,Oblique Angle/ Low Resolution,"Step 1 - Observation:
+The image shows a pressure gauge mounted on a pipe. The gauge is in use, and the reading indicates that the pressure is approximately 60 kPa.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the pressure exceeds 66 kPa, an alert should be shown.
+Observation: The pressure reading of 60 kPa falls within the threshold set by the safety rule (66 kPa).
+Rule Application Satisfied
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+56,guage (34).jpg,guage,Oblique Angle/ Low Resolution,83,kPa,Alert if pressure exceeds 100 kPa.,83 kPa,Rule B,Value is 83. 83 < 100.,1,SAFE,Dataset/Guages/guage (34).jpg,Data_Preprocessed/guage (34).jpg,Oblique Angle/ Low Resolution,"Step 1: Observation:
+The image shows a pressure gauge mounted on a pipe. The gauge is in use, with the needle pointing slightly above 100 kPa.
+
+Step 2: Rule Application:
+According to the safety rule, if the pressure exceeds 100 kPa, an alert should be shown.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+57,guage (35).jpg,guage,Obstruction,35,Psi,Alert if > 28 Psi.,35 Psi,Rule A,Value is 35. 35 > 28.,1,UNSAFE,Dataset/Guages/guage (35).jpg,Data_Preprocessed/guage (35).jpg,Obstruction,"Step 1 - Observation:
+The image shows two pressure gauges mounted on a pipe. The gauge on the left has a numeric reading of approximately 120 psi and is labeled in kilograms per square centimeter (kg/cm²). The gauge on the right also displays a numeric reading of approximately 120 psi, but it is labeled in kilograms per cubic meter (kg/m³).
+
+Step 2 - Rule Application: According to the safety rule, an alert should be given if > 28 Psi.
+Observation: Both gauges show readings above 28 psi.
+
+Step 3 - Verdict: Final Verdict: UNSAFE"
+58,guage (35).jpg,guage,Obstruction,35,Psi,Alert if > 42 Psi.,35 Psi,Rule B,Value is 35. 35 < 42.,1,SAFE,Dataset/Guages/guage (35).jpg,Data_Preprocessed/guage (35).jpg,Obstruction,"Step 1 - Observation:
+The image shows two pressure gauges mounted on a pipe. The gauge on the left has a numeric reading of approximately 42 psi, and it is set to measure in kilogram per cubic centimeter (kg/cm³). The gauge on the right also measures pressure but is not clearly visible.
+
+Step 2 - Rule Application: 
+According to the safety rule, an alert should be given if the pressure reading exceeds 42 psi.
+Observation: The pressure reading on the gauge on the left is 42 psi, which exceeds the threshold for an alert.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+59,guage (36).jpg,guage,Low Contrast,0.1,Mpa,Alert if > 0.08 Mpa.,0.1 Mpa,Rule A,Value is 0.1. 0.1 > 0.08.,1,UNSAFE,Dataset/Guages/guage (36).jpg,Data_Preprocessed/guage (36).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a gauge mounted on a metal pole. The gauge is set to measure pressure, specifically in MPa (millimeters of pressure). 
+
+Step 2 - Rule Application: 
+According to the safety rule, if the reading exceeds 0.08 MPa, an alert should be shown.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+60,guage (36).jpg,guage,Low Contrast,0.1,Mpa,Alert if > 0.12 Mpa.,0.1 Mpa,Rule B,Value is 0.1. 0.1 < 0.12.,1,SAFE,Dataset/Guages/guage (36).jpg,Data_Preprocessed/guage (36).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a gauge mounted on a metal pole. The gauge is set to measure pressure, specifically in MPa (millimeters of pressure). 
+
+Step 2 - Rule Application: 
+According to the safety rule, if the reading exceeds 0.12 MPa, an alert should be shown.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+61,guage (37).jpg,guage,Low Contrast,160,celcius,Alert if > 128 celcius.,160 celcius,Rule A,Value is 160. 160 > 128.,1,UNSAFE,Dataset/Guages/guage (37).jpg,Data_Preprocessed/guage (37).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a gauge with a white background and black markings. The scale is marked in Celsius (°C) ranging from 0 to 150, with increments of 20. There are two measurement points: one at the top labeled ""WSSN-4111"" and another at the bottom labeled ""150"". A needle pointer indicates that the current reading is approximately 138°C.
+
+Step 2 - Rule Application:
+According to the safety rule, an alert should be given if the temperature exceeds 128 degrees Celsius.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+62,guage (37).jpg,guage,Low Contrast,160,celcius,Alert if > 192 celcius.,160 celcius,Rule B,Value is 160. 160 < 192.,1,SAFE,Dataset/Guages/guage (37).jpg,Data_Preprocessed/guage (37).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a gauge with a white background and black markings. The scale is marked in Celsius (°C) ranging from 0 to 200, with increments of 20. There are two measurement points labeled ""50"" and ""150"". A needle pointer indicates the current reading.
+
+Step 2 - Rule Application: 
+The safety rule states that an alert should be given if the temperature exceeds 192 degrees Celsius.
+
+Step 3 - Verdict:
+Since the needle pointer reads approximately 194°C, which is within the range of 192-200 degrees Celsius, there is no immediate danger or need for an alert according to this rule. Therefore, the final verdict is:
+
+Final Verdict: SAFE"
+63,guage (38).jpg,guage,,60,celcius,Alert if temperature exceeds 48 celcius.,60 celcius,Rule A,Value is 60. 60 > 48.,0,UNSAFE,Dataset/Guages/guage (38).jpg,Data_Preprocessed/guage (38).jpg,,"Step 1 - Observation:
+The image shows a gauge with a scale from 0 to 600 in increments of 10. The needle is pointing at approximately 48.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the temperature exceeds 48 degrees Celsius, an alert should be given.
+Observation: The temperature reading on the gauge is indeed above 48 degrees Celsius.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+64,guage (38).jpg,guage,,60,celcius,Alert if temperature exceeds 72 celcius.,60 celcius,Rule B,Value is 60. 60 < 72.,0,SAFE,Dataset/Guages/guage (38).jpg,Data_Preprocessed/guage (38).jpg,,"Step 1 - Observation:
+The image shows a gauge with a scale from 0 to 600 in increments of 10. The needle is pointing at approximately 50.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the temperature exceeds 72 degrees Celsius (72°C), an alert should be given.
+Observation: The temperature reading on the gauge is 50, which falls within the threshold for exceeding 72°C.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+65,guage (39).jpg,guage,,155,psi,Alert if > 124 psi.,155 psi,Rule A,Value is 155. 155 > 124.,0,UNSAFE,Dataset/Guages/guage (39).jpg,Data_Preprocessed/guage (39).jpg,,"Step 1: Observations:
+- The gauge is a circular gauge with black background and white markings.
+- It has two sets of numbers, one for oil pressure (oil psi) and another set for air pressure (air psi).
+- The needle is pointing slightly above the 0 mark on the oil side.
+
+Step 2: Rule Application:
+The safety rule states to alert if > 124 psi. Since the needle is just past the 124 mark but not quite reaching it, this observation does not meet the rule.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+66,guage (39).jpg,guage,,155,psi,Alert if > 186 psi.,155 psi,Rule B,Value is 155. 155 < 186.,0,SAFE,Dataset/Guages/guage (39).jpg,Data_Preprocessed/guage (39).jpg,,"Step 1: The image shows a gauge with the following numeric reading and unit:
+- 75 psi
+
+Step 2: According to the safety rule, an alert should be given if > 186 psi. Since the current reading is 75 psi, which is not above 186 psi, this observation does not satisfy the rule.
+
+Final Verdict: UNSAFE"
+67,guage (4).jpg,guage,Obstruction,90,fahrenheit,Alert if > 72 fahrenheit.,90 fahrenheit,Rule A,Value is 90. 90 > 72.,1,UNSAFE,Dataset/Guages/guage (4).jpg,Data_Preprocessed/guage (4).jpg,Obstruction,"Step 1 - Observation:
+The gauge is measuring the temperature in Fahrenheit. The reading on the scale is approximately 72 degrees Fahrenheit.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the temperature exceeds 72°F, an alert should be given.
+Since the temperature shown by the gauge is 72°F, it does not exceed this threshold.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+68,guage (4).jpg,guage,Obstruction,90,fahrenheit,Alert if > 108 fahrenheit.,90 fahrenheit,Rule B,Value is 90. 90 < 108.,1,SAFE,Dataset/Guages/guage (4).jpg,Data_Preprocessed/guage (4).jpg,Obstruction,"Step 1 - Observation:
+The gauge is measuring the temperature in Fahrenheit. The numeric reading is 120°F.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the temperature exceeds 108°F, an alert should be given.
+Since the current temperature on the gauge is 120°F, which is within the threshold of 108°F, no alert needs to be given.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+69,guage (40).jpg,guage,Low Contrast,53,celcius,Alert if > 42 celcius.,53 celcius,Rule A,Value is 53. 53 > 42.,1,UNSAFE,Dataset/Guages/guage (40).jpg,Data_Preprocessed/guage (40).jpg,Low Contrast,"Step 1: Observations:
+- The gauge is a pressure gauge.
+- It has markings in both millimeters and centimeters.
+
+Step 2: Rule Application:
+The temperature reading of the gauge is 42 degrees Celsius. According to the safety rule, an alert should be given if the temperature exceeds 42 degrees Celsius.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+70,guage (40).jpg,guage,Low Contrast,53,celcius,Alert if > 64 celcius.,53 celcius,Rule B,Value is 53. 53 < 64.,1,SAFE,Dataset/Guages/guage (40).jpg,Data_Preprocessed/guage (40).jpg,Low Contrast,"Step 1: Observations:
+- The gauge is a pressure gauge.
+- It has a scale from 0 to 120, with markings for 40, 60, and 80 psi (pounds per square inch).
+- The needle of the gauge is pointing slightly above 60 psi.
+
+Step 2: Rule Application:
+The safety rule states that an alert should be given if the temperature exceeds 64 degrees Celsius. Since the gauge shows a reading of approximately 60 psi, which falls within the range of 60 to 64 psi, it does not meet the threshold for an alert at this temperature.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+71,guage (41).jpg,guage,Glare,75,fahrenheit,Alert if > 60 fahrenheit.,75 fahrenheit,Rule A,Value is 75. 75 > 60.,1,UNSAFE,Dataset/Guages/guage (41).jpg,Data_Preprocessed/guage (41).jpg,Glare,"Step 1 - Observation:
+The image shows a gauge with a scale from 0 to 250 in both Celsius and Fahrenheit. The needle is pointing at approximately 90 degrees on the Celsius scale, which corresponds to 37°C or 98°F.
+
+Step 2 - Rule Application: 
+According to the safety rule, an alert should be given if the temperature exceeds 60°F.
+Observation: The temperature reading of 90°F (or 37°C) exceeds the threshold for unsafe conditions set by the rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+72,guage (41).jpg,guage,Glare,75,fahrenheit,Alert if > 90 fahrenheit.,75 fahrenheit,Rule B,Value is 75. 75 < 90.,1,SAFE,Dataset/Guages/guage (41).jpg,Data_Preprocessed/guage (41).jpg,Glare,"Step 1: 
+Observation:
+The image shows a gauge with a scale ranging from 0 to 250 in increments of 5. The needle is pointing at approximately 90.
+
+Unit: Fahrenheit
+
+Step 2:
+Rule Application: Alert if > 90 fahrenheit.
+Since the reading on the gauge is 90, which falls within the range of 90-100 degrees Fahrenheit (or 30-37 degrees Celsius), it does not meet the rule for alerting when the temperature exceeds 90 degrees Fahrenheit.
+
+Step 3:
+Final Verdict: UNSAFE"
+73,guage (42).jpg,guage,,25,psi,Alert if > 20 psi.,25 psi,Rule A,Value is 25. 25 > 20.,0,UNSAFE,Dataset/Guages/guage (42).jpg,Data_Preprocessed/guage (42).jpg,,"Step 1: Observations:
+- The gauge is a Janssen pressure gauge.
+- It has a white body with red and black markings.
+
+Step 2: Rule Application:
+The gauge's reading is > 20 psi, which satisfies the rule for alerting when the pressure exceeds 20 psi. Therefore, this observation meets the safety rule.
+
+Step 3: Verdict:
+Final Verdict: SAFE"
+74,guage (42).jpg,guage,,25,psi,Alert if > 30 psi.,25 psi,Rule B,Value is 25. 25 < 30.,0,SAFE,Dataset/Guages/guage (42).jpg,Data_Preprocessed/guage (42).jpg,,"Step 1: Observations:
+- The gauge is a Janssen pressure gauge.
+- It has a white body with red markings and the brand name ""JANATICS"" prominently displayed in black letters.
+
+Observation: The numeric reading on the gauge is approximately 75 psi. 
+
+Step 2: Rule Application:
+The safety rule states that an alert should be given if > 30 psi. Since the reading on the gauge is 75 psi, which exceeds the threshold of 30 psi, this observation satisfies the rule.
+
+Step 3: Verdict:
+Final Verdict: SAFE"
+75,guage (43).jpg,guage,,43,celcius,Alert if > 34 celcius.,43 celcius,Rule A,Value is 43. 43 > 34.,0,UNSAFE,Dataset/Guages/guage (43).jpg,Data_Preprocessed/guage (43).jpg,,"Step 1: Observations:
+- The gauge is a round, metallic device with a white face and black markings.
+- It has a scale from -40°C to +200°C in increments of 60°C.
+- There are two needles on the dial; one needle points at approximately 35°C, while the other needle points at approximately 70°C.
+
+Step 2: Rule Application:
+The temperature reading of 35°C falls within the safe range for an industrial gauge. However, the physical surface condition of the pipe appears dirty or corroded, which could potentially affect its function and safety.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+76,guage (43).jpg,guage,,43,celcius,Alert if > 52 celcius.,43 celcius,Rule B,Value is 43. 43 < 52.,0,SAFE,Dataset/Guages/guage (43).jpg,Data_Preprocessed/guage (43).jpg,,Final Verdict: UNSAFE
+77,guage (44).jpg,guage,Obstruction,50,celcius,Alert if > 40 celcius.,50 celcius,Rule A,Value is 50. 50 > 40.,1,UNSAFE,Dataset/Guages/guage (44).jpg,Data_Preprocessed/guage (44).jpg,Obstruction,"Step 1 - Observation:
+The image shows a gauge with a red needle pointing to approximately 40 degrees Celsius. The scale of the gauge is marked in degrees, and it has a range from 200 to 500 degrees.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the temperature reading exceeds 40 degrees Celsius, an alert should be given.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+78,guage (44).jpg,guage,Obstruction,50,celcius,Alert if > 60 celcius.,50 celcius,Rule B,Value is 50. 50 < 60.,1,SAFE,Dataset/Guages/guage (44).jpg,Data_Preprocessed/guage (44).jpg,Obstruction,"Step 1 - Observation:
+The image shows a gauge with a red needle pointing to approximately 400 degrees Celsius. The scale is marked in both Fahrenheit and Celsius, indicating that the temperature reading is in Celsius.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the temperature exceeds 60 degrees Celsius (or 180 degrees Fahrenheit), an alert should be given.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+79,guage (45).jpg,guage,,25,psi,Alert if > 20 psi.,25 psi,Rule A,Value is 25. 25 > 20.,0,UNSAFE,Dataset/Guages/guage (45).jpg,Data_Preprocessed/guage (45).jpg,,"Step 1: 
+Observation:
+The image shows a pressure gauge attached to a pipe. The gauge has a red and white color scheme with the following readings:
+
+- Gauge reading: 75 psi
+- Unit: psi (pounds per square inch)
+
+Step 2:
+Rule Application: According to the safety rule, an alert should be given if the pressure is > 20 psi.
+
+Step 3:
+Final Verdict: UNSAFE"
+80,guage (45).jpg,guage,,25,psi,Alert if > 30 psi.,25 psi,Rule B,Value is 25. 25 < 30.,0,SAFE,Dataset/Guages/guage (45).jpg,Data_Preprocessed/guage (45).jpg,,"Step 1: Observations:
+- The gauge is a Janssen pressure gauge.
+- It has a red and black dial with the following readings:
+  - Pressure reading: 75 psi
+  - Gauge markings are in red, indicating different units of measurement (psi, bar).
+- The physical surface condition appears to be clean and well-maintained.
+
+Step 2: Rule Application:
+The safety rule states that an alert should be given if > 30 psi. Since the pressure reading on the gauge is 75 psi, which exceeds the threshold set by the rule, there is no immediate danger or need for caution.
+
+Step 3: Verdict:
+Final Verdict: SAFE"
+81,guage (46).jpg,guage,Glare,2.2,bar,Alert if > 1.7 bar.,2.2 bar,Rule A,Value is 2.2. 2.2 > 1.7.,1,UNSAFE,Dataset/Guages/guage (46).jpg,Data_Preprocessed/guage (46).jpg,Glare,"Step 1: Observations:
+- The gauge is a pressure gauge with a red and white color scheme.
+- It has markings in increments of 50, ranging from 0 to 75.
+- There are two black rubber stoppers on the sides for securing the gauge.
+
+Step 2: Rule Application:
+The observation shows that the gauge reads approximately 75. This value falls within the safe range for a pressure gauge (typically between 0 and 140 bar), but it exceeds the threshold set by the rule to alert if > 1.7 bar.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+82,guage (46).jpg,guage,Glare,2.2,bar,Alert if > 2.7 bar.,2.2 bar,Rule B,Value is 2.2. 2.2 < 2.7.,1,SAFE,Dataset/Guages/guage (46).jpg,Data_Preprocessed/guage (46).jpg,Glare,"Step 1: Observations:
+- The gauge is a pressure gauge.
+- It has a scale from 0 to 150 psi (pounds per square inch) with red markings indicating the range of pressures.
+
+Step 2: Rule Application:
+The observation shows that the pressure reading is > 2.7 psi, which falls within the safe threshold for an industrial safety rule. Therefore, it does not meet the rule.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+83,guage (47).jpg,guage,Obstruction,40,psi,Alert if > 32 psi.,40 psi,Rule A,Value is 40. 40 > 32.,1,UNSAFE,Dataset/Guages/guage (47).jpg,Data_Preprocessed/guage (47).jpg,Obstruction,"Step 1 - Observation:
+The image shows a pressure gauge mounted on a pipe. The gauge is in contact with the pipe, and its reading appears to be slightly above 32 psi.
+
+Step 2 - Rule Application: 
+According to the safety rule, an alert should be given if the pressure reading exceeds 32 psi.
+Observation: The pressure reading of the gauge is slightly above 32 psi (32 + 0.5 = 32.5).
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+84,guage (47).jpg,guage,Obstruction,40,psi,Alert if > 48 psi.,40 psi,Rule B,Value is 40. 40 < 48.,1,SAFE,Dataset/Guages/guage (47).jpg,Data_Preprocessed/guage (47).jpg,Obstruction,"Step 1 - Observation:
+The image shows a pressure gauge attached to a pipe. The gauge is mounted on a metal bracket and has a white background with black markings.
+
+Step 2 - Rule Application: 
+The safety rule states that an alert should be given if the pressure reading exceeds 48 psi.
+
+Observation: The pressure reading of the gauge is approximately 50 psi (as indicated by the scale marked in millibars).
+
+Rule Application: Yes, the observation from Step 1 satisfies the rule because the pressure reading of 50 psi falls within the threshold set for an alert at 48 psi.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+85,guage (48).jpg,guage,Glare/ Oblique Angle,0.17,MPa,Alert if > 0.13 MPa.,0.17 MPa,Rule A,Value is 0.17. 0.17 > 0.13.,1,UNSAFE,Dataset/Guages/guage (48).jpg,Data_Preprocessed/guage (48).jpg,Glare/ Oblique Angle,"Step 1 - Observation:
+The image shows a blue industrial gauge with the label ""TEST PRESSURE"" at the top. The gauge has a white face and is marked with various markings, including ""CKD,"" ""MPa,"" and other units such as ""MPS."" There are also two red indicator lights on either side of the dial.
+
+Step 2 - Rule Application: 
+According to the safety rule, an alert should be given if > 0.13 MPa. Observing the gauge, it appears that the pressure reading is just above the threshold for this rule (0.13 MPa). Therefore, the observation does not meet the rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+86,guage (48).jpg,guage,Glare/ Oblique Angle,0.17,MPa,Alert if > 0.21 MPa.,0.17 MPa,Rule B,Value is 0.17. 0.17 < 0.21.,1,SAFE,Dataset/Guages/guage (48).jpg,Data_Preprocessed/guage (48).jpg,Glare/ Oblique Angle,"Step 1 - Observation:
+The image shows a blue industrial gauge with the label ""TEST PRESSURE"" at the top. The gauge has a white face and is marked with various markings, including ""CKD,"" ""MPa,"" and other units such as ""MPS."" There are also two red indicator lights on either side of the dial.
+
+Step 2 - Rule Application: According to the safety rule, an alert should be given if > 0.21 MPa.
+Observation: The pressure reading displayed by the gauge is approximately 0.21 MPa.
+
+Step 3 - Verdict: Final Verdict: UNSAFE"
+87,guage (49).jpg,guage,Low Resolution,35,psi,Alert if > 28 psi.,35 psi,Rule A,Value is 35. 35 > 28.,1,UNSAFE,Dataset/Guages/guage (49).jpg,Data_Preprocessed/guage (49).jpg,Low Resolution,"Step 1: 
+The image shows a pressure gauge attached to a pipe. The gauge is mounted on a concrete surface with visible signs of wear and corrosion.
+
+Step 2:
+Upon observing the gauge, it displays a reading of approximately 28 psi (pounds per square inch). This value falls within the safe threshold for industrial applications, as specified by the safety rule: Alert if > 28 psi.
+
+Step 3:
+Based on the observation from Step 1 that the gauge's reading meets the safety rule, I would conclude that the condition described in Step 2 is acceptable. Therefore, my final verdict is:
+
+Final Verdict: SAFE"
+88,guage (49).jpg,guage,Low Resolution,35,psi,Alert if > 42 psi.,35 psi,Rule B,Value is 35. 35 < 42.,1,SAFE,Dataset/Guages/guage (49).jpg,Data_Preprocessed/guage (49).jpg,Low Resolution,"Step 1: 
+The image shows a pressure gauge with a scale from 0 to 25 psi. The reading on the gauge is approximately 18 psi.
+
+Step 2:
+According to the safety rule, if the pressure reading exceeds 42 psi, an alert should be given. In this case, the gauge reads approximately 18 psi which falls within the threshold of 42 psi.
+
+Step 3:
+Since the pressure reading (approximately 18 psi) does not exceed the specified limit of 42 psi, the observation meets the safety rule and there is no immediate danger or need for further action.
+
+Final Verdict: SAFE"
+89,guage (5).jpg,guage,Low Contrast,70,bar,Alert if > 56 bar.,70 bar,Rule A,Value is 70. 70 > 56.,1,UNSAFE,Dataset/Guages/guage (5).jpg,Data_Preprocessed/guage (5).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a gauge with a white background and black markings. The scale is marked in millibars (bar), ranging from 0 to 60, with increments of 10.
+
+Step 2 - Rule Application: 
+According to the safety rule, an alert should be given if the pressure reading exceeds 56 bar.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+90,guage (5).jpg,guage,Low Contrast,70,bar,Alert if > 84 bar.,70 bar,Rule B,Value is 70. 70 < 84.,1,SAFE,Dataset/Guages/guage (5).jpg,Data_Preprocessed/guage (5).jpg,Low Contrast,"Step 1 - Observation:
+The image shows a gauge with a white background and black markings. The scale is marked in millibars (bar), ranging from 0 to 160, with increments of 20.
+
+Step 2 - Rule Application: 
+According to the safety rule, an alert should be given if the pressure reading exceeds 84 bar.
+Observation: The pressure reading on the gauge is approximately 85 bar.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+91,guage (50).jpg,guage,,4.8,kp/cm3,Alert if > 3.8 kp/cm3.,4.8 kp/cm3,Rule A,Value is 4.8. 4.8 > 3.8.,0,UNSAFE,Dataset/Guages/guage (50).jpg,Data_Preprocessed/guage (50).jpg,,"Step 1: Observations:
+- The gauge is an industrial pressure gauge.
+- It has a scale from 0 to 8 in millipascal (mpa) increments, with markings for 4, 6, and 8 mm.
+- The unit of measurement is ""kPa/cm3"" which stands for kilopascals per cubic meter.
+
+Step 2: Rule Application:
+The safety rule states that if the reading exceeds 3.8 kPa/cm3, an alert should be given.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+92,guage (50).jpg,guage,,4.8,kp/cm3,Alert if > 5.8 kp/cm3.,4.8 kp/cm3,Rule B,Value is 4.8. 4.8 < 5.8.,0,SAFE,Dataset/Guages/guage (50).jpg,Data_Preprocessed/guage (50).jpg,,"Step 1: Observations:
+- The gauge is an industrial pressure gauge.
+- It has a scale from 0 to 8 in millipascal (mpa) increments, with markings for 2, 4, 6, and 8 mm.
+- The unit of measurement is ""kp/cm3,"" which stands for kilopascals per cubic meter.
+
+Step 2: Rule Application:
+The safety rule states that if the reading exceeds 5.8 kp/cm3, an alert should be given.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+93,guage (6).jpg,guage,Glare/ Oblique Angle,34,celcius,Alert if > 27 celcius.,34 celcius,Rule A,Value is 34. 34 > 27.,1,UNSAFE,Dataset/Guages/guage (6).jpg,Data_Preprocessed/guage (6).jpg,Glare/ Oblique Angle,"Step 1 - Observation:
+The gauge is a pressure gauge with a scale from 0 to 120, marked in millimeters (mm). The needle of the gauge is pointing at approximately 85 mm. 
+
+Step 2 - Rule Application: 
+According to the safety rule that alerts for an alert if > 27 degrees Celsius, the observation from Step 1 does not meet this rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+94,guage (6).jpg,guage,Glare/ Oblique Angle,34,celcius,Alert if > 41 celcius.,34 celcius,Rule B,Value is 34. 34 < 41.,1,SAFE,Dataset/Guages/guage (6).jpg,Data_Preprocessed/guage (6).jpg,Glare/ Oblique Angle,"Step 1 - Observation:
+The gauge is a pressure gauge with a scale from 0 to 120, marked in millimeters (mm). The needle of the gauge is pointing at approximately 85 mm. 
+
+Step 2 - Rule Application: 
+According to the safety rule that alerts for an alert if > 41°C, the observation does not meet this requirement.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+95,guage (7).jpg,guage,Oblique Angle,1.3,,Alert if > 1.0 NA.,1.3 NA,Rule A,Value is 1.3. 1.3 > 1.0.,1,UNSAFE,Dataset/Guages/guage (7).jpg,Data_Preprocessed/guage (7).jpg,Oblique Angle,Final Verdict: UNSAFE
+96,guage (7).jpg,guage,Oblique Angle,1.3,,Alert if > 1.6 NA.,1.3 NA,Rule B,Value is 1.3. 1.3 < 1.6.,1,SAFE,Dataset/Guages/guage (7).jpg,Data_Preprocessed/guage (7).jpg,Oblique Angle,Final Verdict: UNSAFE
+97,guage (8).jpg,guage,Oblique Angle,0,,Alert if reading > 5 NA.,0 NA,Rule A,Value is 0. 0 < 5.,1,SAFE,Dataset/Guages/guage (8).jpg,Data_Preprocessed/guage (8).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a red industrial gauge with a white dial. The scale of the gauge is marked in millimeters (mm). The reading on the gauge is approximately 200 mm.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the reading exceeds 5 NA (not applicable), an alert should be given.
+Since the reading is 200 mm and it exceeds 5 NA, an alert should be given.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+98,guage (8).jpg,guage,Oblique Angle,0,,Alert if reading is at 0 NA.,0 NA,Rule B,Value is 0. System is at 0.,1,UNSAFE,Dataset/Guages/guage (8).jpg,Data_Preprocessed/guage (8).jpg,Oblique Angle,"Step 1 - Observation:
+The image shows a red industrial gauge with a white dial. The scale on the gauge is marked in millimeters (mm). The reading displayed is approximately 200 mm.
+
+Step 2 - Rule Application: 
+According to the safety rule, if the reading is at 0 NA (zero), an alert should be given.
+Since the reading is not zero, it does not meet this rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+99,guage (9).jpg,guage,Oblique Angle/ Obstruction,86,Pa,Alert if > 68 Pa.,86 Pa,Rule A,Value is 86. 86 > 68.,1,UNSAFE,Dataset/Guages/guage (9).jpg,Data_Preprocessed/guage (9).jpg,Oblique Angle/ Obstruction,"Step 1 - Observation:
+The image shows a person using a gauge to measure the pressure on a pipe. The gauge is mounted on a metal stand and has a scale with markings in millibars (mmHg). The reading on the gauge indicates that the pressure is approximately 68 mmHg.
+
+Step 2 - Rule Application:
+According to the safety rule, if the pressure reading exceeds 68 mmHg, an alert should be given. Since the pressure measurement is within this threshold of 68 mmHg, no action needs to be taken under this rule.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+100,guage (9).jpg,guage,Oblique Angle/ Obstruction,86,Pa,Alert if > 104 Pa.,86 Pa,Rule B,Value is 86. 86 < 104.,1,SAFE,Dataset/Guages/guage (9).jpg,Data_Preprocessed/guage (9).jpg,Oblique Angle/ Obstruction,"Step 1 - Observation:
+The image shows a person using a gauge to measure the pressure on a pipe. The gauge is set to 50, and it appears that the reading is slightly above 50.
+
+Step 2 - Rule Application:
+According to the safety rule, if the pressure reading exceeds 104 Pa, an alert should be shown.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+101,pipe_corroded (1).jpg,pipeline,Texture Overlap,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (1).jpg,Data_Preprocessed/pipe_corroded (1).jpg,Texture Overlap,"Step 1 - Observation:
+- The image shows a section of the ground with a concrete base and a rusty metal pipe running through it. There is visible rust on the metal surface, indicating oxidation or corrosion.
+
+Step 2 - Rule Application:
+The safety rule states to alert on any sign of surface oxidation or corrosion. Since there is visible rust on the metal surface in the image, this observation satisfies the rule.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+102,pipe_corroded (1).jpg,pipeline,Texture Overlap,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (1).jpg,Data_Preprocessed/pipe_corroded (1).jpg,Texture Overlap,"Step 1 - Observation:
+- The image shows a section of the ground with a concrete base and a pipe running through it. There is visible rust on the metal surface of the pipe, indicating that it has been exposed to moisture and corrosion.
+
+Step 2 - Rule Application:
+The safety rule states: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Since there is visible rust on the pipe's surface, this observation satisfies the rule.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+103,pipe_corroded (10).jpg,pipeline,Texture Overlap,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (10).jpg,Data_Preprocessed/pipe_corroded (10).jpg,Texture Overlap,"Step 1: Observation
+The image shows a section of an industrial pipe with visible rust and corrosion on the surface. The metal appears to be made of steel, which is susceptible to oxidation.
+
+Step 2: Rule Application
+The safety rule states that an alert should be given if there is any sign of surface oxidation or corrosion. In this case, the observation clearly indicates that the surface has been exposed to moisture and has developed rust and corrosion.
+
+Step 3: Verdict
+Based on the observation and the rule application, the final verdict is:
+
+Final Verdict: SAFE"
+104,pipe_corroded (10).jpg,pipeline,Texture Overlap,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (10).jpg,Data_Preprocessed/pipe_corroded (10).jpg,Texture Overlap,"Step 1 - Observation:
+The image shows a section of an industrial pipe with visible rust and corrosion on the surface. The metal appears to be corroded, indicating potential structural defects or leaks.
+
+Step 2 - Rule Application: 
+The safety rule is: Surface rust is acceptable.
+Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+105,pipe_corroded (11).jpg,pipeline,Texture Overlap,Corroded/ Damaged,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Damaged NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (11).jpg,Data_Preprocessed/pipe_corroded (11).jpg,Texture Overlap,"Step 1: Observations:
+- The gauge is rusty and has a noticeable rust on its surface.
+- There are visible signs of corrosion, particularly around the opening where it connects to another pipe.
+
+Step 2: Rule Application:
+The safety rule states that an alert should be given if any sign of surface oxidation or corrosion is observed. Since the gauge shows signs of rust and corrosion, this observation satisfies the rule.
+
+Step 3: Verdict:
+Final Verdict: SAFE"
+106,pipe_corroded (11).jpg,pipeline,Texture Overlap,Corroded/ Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Damaged NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (11).jpg,Data_Preprocessed/pipe_corroded (11).jpg,Texture Overlap,"Step 1 - Observation:
+The image shows a rusty pipe with visible rust on the surface. The unit of measurement is not specified in the image.
+
+Step 2 - Rule Application:
+The safety rule states that surface rust is acceptable, and an alert should be given if there are any structural defects, dents, cracks, or leaks.
+
+Observation: The pipe has noticeable rust on its surface.
+Rule Application: Surface rust is acceptable.
+Safety Alert: Do not proceed until inspection reveals no structural defects, dents, cracks, or leaks.
+
+Final Verdict: UNSAFE"
+107,pipe_corroded (12).jpg,pipeline,Low Resolution,Corroded/ Damaged,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Damaged NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (12).jpg,Data_Preprocessed/pipe_corroded (12).jpg,Low Resolution,"Step 1: Observations:
+- The gauge is metallic and appears to be in good condition.
+- There are no signs of surface oxidation or corrosion on the visible part of the gauge.
+
+Step 2: Rule Application:
+The safety rule states that an alert should be given if any sign of surface oxidation or corrosion is observed. Since there is no evidence of such signs, this observation does not meet the rule.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+108,pipe_corroded (12).jpg,pipeline,Low Resolution,Corroded/ Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Damaged NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (12).jpg,Data_Preprocessed/pipe_corroded (12).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a long, straight pipe with some rust and surface corrosion. The pipe appears to be made of metal.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Based on the observations in Step 1, the surface rust on the pipe does not meet the acceptable criteria set by the safety rule. Therefore, the final verdict is:
+
+Final Verdict: UNSAFE"
+109,pipe_corroded (13).jpg,pipeline,Glare,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (13).jpg,Data_Preprocessed/pipe_corroded (13).jpg,Glare,"Step 1: Observations:
+- The pipe appears to be made of metal and is likely used for water supply or irrigation.
+- There are visible signs of oxidation or corrosion on the surface, particularly around the joint where the pipe meets the ground.
+
+Step 2: Rule Application:
+The observation from Step 1 does not meet the safety rule. The physical surface condition indicates that there is oxidation or corrosion on the pipe's surface, which poses a risk of electrical hazards due to potential short circuits.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+110,pipe_corroded (13).jpg,pipeline,Glare,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (13).jpg,Data_Preprocessed/pipe_corroded (13).jpg,Glare,"Step 1 - Observation:
+The image shows a close-up of a water pipe with water spraying out from it. The surface condition of the pipe appears to be in good condition, without any visible rust or structural defects.
+
+Step 2 - Rule Application: 
+The safety rule is that surface rust is acceptable. However, there are no signs of corrosion on the pipe's surface, which does not meet this criterion.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+111,pipe_corroded (14).jpg,pipeline,Low Resolution,Corroded/ Damaged,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Damaged NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (14).jpg,Data_Preprocessed/pipe_corroded (14).jpg,Low Resolution,"Step 1: Observations:
+- The image shows a large, rusty pipe lying horizontally on the ground.
+- The surface of the pipe is visibly corroded with patches where the paint has worn off.
+
+Step 2: Rule Application:
+The safety rule states that an alert should be given if there are signs of surface oxidation or corrosion. Since the pipe appears to have significant rust and discoloration along its length, this condition meets the rule.
+
+Step 3: Verdict:
+Final Verdict: SAFE"
+112,pipe_corroded (14).jpg,pipeline,Low Resolution,Corroded/ Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Damaged NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (14).jpg,Data_Preprocessed/pipe_corroded (14).jpg,Low Resolution,"Step 1: Observation
+The image shows a large, rusty pipe lying horizontally on the ground. The surface of the pipe is heavily corroded with visible rust and discoloration.
+
+Step 2: Rule Application
+According to the safety rule, ""Surface rust is acceptable."" This means that the observation from Step 1 does not meet this criterion.
+
+Step 3: Verdict
+Final Verdict: UNSAFE"
+113,pipe_corroded (15).jpg,pipeline,Texture Overlap,Corroded/ Crack,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Crack NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (15).jpg,Data_Preprocessed/pipe_corroded (15).jpg,Texture Overlap,"Step 1: Observation
+The image shows a large, rusted metal surface with visible signs of oxidation and corrosion. The metal has an uneven texture and appears to be in poor condition.
+
+Step 2: Rule Application
+According to the safety rule, ""Alert on any sign of surface oxidation or corrosion,"" this observation satisfies the rule as evidenced by the visible deterioration and discoloration on the metal surface.
+
+Step 3: Verdict
+Final Verdict: SAFE"
+114,pipe_corroded (15).jpg,pipeline,Texture Overlap,Corroded/ Crack,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Crack NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (15).jpg,Data_Preprocessed/pipe_corroded (15).jpg,Texture Overlap,"Step 1: Observation
+The image shows a large, rusted metal surface with visible signs of corrosion and discoloration. The surface appears to be made of steel or another metallic material.
+
+Step 2: Rule Application
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.
+Observation: The surface has significant rust and discoloration, indicating that it is not structurally sound.
+
+Step 3: Verdict
+Final Verdict: UNSAFE"
+115,pipe_corroded (16).jpg,pipeline,,Corroded/ Damaged,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Damaged NA,Rule A,Image shows corrosion or damage.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (16).jpg,Data_Preprocessed/pipe_corroded (16).jpg,,"Step 1 - Observation:
+The image shows a pipe lying on its side against a stone wall. The surface of the pipe appears to be in good condition, with no signs of oxidation or corrosion.
+
+Step 2 - Rule Application:
+According to the safety rule, ""Alert on any sign of surface oxidation or corrosion,"" we need to determine if there is any sign of such deterioration visible on the pipe's surface.
+
+Step 3 - Verdict:
+Since there are no signs of oxidation or corrosion on the surface of the pipe, the final verdict is:
+
+Final Verdict: SAFE"
+116,pipe_corroded (16).jpg,pipeline,,Corroded/ Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Damaged NA,Rule B,Critical structural defect is visible.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (16).jpg,Data_Preprocessed/pipe_corroded (16).jpg,,"Step 1 - Observation:
+The image shows a pipe lying on its side. The surface of the pipe appears to be rusted, as evidenced by the discoloration and corrosion visible on the metal.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.
+Observation: The pipe has noticeable rust on its surface, which indicates that it is not structurally sound and poses potential risks such as structural failure.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+117,pipe_corroded (17).jpg,pipeline,,Leak / Damaged,,Alert on any sign of surface oxidation or corrosion.,Leak / Damaged NA,Rule A,Image shows corrosion or damage.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (17).jpg,Data_Preprocessed/pipe_corroded (17).jpg,,"Step 1 - Observation:
+The image shows a rusty pipe with water flowing through it. The surface of the pipe is visibly corroded, as evidenced by the darkened and discolored areas.
+
+Step 2 - Rule Application: 
+The safety rule states that an alert should be given on any sign of surface oxidation or corrosion. Since the pipe has visible signs of corrosion (darkened and discolored areas), this observation satisfies the rule.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+118,pipe_corroded (17).jpg,pipeline,,Leak / Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Leak / Damaged NA,Rule B,Critical structural defect is visible.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (17).jpg,Data_Preprocessed/pipe_corroded (17).jpg,,"Step 1 - Observation:
+The image shows a close-up view of a rusty pipe with water flowing through it. The surface of the pipe appears to be corroded, indicating significant rust.
+
+Step 2 - Rule Application:
+According to the safety rule, surface rust is acceptable. However, since there are visible signs of corrosion and rust on the pipe, this observation does not meet the criteria for structural defects or dents.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+119,pipe_corroded (18).jpg,pipeline,Low Resolution,Damaged,,Alert on any sign of surface oxidation or corrosion.,Damaged NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (18).jpg,Data_Preprocessed/pipe_corroded (18).jpg,Low Resolution,"Step 1: Observation
+- The image shows two cylindrical objects with a dull, grayish surface. There are visible signs of oxidation or corrosion on the surfaces.
+
+Step 2: Rule Application
+- According to the safety rule, ""Alert on any sign of surface oxidation or corrosion,"" we need to determine if there is any sign of such deterioration in the observed objects.
+
+Step 3: Verdict
+- Final Verdict: UNSAFE"
+120,pipe_corroded (18).jpg,pipeline,Low Resolution,Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Damaged NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (18).jpg,Data_Preprocessed/pipe_corroded (18).jpg,Low Resolution,"Step 1 - Observation:
+- The first object is a cylindrical pipe with a flanged end.
+- The second object is another cylindrical pipe, similar in appearance to the first but slightly different in size and shape.
+
+Step 2 - Rule Application: 
+The observation from Step 1 does not meet the rule for surface rust. Both objects show signs of corrosion on their surfaces, which are acceptable under this rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+121,pipe_corroded (19).jpg,pipeline,Low Resolution,Dented,,Alert on any sign of surface oxidation or corrosion.,Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (19).jpg,Data_Preprocessed/pipe_corroded (19).jpg,Low Resolution,"Step 1: Observation
+The image shows a large, blue pipe with visible signs of oxidation or corrosion. The surface appears to be dull and has patches where the paint is peeling off.
+
+Step 2: Rule Application
+According to the safety rule, ""Alert on any sign of surface oxidation or corrosion,"" this observation does not meet the criteria because there are no signs of such deterioration in the image.
+
+Step 3: Verdict
+Final Verdict: UNSAFE"
+122,pipe_corroded (19).jpg,pipeline,Low Resolution,Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (19).jpg,Data_Preprocessed/pipe_corroded (19).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a large, cylindrical pipe with a metallic surface. The pipe appears to be made of steel and has some rust on its surface.
+
+Step 2 - Rule Application: 
+The safety rule is: Surface rust is acceptable.
+Observation: The surface of the pipe does not show any significant rust or corrosion, indicating that it meets this rule.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+123,pipe_corroded (2).jpg,pipeline,Texture Overlap,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (2).jpg,Data_Preprocessed/pipe_corroded (2).jpg,Texture Overlap,"Step 1 - Observation:
+The image shows a rusty, corroded pipe with water flowing through it. The surface of the pipe is visibly rusted and has an orange-brown coloration.
+
+Step 2 - Rule Application: 
+The safety rule states that any sign of surface oxidation or corrosion should be alerted to prevent potential hazards such as leaks or damage to the pipes.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+124,pipe_corroded (2).jpg,pipeline,Texture Overlap,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (2).jpg,Data_Preprocessed/pipe_corroded (2).jpg,Texture Overlap,"Step 1 - Observation:
+The image shows a rusty pipe with water flowing through it. The surface of the pipe is heavily rusted, showing signs of corrosion and discoloration.
+
+Step 2 - Rule Application: 
+The observation from Step 1 does not meet the safety rule for structural defects or leaks. However, it does show that there is significant rust on the surface of the pipe, which could potentially pose a risk to structural integrity if left untreated.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+125,pipe_corroded (20).jpg,pipeline,Texture Overlap,Corroded/ Dented,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (20).jpg,Data_Preprocessed/pipe_corroded (20).jpg,Texture Overlap,"Step 1 - Observation:
+The image shows a large, cylindrical object with a yellow coating. The surface appears to be weathered and has patches of discoloration.
+
+Step 2 - Rule Application: 
+The safety rule is: Alert on any sign of surface oxidation or corrosion.
+Observation: The surface of the cylinder shows signs of oxidation and corrosion. There are areas where the coating is peeling off, revealing underlying material that looks dull and rusty.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+126,pipe_corroded (20).jpg,pipeline,Texture Overlap,Corroded/ Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (20).jpg,Data_Preprocessed/pipe_corroded (20).jpg,Texture Overlap,"STEP 1 - OBSERVATION:
+The image shows a large, cylindrical object with a yellow coating. The surface of the cylinder appears to be heavily rusted and has significant areas where the paint is peeling off or chipping away.
+
+STEP 2 - RULE APPLICATION: 
+The safety rule states that surface rust is acceptable. However, structural defects, dents, cracks, or leaks are not acceptable as per this rule.
+
+Since the observation from Step 1 does not meet the criteria for rust (acceptable) but also does not show any structural defects, cracks, or leaks, it does not satisfy the rule against surface rust being acceptable.
+
+STEP 3 - VERDICT: Final Verdict: UNSAFE"
+127,pipe_corroded (21).jpg,pipeline,Low Resolution,Dented,,Alert on any sign of surface oxidation or corrosion.,Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (21).jpg,Data_Preprocessed/pipe_corroded (21).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a large, cylindrical object with a dark brown surface. The surface appears to be oxidized or corroded in several areas.
+
+Step 2 - Rule Application:
+The safety rule is: Alert on any sign of surface oxidation or corrosion.
+Observation: There are visible signs of oxidation and corrosion on the surface of the cylinder. Specifically:
+
+- One area has a noticeable darkened, rust-like appearance indicating possible oxidation.
+- Another area near the center exhibits a lighter color compared to its surroundings, suggesting potential corrosion.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+128,pipe_corroded (21).jpg,pipeline,Low Resolution,Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (21).jpg,Data_Preprocessed/pipe_corroded (21).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a large, cylindrical object with several marks on its surface. The markings include circular symbols and numbers.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Since there are no visible signs of corrosion (rust), structural defects, dents, cracks, or leaks in the observed area, the final verdict is:
+
+Final Verdict: SAFE"
+129,pipe_corroded (22).jpg,pipeline,Low Resolution,Corroded/ Dented,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (22).jpg,Data_Preprocessed/pipe_corroded (22).jpg,Low Resolution,"Step 1: Observation
+The image shows a section of an industrial pipe with visible signs of surface oxidation or corrosion. The surface appears to be brownish and has areas where the color is darker than usual, indicating possible rusting.
+
+Step 2: Rule Application
+According to the safety rule for surface oxidation or corrosion, we need to alert on any sign of such deterioration.
+
+Step 3: Verdict
+Final Verdict: UNSAFE"
+130,pipe_corroded (22).jpg,pipeline,Low Resolution,Corroded/ Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (22).jpg,Data_Preprocessed/pipe_corroded (22).jpg,Low Resolution,"Step 1: Observation
+The image shows a close-up of an object with visible rust on the surface. The rust appears to be concentrated in a specific area, likely around the central part of the object.
+
+Step 2: Rule Application
+According to the safety rule, ""Surface rust is acceptable."" However, this observation does not meet the criteria for structural defects, dents, cracks, or leaks. Therefore, it falls under the category of acceptable surface rust and does not require further action.
+
+Step 3: Verdict
+Final Verdict: UNSAFE"
+131,pipe_corroded (23).jpg,pipeline,Low Resolution,Corroded/ Dented,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (23).jpg,Data_Preprocessed/pipe_corroded (23).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a cylindrical object with a rough, uneven surface. The color of the object is predominantly grayish and has some areas that appear darker than others.
+
+Step 2 - Rule Application: 
+The safety rule states to alert on any sign of surface oxidation or corrosion.
+Observation: The surface appears to be slightly corroded with visible cracks and discolorations.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+132,pipe_corroded (23).jpg,pipeline,Low Resolution,Corroded/ Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (23).jpg,Data_Preprocessed/pipe_corroded (23).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a cylindrical object with a rough surface. The texture appears to be uneven and there are visible cracks and dents along the circumference of the cylinder.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Since the observed surface has some rust (visible as small dark spots) but no other significant structural defects, dents, cracks, or leaks, the final verdict is:
+
+Final Verdict: SAFE"
+133,pipe_corroded (24).jpg,pipeline,,Leak / Damaged,,Alert on any sign of surface oxidation or corrosion.,Leak / Damaged NA,Rule A,Image shows corrosion or damage.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (24).jpg,Data_Preprocessed/pipe_corroded (24).jpg,,"Step 1 - Observation:
+The image shows a metallic pipe with several holes drilled into the surface. The visible part of the pipe has a shiny, reflective surface indicating it is likely made from stainless steel or another corrosion-resistant material.
+
+Step 2 - Rule Application: 
+The safety rule states to alert on any sign of surface oxidation or corrosion.
+Observation: There are no signs of oxidation or corrosion on the visible part of the pipe.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+134,pipe_corroded (24).jpg,pipeline,,Leak / Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Leak / Damaged NA,Rule B,Critical structural defect is visible.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (24).jpg,Data_Preprocessed/pipe_corroded (24).jpg,,"Step 1 - Observation:
+The image shows a metallic pipe with several holes drilled into the surface. The visible part of the pipe appears to be made of stainless steel, as indicated by its shiny and reflective surface.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Based on the observed condition, the final verdict would be:
+
+Final Verdict: UNSAFE"
+135,pipe_corroded (25).jpg,pipeline,Unclear image,Corroded/ Dented,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (25).jpg,Data_Preprocessed/pipe_corroded (25).jpg,Unclear image,"Step 1 - Observation:
+The image shows a metallic object with a cylindrical shape, likely part of an industrial equipment. The surface appears to be coated with some sort of protective coating or material.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: There are visible signs of oxidation and corrosion on the metallic surface. This indicates that there might be potential issues with the surface's integrity.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+136,pipe_corroded (25).jpg,pipeline,Unclear image,Corroded/ Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (25).jpg,Data_Preprocessed/pipe_corroded (25).jpg,Unclear image,"Step 1 - Observation:
+The image shows a metallic object with a cylindrical shape, likely part of an industrial equipment. The surface appears to be rusted and has some discoloration.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Based on the observed condition, the final verdict would be:
+
+Final Verdict: UNSAFE"
+137,pipe_corroded (3).jpg,pipeline,Low Resolution,Corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Rust NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (3).jpg,Data_Preprocessed/pipe_corroded (3).jpg,Low Resolution,"Step 1: Observations:
+- The image shows a close-up of two cylindrical objects, likely pipes or beams.
+- The surface appears to be made of metal with some areas showing signs of oxidation or corrosion.
+
+Step 2: Rule Application:
+The observation from Step 1 does not meet the safety rule for surface oxidation or corrosion. There is visible rust and discoloration on the surfaces of both objects.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+138,pipe_corroded (3).jpg,pipeline,Low Resolution,Corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Rust NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (3).jpg,Data_Preprocessed/pipe_corroded (3).jpg,Low Resolution,"Step 1: Observations:
+- The image shows a close-up of two cylindrical objects, likely pipes or beams.
+- The surface appears to be made of metal with some rust and discoloration.
+
+Step 2: Rule Application:
+The observation from Step 1 does not meet the rule for structural defects. There are no visible signs of structural damage such as cracks, dents, or leaks in this image.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+139,pipe_corroded (4).jpg,pipeline,Low Resolution,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (4).jpg,Data_Preprocessed/pipe_corroded (4).jpg,Low Resolution,"Step 1: Observations:
+- The image shows a large, rusty pipe with significant surface oxidation and corrosion. The metal appears to be corroding at the junctions where it meets another part of the pipe.
+
+Step 2: Rule Application:
+The safety rule is: Alert on any sign of surface oxidation or corrosion.
+Observation: The surface condition of the pipe indicates significant corrosion, which poses a risk of pipeline failure due to mechanical stress and potential chemical reactions.
+
+Step 3: Verdict:
+Final Verdict: UNSAFE"
+140,pipe_corroded (4).jpg,pipeline,Low Resolution,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (4).jpg,Data_Preprocessed/pipe_corroded (4).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a rusty pipe with water flowing through it. The surface of the pipe is visibly corroded, showing signs of rust and discoloration.
+
+Step 2 - Rule Application:
+The safety rule states that surface rust is acceptable. However, this observation does not meet the criteria for structural defects, dents, cracks, or leaks since there are no visible signs of damage such as holes, cracks, or leaks in the image.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+141,pipe_corroded (5).jpg,pipeline,Texture Overlap,Corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Rust NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (5).jpg,Data_Preprocessed/pipe_corroded (5).jpg,Texture Overlap,"Step 1: Observation
+The image shows a large cylindrical object with an orange-brown patina, indicating oxidation or corrosion. The surface appears to be weathered and has patches of rust.
+
+Step 2: Rule Application
+According to the safety rule, ""Alert on any sign of surface oxidation or corrosion,"" this observation satisfies the rule as evidenced by the visible signs of oxidation and corrosion on the surface of the object.
+
+Step 3: Verdict
+Final Verdict: SAFE"
+142,pipe_corroded (5).jpg,pipeline,Texture Overlap,Corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Rust NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (5).jpg,Data_Preprocessed/pipe_corroded (5).jpg,Texture Overlap,"Step 1: Observation
+The image shows a large, cylindrical object with an exposed surface. The rust is visible on the metal, indicating that it has been exposed to moisture and oxygen for some time.
+
+Step 2: Rule Application
+The safety rule states that surface rust is acceptable. However, this observation does not meet the criteria because there are no structural defects, dents, cracks, or leaks present in the observed area.
+
+Step 3: Verdict
+Final Verdict: UNSAFE"
+143,pipe_corroded (6).jpg,pipeline,Low Resolution,Corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Rust NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (6).jpg,Data_Preprocessed/pipe_corroded (6).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a series of rusty metal pipes. The numeric reading on the first pipe is approximately 20 feet, and its unit is not specified.
+
+Step 2 - Rule Application: 
+The safety rule states that an alert should be given if any sign of surface oxidation or corrosion exists. Since there are no signs of rust or corrosion visible in this image, it does not meet the rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+144,pipe_corroded (6).jpg,pipeline,Low Resolution,Corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Rust NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (6).jpg,Data_Preprocessed/pipe_corroded (6).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a series of rusty metal pipes. The numeric reading on the first pipe is approximately 20 feet, and its unit is not specified in the image.
+
+Step 2 - Rule Application: 
+The safety rule states that surface rust is acceptable. However, there are no visible structural defects, dents, cracks, or leaks in this image.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+145,pipe_corroded (7).jpg,pipeline,Texture Overlap,Corroded,,Alert on any sign of surface oxidation or corrosion.,Corroded NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (7).jpg,Data_Preprocessed/pipe_corroded (7).jpg,Texture Overlap,"Step 1: Observations:
+- The image shows a series of rusted metal pipes.
+- The surface condition of the pipes is severely corroded, with visible signs of rust and discoloration.
+
+Step 2: Rule Application:
+The observation from Step 1 satisfies the rule for surface oxidation or corrosion. The pipes are heavily corroded, indicating potential hazards to human health and safety.
+
+Step 3: Verdict:
+Final Verdict: SAFE"
+146,pipe_corroded (7).jpg,pipeline,Texture Overlap,Corroded,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (7).jpg,Data_Preprocessed/pipe_corroded (7).jpg,Texture Overlap,"Step 1 - Observation:
+The image shows a series of rusted metal pipes. The surface condition is visibly corroded, with visible signs of rust and discoloration.
+
+Step 2 - Rule Application:
+The observation meets the rule for acceptable rust on industrial surfaces. There are no structural defects, dents, cracks, or leaks present in this image.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+147,pipe_corroded (8).jpg,pipeline,Texture Overlap,Corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Rust NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (8).jpg,Data_Preprocessed/pipe_corroded (8).jpg,Texture Overlap,"Step 1 - Observation:
+The image shows a rusty, corroded pipe with visible rust and discoloration on the surface. The pipe appears to be made of metal.
+
+Step 2 - Rule Application: 
+The safety rule is: Alert on any sign of surface oxidation or corrosion.
+Observation: The pipe has significant rust and discoloration, indicating it is in poor condition and likely unsafe for use.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+148,pipe_corroded (8).jpg,pipeline,Texture Overlap,Corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Rust NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (8).jpg,Data_Preprocessed/pipe_corroded (8).jpg,Texture Overlap,"Step 1 - Observation:
+The image shows a rusty cylindrical object with an orange and brown rust coating. The surface appears to be corroded, indicating significant corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is: Surface rust is acceptable.
+Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+149,pipe_corroded (9).jpg,pipeline,,Rust,,Alert on any sign of surface oxidation or corrosion.,Rust NA,Rule A,Surface oxidation/rust is present.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (9).jpg,Data_Preprocessed/pipe_corroded (9).jpg,,"Step 1 - Observation:
+The image shows four vertical pipes with a rusty and corroded surface. The colors on the pipes include brown, rusted orange, and some greenish areas.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: The surfaces of the pipes show signs of rust and discoloration, indicating that they are in need of maintenance or replacement.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+150,pipe_corroded (9).jpg,pipeline,,Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Rust NA,Rule B,Image shows surface rust but no critical defects.,0,SAFE,Dataset/Pipes/Defected/pipe_corroded (9).jpg,Data_Preprocessed/pipe_corroded (9).jpg,,"Step 1 - Observation:
+The image shows four vertical pipes with a rusty surface. The rust appears to be concentrated on the top and sides of each pipe, showing signs of corrosion.
+
+Step 2 - Rule Application:
+The observation from Step 1 does not meet the safety rule for structural defects or dents. However, it does show that there is some rust present on the pipes, which can affect their integrity but is acceptable as long as they do not pose any structural risks.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+151,pipe_non_corroded (1).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (1).jpg,Data_Preprocessed/pipe_non_corroded (1).jpg,,"Step 1 - Observation:
+The image shows a long pipeline with multiple pipes running parallel to each other. The surface of the pipeline appears to be in good condition, without any signs of oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: There are no visible signs of oxidation or corrosion on the surface of the pipeline.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+152,pipe_non_corroded (1).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (1).jpg,Data_Preprocessed/pipe_non_corroded (1).jpg,,"Step 1 - Observation:
+- Numeric reading: Not applicable
+- Unit: Not applicable
+
+Step 2 - Rule Application:
+The observation from Step 1 does not meet the rule for surface rust. The pipeline appears to be in good condition, with no visible signs of corrosion or damage.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+153,pipe_non_corroded (10).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (10).jpg,Data_Preprocessed/pipe_non_corroded (10).jpg,,"Step 1 - Observation:
+The image shows a large, gray pipeline with several cylindrical sections. The surface of the pipeline appears to be in good condition without any signs of oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: The surface of the pipeline does not show any signs of oxidation or corrosion.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+154,pipe_non_corroded (10).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (10).jpg,Data_Preprocessed/pipe_non_corroded (10).jpg,,"Step 1 - Observation:
+The image shows a large, gray pipeline with several cylindrical sections. The surface of the pipeline appears to be rusted and corroded, indicating that it is in need of maintenance or repair.
+
+Step 2 - Rule Application:
+According to the safety rule, ""Surface rust is acceptable."" However, since the observation from Step 1 indicates that the pipeline has been exposed to corrosion and rust, this does not meet the criteria for acceptable rust. Therefore, an alert should be issued for structural defects, dents, cracks, or leaks.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+155,pipe_non_corroded (11).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (11).jpg,Data_Preprocessed/pipe_non_corroded (11).jpg,,"Step 1 - Observation:
+- The numeric reading on the pipe is approximately 200.
+- The physical surface condition of the pipe appears to be in good condition, with no visible signs of oxidation or corrosion.
+
+Step 2 - Rule Application:
+The safety rule states that an alert should be given if any sign of surface oxidation or corrosion is observed. Since there are no signs of such conditions (no rust, discoloration, or other signs of deterioration), this observation does not meet the rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+156,pipe_non_corroded (11).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (11).jpg,Data_Preprocessed/pipe_non_corroded (11).jpg,,"Step 1 - Observation:
+- Gauge: The gauge is showing a reading of approximately 20 feet.
+- Unit: Feet (ft)
+
+Step 2 - Rule Application:
+The surface rust observed in the image does not meet the criteria for acceptable rust. It appears to be dry and non-corrosive, indicating that structural defects, dents, cracks, or leaks are not present.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+157,pipe_non_corroded (12).jpg,pipeline,,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,0,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (12).jpg,Data_Preprocessed/pipe_non_corroded (12).jpg,,"Step 1 - Observations:
+- The image shows a set of large metallic pipes running horizontally across the frame.
+- The surface condition of these pipes appears to be oxidized or corroded, as evidenced by visible rust and discoloration.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion. Since the observation from Step 1 indicates that the pipes are visibly rusty and discolored, this meets the rule.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+158,pipe_non_corroded (12).jpg,pipeline,,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (12).jpg,Data_Preprocessed/pipe_non_corroded (12).jpg,,"Step 1 - Observations:
+- The image shows a set of large, cylindrical pipes running horizontally across the frame.
+- The surface condition of these pipes appears to be rusted and corroded. 
+- The pipes show signs of corrosion with visible rust on their surfaces.
+
+Step 2 - Rule Application: According to the safety rule, ""Surface rust is acceptable."" This observation satisfies this rule because the rust on the pipes does not indicate structural defects, dents, cracks, or leaks.
+
+Step 3 - Verdict: Final Verdict: SAFE"
+159,pipe_non_corroded (13).jpg,pipeline,Glare,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (13).jpg,Data_Preprocessed/pipe_non_corroded (13).jpg,Glare,"Step 1 - Observation:
+- The image shows a series of metallic pipes extending into the distance. They appear to be cylindrical and have a reflective surface, likely made of stainless steel or another corrosion-resistant material.
+
+Step 2 - Rule Application: 
+The observation from Step 1 does not meet the safety rule for surface oxidation or corrosion. There is no sign of any signs of surface oxidation or corrosion visible in this image.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+160,pipe_non_corroded (13).jpg,pipeline,Glare,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (13).jpg,Data_Preprocessed/pipe_non_corroded (13).jpg,Glare,"Step 1 - Observation:
+- The image shows a series of metallic pipes extending into the distance. They appear to be cylindrical and have a reflective surface, likely made from stainless steel or another corrosion-resistant material.
+
+Step 2 - Rule Application: 
+The observation does not meet the safety rule for rust (acceptable) because there are no visible signs of rust on any of the pipes. All surfaces look clean and free of rust, corrosion, or dents.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+161,pipe_non_corroded (14).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (14).jpg,Data_Preprocessed/pipe_non_corroded (14).jpg,,"Step 1 - Observation:
+The image shows a large, metallic pipe with several bolt heads. The surface of the pipe appears to be slightly rusted and has some discoloration.
+
+Step 2 - Rule Application: 
+Alert on any sign of surface oxidation or corrosion.
+Observation: The surface of the pipe is visibly rusty and has some discoloration.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+162,pipe_non_corroded (14).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (14).jpg,Data_Preprocessed/pipe_non_corroded (14).jpg,,"Step 1 - Observation:
+The image shows a large, metallic pipe with several bolt heads. The surface of the pipe appears to be smooth and unblemished except for minor rust spots.
+
+Step 2 - Rule Application: 
+The safety rule is: Surface rust is acceptable.
+Upon close inspection, there are no visible signs of rust or corrosion on the surface of the pipe. Therefore, this observation meets the criteria for acceptable rust.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+163,pipe_non_corroded (15).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (15).jpg,Data_Preprocessed/pipe_non_corroded (15).jpg,,"Step 1 - Observation:
+The image shows a series of large cylindrical tanks aligned in parallel. The surface of the tanks appears to be smooth and unblemished, with no signs of oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: The tanks do not show any signs of oxidation or corrosion.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+164,pipe_non_corroded (15).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (15).jpg,Data_Preprocessed/pipe_non_corroded (15).jpg,,"Step 1 - Observation:
+The image shows a series of large cylindrical tanks aligned in parallel. The surface of the tanks appears to be smooth and unblemished, with no visible rust or corrosion.
+
+Step 2 - Rule Application:
+According to the safety rule, ""Surface rust is acceptable."" Since there are no signs of rust or corrosion on the tanks' surfaces, this observation does not meet the criteria for structural defects, dents, cracks, or leaks.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+165,pipe_non_corroded (16).jpg,pipeline,Low Resolution,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (16).jpg,Data_Preprocessed/pipe_non_corroded (16).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a large, metallic pipe with a series of bends and fittings. The surface condition appears to be relatively clean but there are some signs of oxidation or corrosion on the metal surfaces.
+
+Step 2 - Rule Application:
+To alert on any sign of surface oxidation or corrosion, we need to check for any visible signs of rust, discoloration, or other signs of deterioration in the metal surface.
+
+Observation: There is no obvious signs of corrosion or oxidation present on the metal surface.
+Rule Application: No rule application needed.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+166,pipe_non_corroded (16).jpg,pipeline,Low Resolution,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (16).jpg,Data_Preprocessed/pipe_non_corroded (16).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a large, metallic pipe with visible rust on its surface. The unit of measurement is not specified in the image.
+
+Step 2 - Rule Application:
+The safety rule states that surface rust is acceptable. However, there are no structural defects, dents, cracks, or leaks observed in this image.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+167,pipe_non_corroded (17).jpg,pipeline,Low Resolution,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (17).jpg,Data_Preprocessed/pipe_non_corroded (17).jpg,Low Resolution,"Step 1 - Observation:
+- The image shows two large cylindrical pipes lying horizontally in a trench. Both pipes have a smooth, metallic surface with no visible signs of oxidation or corrosion.
+
+Step 2 - Rule Application:
+The safety rule is: Alert on any sign of surface oxidation or corrosion.
+Observation: No signs of oxidation or corrosion are observed on the surfaces of the cylinders.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+168,pipe_non_corroded (17).jpg,pipeline,Low Resolution,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (17).jpg,Data_Preprocessed/pipe_non_corroded (17).jpg,Low Resolution,"Step 1 - Observation:
+- The image shows two large cylindrical pipes lying horizontally in a trench. Both pipes have a smooth, metallic surface with no visible rust or corrosion.
+
+Step 2 - Rule Application:
+The observation from Step 1 does not meet the rule for structural defects, dents, cracks, or leaks. Therefore, this observation should be flagged as unsuitable.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+169,pipe_non_corroded (18).jpg,pipeline,Low Resolution,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,1,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (18).jpg,Data_Preprocessed/pipe_non_corroded (18).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a series of pipes running parallel to each other. The surface condition of the pipes appears to be relatively clean, with no visible signs of oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: No signs of oxidation or corrosion are observed in the pipes.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+170,pipe_non_corroded (18).jpg,pipeline,Low Resolution,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (18).jpg,Data_Preprocessed/pipe_non_corroded (18).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a series of pipes running parallel to each other. The surface condition of the pipes appears to be rusted, as evidenced by their reddish-brown color and rough texture.
+
+Step 2 - Rule Application:
+According to the safety rule, ""Surface rust is acceptable."" However, there are no visible structural defects, dents, cracks, or leaks in this image.
+
+Step 3 - Verdict:
+Since the observation from Step 1 does not meet the criteria for rust (acceptable) and does not show any structural defects, cracks, or leaks, the final verdict is:
+
+Final Verdict: UNSAFE"
+171,pipe_non_corroded (19).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (19).jpg,Data_Preprocessed/pipe_non_corroded (19).jpg,,"Step 1 - Observation:
+The image shows a series of large, cylindrical pipes running parallel to each other. The surface condition of the pipes appears to be relatively clean and free from significant oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: The surfaces of the pipes do not show signs of oxidation or corrosion (no discoloration, rust, or buildup).
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+172,pipe_non_corroded (19).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (19).jpg,Data_Preprocessed/pipe_non_corroded (19).jpg,,"Step 1 - Observation:
+The image shows a series of large, cylindrical pipes running parallel to each other. The surface condition of the pipes appears to be relatively clean with no visible rust or significant damage.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.
+Observation: No rust or significant damage on the surface of the pipes.
+Rule Application: Surface rust is acceptable.
+Final Verdict: SAFE"
+173,pipe_non_corroded (2).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (2).jpg,Data_Preprocessed/pipe_non_corroded (2).jpg,,"Step 1 - Observation:
+- The image shows a series of metallic pipes running parallel to each other. These pipes appear to be made of stainless steel and are coated with a silver-colored paint.
+
+Step 2 - Rule Application: 
+The observation from Step 1 does not meet the safety rule for surface oxidation or corrosion, as there is no sign of any signs of surface oxidation or corrosion on these pipes.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+174,pipe_non_corroded (2).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (2).jpg,Data_Preprocessed/pipe_non_corroded (2).jpg,,"Step 1 - Observation:
+- The image shows a series of metallic pipes running parallel to each other. These pipes are made of stainless steel and have a reflective surface.
+
+Step 2 - Rule Application: 
+The observation from Step 1 does not meet the rule for rust, which is acceptable in this context. However, it does not meet the rule for structural defects or dents either, as there are no visible signs of damage such as cracks or leaks.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+175,pipe_non_corroded (20).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (20).jpg,Data_Preprocessed/pipe_non_corroded (20).jpg,,"Step 1 - Observation:
+The image shows a set of large, gray pipes extending into the distance. The surface condition of these pipes appears to be quite worn and corroded.
+
+Step 2 - Rule Application: 
+To determine if the observation from Step 1 satisfies the safety rule of alerting on any sign of surface oxidation or corrosion, we need to check for signs of rust or deterioration in the pipes' surfaces.
+
+Observation: The pipes show signs of wear and corrosion, with some areas appearing more heavily stained than others.
+Signs of Surface Oxidation/Corrosion: There are visible patches where the paint has peeled off, exposing the underlying metal. Additionally, there is an overall dull appearance of the pipes, suggesting that they have been exposed to moisture and other environmental factors leading to corrosion.
+
+Step 3 - Verdict:
+Based on the observations and the rules provided, the final verdict would be:
+
+Final Verdict: UNSAFE"
+176,pipe_non_corroded (20).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (20).jpg,Data_Preprocessed/pipe_non_corroded (20).jpg,,"Step 1 - Observation:
+The image shows a set of large, gray pipes extending into the distance. The surface condition of these pipes appears to be quite worn and corroded, with visible signs of rust and discoloration.
+
+Step 2 - Rule Application:
+According to the safety rule, ""Surface rust is acceptable."" However, there are no structural defects, dents, cracks, or leaks observed in this image.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+177,pipe_non_corroded (21).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (21).jpg,Data_Preprocessed/pipe_non_corroded (21).jpg,,"Step 1 - Observation:
+- The image shows a series of large cylindrical tanks with white pipes running horizontally through the center. There are no signs of surface oxidation or corrosion visible in this view.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: No signs of surface oxidation or corrosion are observed in the image.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+178,pipe_non_corroded (21).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (21).jpg,Data_Preprocessed/pipe_non_corroded (21).jpg,,"Step 1 - Observation:
+- The image shows a series of large cylindrical tanks with white pipes running horizontally through the center. The surface condition of these pipes appears to be clean and free from rust, corrosion, or any other signs of wear.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.
+Since there are no visible signs of rust, corrosion, or damage on the surface of the pipes in this image, it does not meet the criteria for surface rust being acceptable under the given rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+179,pipe_non_corroded (22).jpg,pipeline,,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,0,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (22).jpg,Data_Preprocessed/pipe_non_corroded (22).jpg,,"Step 1 - Observation:
+The image shows a series of pipes running horizontally. The surface condition of the pipes appears to be relatively clean, with no visible signs of oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: No signs of oxidation or corrosion are observed in the image.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+180,pipe_non_corroded (22).jpg,pipeline,,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (22).jpg,Data_Preprocessed/pipe_non_corroded (22).jpg,,"Step 1 - Observation:
+The image shows a series of pipes running horizontally. The surface condition of the pipes appears to be rusted, as evidenced by the darkened and corroded metal surfaces.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Based on the observation in Step 1, which indicates that the surface of the pipes is rusted, it meets the criteria set by the safety rule. Therefore, the final verdict is:
+
+Final Verdict: SAFE"
+181,pipe_non_corroded (23).jpg,pipeline,Low Resolution,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,1,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (23).jpg,Data_Preprocessed/pipe_non_corroded (23).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a long, curved metallic pipe running through a rural area. The surface of the pipe appears to be in good condition with no signs of oxidation or corrosion.
+
+Step 2 - Rule Application:
+According to the safety rule, ""Alert on any sign of surface oxidation or corrosion,"" we need to determine if there is any sign of such deterioration visible on the pipe's surface.
+
+Step 3 - Verdict:
+Since the observation from Step 1 does not show any signs of surface oxidation or corrosion, the final verdict is:
+
+Final Verdict: SAFE"
+182,pipe_non_corroded (23).jpg,pipeline,Low Resolution,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (23).jpg,Data_Preprocessed/pipe_non_corroded (23).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a large, curved metallic pipe running along the side of a road. The surface of the pipe appears to be rusted and has some visible signs of corrosion or wear.
+
+Step 2 - Rule Application: 
+The safety rule states that surface rust is acceptable. However, this observation does not include any structural defects, dents, cracks, or leaks.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+183,pipe_non_corroded (24).jpg,pipeline,,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,0,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (24).jpg,Data_Preprocessed/pipe_non_corroded (24).jpg,,"Step 1 - Observation:
+The image shows a large, cylindrical pipe with a metallic surface. The pipe appears to be in good condition and does not show any signs of oxidation or corrosion.
+
+Step 2 - Rule Application:
+According to the safety rule, ""Alert on any sign of surface oxidation or corrosion,"" we need to determine if there is any sign of such deterioration visible on the pipe's surface.
+
+Step 3 - Verdict:
+Since no signs of oxidation or corrosion are observed on the surface of the pipe, the final verdict is:
+
+Final Verdict: SAFE"
+184,pipe_non_corroded (24).jpg,pipeline,,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (24).jpg,Data_Preprocessed/pipe_non_corroded (24).jpg,,"Step 1 - Observation:
+The image shows a large, cylindrical pipe with a metallic surface. The numeric reading on the pipe is approximately 20 feet (approximately 6 meters). The unit of measurement is not specified in the image.
+
+Step 2 - Rule Application: 
+The safety rule states that surface rust is acceptable. However, there are no visible signs of rust or corrosion on the surface of the pipe. Therefore, this observation does not meet the rule for surface rust being acceptable.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+185,pipe_non_corroded (25).jpg,pipeline,Low Resolution,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (25).jpg,Data_Preprocessed/pipe_non_corroded (25).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a large cylindrical pipe extending into the distance. The surface of the pipe appears to be smooth and unblemished, with no signs of oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: The surface condition of the pipe does not show signs of oxidation or corrosion.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+186,pipe_non_corroded (25).jpg,pipeline,Low Resolution,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (25).jpg,Data_Preprocessed/pipe_non_corroded (25).jpg,Low Resolution,"Step 1 - Observation:
+The image shows a large cylindrical pipe extending into the distance. The surface of the pipe appears to be smooth and free from any visible rust, corrosion, or structural defects.
+
+Step 2 - Rule Application:
+According to the safety rule, ""Surface rust is acceptable."" Since there are no signs of rust, corrosion, or structural defects on the surface of the pipe in this image, it does not meet the criteria for being considered safe under this rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+187,pipe_non_corroded (3).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (3).jpg,Data_Preprocessed/pipe_non_corroded (3).jpg,,"Step 1 - Observation:
+The image shows two large yellow pipes lying on the ground. The surface of both pipes appears to be slightly worn, with some areas showing signs of oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: Both pipes show signs of wear and possible corrosion on their surfaces.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+188,pipe_non_corroded (3).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (3).jpg,Data_Preprocessed/pipe_non_corroded (3).jpg,,"Step 1 - Observation:
+The image shows two large yellow pipes lying on the ground. The surface of these pipes appears to be rusted, with visible signs of corrosion and discoloration.
+
+Step 2 - Rule Application: 
+The safety rule is that surface rust is acceptable. However, this observation does not meet the criteria for structural defects, dents, cracks, or leaks since there are no visible signs of damage such as holes, cracks, or leaks in the image.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+189,pipe_non_corroded (4).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (4).jpg,Data_Preprocessed/pipe_non_corroded (4).jpg,,"Step 1 - Observation:
+The image shows a set of large metallic pipes running parallel to each other. The surface condition of the pipes appears to be quite worn and corroded, as evidenced by visible rust and discoloration.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion. Observing the pipeline's surface, it is evident that there are signs of oxidation and corrosion. The presence of rust and discoloration indicates that these surfaces have been exposed to moisture and possibly chemicals, which poses a risk of corrosion and potential damage to the pipes over time.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+190,pipe_non_corroded (4).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (4).jpg,Data_Preprocessed/pipe_non_corroded (4).jpg,,"Step 1 - Observation:
+- The image shows two large metallic pipes running parallel to each other. They appear to be part of a pipeline system.
+- Both pipes have visible rust on their surfaces, indicating that they are exposed to the elements and may need maintenance or replacement.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Based on the observation in Step 1, which indicates surface rust, it does not meet the criteria set by the safety rule. Therefore, the final verdict is:
+
+Final Verdict: UNSAFE"
+191,pipe_non_corroded (5).jpg,pipeline,Distorted,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,1,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (5).jpg,Data_Preprocessed/pipe_non_corroded (5).jpg,Distorted,"Step 1 - Observation:
+- The image shows a series of black pipes with visible signs of oxidation and corrosion. The surface appears to be brownish, indicating possible rust or degradation.
+
+Step 2 - Rule Application:
+The safety rule is: Alert on any sign of surface oxidation or corrosion.
+Observation: Yes, the physical surface condition indicates that there are signs of oxidation and corrosion on the pipes.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+192,pipe_non_corroded (5).jpg,pipeline,Distorted,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (5).jpg,Data_Preprocessed/pipe_non_corroded (5).jpg,Distorted,"Step 1 - Observation:
+- The image shows a series of black pipes with visible rust on their surfaces. The pipes are laid out in an irregular pattern and appear to be underground.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Based on the observed condition, the surface rust on the pipes does not meet the acceptable criteria set by the safety rule. Therefore, the final verdict is:
+
+Final Verdict: UNSAFE"
+193,pipe_non_corroded (6).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (6).jpg,Data_Preprocessed/pipe_non_corroded (6).jpg,,"Step 1 - Observation:
+The image shows a series of red pipes running parallel on the side of a dirt road. The pipes appear to be made of metal and have visible rust or corrosion on their surfaces.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion. Observing the condition of the pipes, it appears that they are experiencing some form of surface oxidation or corrosion. This can lead to potential hazards such as reduced strength, increased wear, and decreased lifespan of the pipes.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+194,pipe_non_corroded (6).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (6).jpg,Data_Preprocessed/pipe_non_corroded (6).jpg,,"Step 1 - Observation:
+The image shows a series of red pipes running parallel on the side of a dirt road. The pipes appear to be made of metal and have visible rust along their surfaces.
+
+Step 2 - Rule Application: 
+The safety rule is: Surface rust is acceptable.
+Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Since the surface rust observed in the image does not meet the criteria set by the safety rule (surface rust is acceptable), the final verdict is:
+
+Final Verdict: UNSAFE"
+195,pipe_non_corroded (7).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (7).jpg,Data_Preprocessed/pipe_non_corroded (7).jpg,,"Step 1 - Observation:
+- The image shows two large pipes with a green coating on their surface. 
+- The numeric reading of the green coating is not clearly visible in this image.
+
+Step 2 - Rule Application: According to the safety rule, ""Alert on any sign of surface oxidation or corrosion,"" we need to determine if there are signs of such corrosion present on the green coating.
+- Observing closely, it appears that the green coating does not show any obvious signs of oxidation or corrosion. It looks smooth and intact without any discoloration or damage.
+
+Step 3 - Verdict: Final Verdict: SAFE"
+196,pipe_non_corroded (7).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (7).jpg,Data_Preprocessed/pipe_non_corroded (7).jpg,,"Step 1 - Observation:
+- The image shows two large pipes with a green coating on the surface. Both pipes appear to be made of metal and are likely part of an industrial or water supply system.
+
+Step 2 - Rule Application: 
+The observation from Step 1 does not meet the rule for rust, which is acceptable in this context. However, it does show structural defects (dents) and cracks but no leaks.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+197,pipe_non_corroded (8).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (8).jpg,Data_Preprocessed/pipe_non_corroded (8).jpg,,"Step 1 - Observation:
+The image shows a long, cylindrical pipe lying in the ground. The surface of the pipe appears to be wet and has signs of oxidation or corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is to alert on any sign of surface oxidation or corrosion.
+Observation: The surface of the pipe shows signs of oxidation or corrosion (wet and possibly corroded).
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+198,pipe_non_corroded (8).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (8).jpg,Data_Preprocessed/pipe_non_corroded (8).jpg,,"Step 1 - Observation:
+The image shows a long, cylindrical pipe lying in the ground. The surface of the pipe appears to be rusted and has visible signs of corrosion.
+
+Step 2 - Rule Application: 
+The safety rule is: Surface rust is acceptable.
+Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Final Verdict: UNSAFE"
+199,pipe_non_corroded (9).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (9).jpg,Data_Preprocessed/pipe_non_corroded (9).jpg,,"Step 1 - Observation:
+- The image shows a series of black pipes with visible signs of oxidation or corrosion. The surface appears to be dark and has patches where the paint is peeling off.
+
+Step 2 - Rule Application: 
+The safety rule states that an alert should be given on any sign of surface oxidation or corrosion. Since there are visible signs of oxidation or corrosion, this observation satisfies the rule.
+
+Step 3 - Verdict:
+Final Verdict: SAFE"
+200,pipe_non_corroded (9).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (9).jpg,Data_Preprocessed/pipe_non_corroded (9).jpg,,"Step 1 - Observation:
+- The image shows a series of black pipes running through a trench. 
+- The surface condition of the pipes appears to be relatively clean, with no visible rust or significant damage.
+
+Step 2 - Rule Application:
+The safety rule is: Surface rust is acceptable.
+Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+Step 3 - Verdict:
+Based on the observed cleanliness and absence of rust, corrosion, or structural damage in the surface of the pipes, I conclude that the trench is safe for continued use. Therefore, my final verdict is:
+
+Final Verdict: SAFE"
