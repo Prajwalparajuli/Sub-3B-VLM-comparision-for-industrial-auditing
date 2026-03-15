@@ -37,7 +37,6 @@ A modular research pipeline for evaluating Vision-Language Models (VLMs) under s
 │   ├── baseline/                # Baseline inference outputs, metrics, failure analysis
 │   ├── innovation/              # CoT, Decomposition, Contrast, Contrast+CoT results
 │   └── profiling/               # Hardware profiling summaries
-├── docs/                        # Reports, decisions log, dataset metadata
 ├── run_all.ps1                  # One-command full pipeline reproduction
 └── run_all_profiling.ps1        # Hardware profiling only
 ```
