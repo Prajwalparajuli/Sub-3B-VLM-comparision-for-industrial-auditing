@@ -15,7 +15,7 @@ from transformers import AutoModel, AutoTokenizer, BitsAndBytesConfig
 
 # inference_utils lives in generation_baseline
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "generation_baseline"))
-from inference_utils import load_preprocessed_metadata
+from inference_utils import load_preprocessed_metadata, save_results
 
 # 1. Setup Device
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -153,74 +153,69 @@ print("Model Ready.")
 
 # 3. Load Data
 dataset = load_preprocessed_metadata()
-results = []
+N_RUNS = 3
 
-# 4. Inference Loop
-print(f"Starting CoT inference on {len(dataset)} images...")
+for run_i in range(1, N_RUNS + 1):
+    results = []
+    torch.manual_seed(42 + run_i)
 
-for i, item in enumerate(dataset):
-    image_path = item.get("processed_path")
-    constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
-
-    if not image_path or not os.path.exists(image_path):
-        print(f"WARNING: Skipping missing image: {image_path}")
-        continue
-
-    image = Image.open(image_path).convert("RGB")
-
-    # Resize to 384px (same as baseline MiniCPM)
-    w, h = image.size
-    MAX_EDGE = 384
-    scale = MAX_EDGE / max(w, h)
-    proc_image = image.resize((int(w * scale), int(h * scale)), resample=Image.LANCZOS)
-
-    # Chain-of-Thought prompt -- identical to all other CoT scripts.
-    # No per-model tuning so results are directly comparable.
-    decomp_prompt = (
-        f"You are an AI industrial safety auditor.\n"
-        f"Safety Rule: '{constraint}'\n\n"
-        f"Identify the current reading or condition shown in the image, then evaluate it against the rule.\n"
-        f"Answer the following three questions exactly in order:\n\n"
-        f"Q1: Observation: What is the exact numeric reading or visible physical condition shown in the image?\n"
-        f"Q2: Evaluation: Does the observation from Q1 violate the Safety Rule? (Answer Yes or No)\n"
-        f"Q3: Final Verdict: If Q2 is Yes, output UNSAFE. If Q2 is No, output SAFE.\n\n"
-        f"Format your response exactly as:\n"
-        f"Q1: Observation: [Your observation here]\n"
-        f"Q2: Evaluation: [Yes or No]\n"
-        f"Q3: Final Verdict: [SAFE or UNSAFE]"
-    )
-
-    msgs = [{"role": "user", "content": decomp_prompt}]
-
-    with torch.no_grad():
-        response, context, _ = model.chat(
-            image=proc_image,
-            msgs=msgs,
-            context=None,
-            tokenizer=tokenizer,
-            sampling=False
+    # 4. Inference Loop
+    print(f"\n--- Starting Decomp Run {run_i}/{N_RUNS} on {len(dataset)} images ---")
+    
+    for i, item in enumerate(dataset):
+        image_path = item.get("processed_path")
+        constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
+    
+        if not image_path or not os.path.exists(image_path):
+            print(f"WARNING: Skipping missing image: {image_path}")
+            continue
+    
+        image = Image.open(image_path).convert("RGB")
+    
+        # Resize to 384px (same as baseline MiniCPM)
+        w, h = image.size
+        MAX_EDGE = 384
+        scale = MAX_EDGE / max(w, h)
+        proc_image = image.resize((int(w * scale), int(h * scale)), resample=Image.LANCZOS)
+    
+        # Chain-of-Thought prompt -- identical to all other CoT scripts.
+        # No per-model tuning so results are directly comparable.
+        decomp_prompt = (
+            f"You are an AI industrial safety auditor.\n"
+            f"Safety Rule: '{constraint}'\n\n"
+            f"Identify the current reading or condition shown in the image, then evaluate it against the rule.\n"
+            f"Answer the following three questions exactly in order:\n\n"
+            f"Q1: Observation: What is the exact numeric reading or visible physical condition shown in the image?\n"
+            f"Q2: Evaluation: Does the observation from Q1 violate the Safety Rule? (Answer Yes or No)\n"
+            f"Q3: Final Verdict: If Q2 is Yes, output UNSAFE. If Q2 is No, output SAFE.\n\n"
+            f"Format your response exactly as:\n"
+            f"Q1: Observation: [Your observation here]\n"
+            f"Q2: Evaluation: [Yes or No]\n"
+            f"Q3: Final Verdict: [SAFE or UNSAFE]"
         )
+    
+        msgs = [{"role": "user", "content": decomp_prompt}]
+    
+        with torch.no_grad():
+            response, context, _ = model.chat(
+                image=proc_image,
+                msgs=msgs,
+                context=None,
+                tokenizer=tokenizer,
+                sampling=False
+            )
+    
+        # Store result -- same fields as baseline so parse_results.py works unchanged
+        result_entry = item.copy()
+        result_entry["model_response"] = response
+        result_entry["run_iteration"] = run_i
+        results.append(result_entry)
+    
+        if (i + 1) % 10 == 0:
+            print(f"Processed {i + 1}/{len(dataset)} images...")
 
-    # Store result -- same fields as baseline so parse_results.py works unchanged
-    result_entry = item.copy()
-    result_entry["model_response"] = response
-    results.append(result_entry)
-
-    if (i + 1) % 10 == 0:
-        print(f"Processed {i + 1}/{len(dataset)} images...")
-
-# 5. Save Results
-output_dir = "results/innovation/decomposition"
-os.makedirs(output_dir, exist_ok=True)
-output_path = os.path.join(output_dir, "minicpm_decomp_results.csv")
-
-if results:
-    keys = results[0].keys()
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=keys)
-        writer.writeheader()
-        writer.writerows(results)
-print(f"Decomp results saved to {output_path}")
+    # 5. Save Results
+    save_results(results, "minicpm_decomp", iteration=run_i, out_dir="results/innovation/decomposition")
 
 # Memory Hygiene
 del model, tokenizer

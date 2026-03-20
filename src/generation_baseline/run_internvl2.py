@@ -41,51 +41,59 @@ def get_pixel_values_safe(image, input_size=448):
 
 # 4. Load Data
 dataset = load_preprocessed_metadata()
-results = []
 
-# 5. Inference Loop
-print(f"Starting inference on {len(dataset)} images...")
-for i, item in enumerate(dataset):
-    image_path = item.get("processed_path")
-    constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
-    
-    if not image_path or not os.path.exists(image_path):
-        print(f"WARNING: Skipping missing image: {image_path}")
-        continue
-    
-    # Load Image
-    image = Image.open(image_path).convert("RGB")
-    
-    # Process Inputs
-    pixel_values = get_pixel_values_safe(image)
-    standard_prompt = get_standard_prompt(constraint)
-    question = f'<image>\n{standard_prompt}'
-    
-    # Generate Response
-    with torch.no_grad():
-        # InternVL2 uses model.chat for simple interaction
-        response = model.chat(
-            tokenizer, 
-            pixel_values, 
-            question, 
-            generation_config=dict(
-                max_new_tokens=256, 
-                do_sample=False, 
-                repetition_penalty=1.1 # SGP Standard
-            ),
-            num_patches_list=[1] # Disable tiling for baseline
-        )
-    
-    # Store result
-    result_entry = item.copy()
-    result_entry["model_response"] = response
-    results.append(result_entry)
-    
-    if (i + 1) % 10 == 0:
-        print(f"Processed {i + 1}/{len(dataset)} images...")
+# Number of evaluation runs to capture generation variance
+N_RUNS = 3
 
-# 6. Save Results
-save_results(results, "internvl2")
+for run_i in range(1, N_RUNS + 1):
+    results = []
+    # Seed control for reproducibility across runs
+    torch.manual_seed(42 + run_i)
+
+    # 5. Inference Loop
+    print(f"\n--- Starting Run {run_i}/{N_RUNS} on {len(dataset)} images ---")
+    for i, item in enumerate(dataset):
+        image_path = item.get("processed_path")
+        constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
+        
+        if not image_path or not os.path.exists(image_path):
+            print(f"WARNING: Skipping missing image: {image_path}")
+            continue
+        
+        # Load Image
+        image = Image.open(image_path).convert("RGB")
+        
+        # Process Inputs
+        pixel_values = get_pixel_values_safe(image)
+        standard_prompt = get_standard_prompt(constraint)
+        question = f'<image>\n{standard_prompt}'
+        
+        # Generate Response
+        with torch.no_grad():
+            # InternVL2 uses model.chat for simple interaction
+            response = model.chat(
+                tokenizer, 
+                pixel_values, 
+                question, 
+                generation_config=dict(
+                    max_new_tokens=256, 
+                    do_sample=False, 
+                    repetition_penalty=1.1 # SGP Standard
+                ),
+                num_patches_list=[1] # Disable tiling for baseline
+            )
+        
+        # Store result
+        result_entry = item.copy()
+        result_entry["model_response"] = response
+        result_entry["run_iteration"] = run_i  # Track which run this is
+        results.append(result_entry)
+        
+        if (i + 1) % 10 == 0:
+            print(f"Processed {i + 1}/{len(dataset)} images...")
+
+    # 6. Save Results
+    save_results(results, "internvl2", iteration=run_i)
 
 # Cleanup
 del model, tokenizer

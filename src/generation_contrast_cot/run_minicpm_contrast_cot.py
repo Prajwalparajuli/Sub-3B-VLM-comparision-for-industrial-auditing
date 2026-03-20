@@ -15,7 +15,7 @@ from transformers import AutoModel, AutoTokenizer, BitsAndBytesConfig
 
 # inference_utils lives in generation_baseline
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "generation_baseline"))
-from inference_utils import load_preprocessed_metadata
+from inference_utils import load_preprocessed_metadata, save_results
 
 # Add the local directory for image_utils
 sys.path.insert(0, os.path.dirname(__file__))
@@ -149,69 +149,64 @@ model.eval()
 
 # 3. Load Data
 dataset = load_preprocessed_metadata()
-results = []
+N_RUNS = 3
 
-# 4. Inference Loop
-print(f"Starting Dual-Channel CLAHE inference on {len(dataset)} images...")
+for run_i in range(1, N_RUNS + 1):
+    results = []
+    torch.manual_seed(42 + run_i)
 
-for i, item in enumerate(dataset):
-    image_path = item.get("processed_path")
-    constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
-
-    if not image_path or not os.path.exists(image_path):
-        continue
-
-    original_image = Image.open(image_path).convert("RGB")
-
-    # APPLY DUAL-CHANNEL CLAHE INNOVATION
-    # apply_clahe_and_concatenate internally enforces max_dim=512 via LANCZOS,
-    # making it completely VRAM safe without an external resizing step.
-    image = apply_clahe_and_concatenate(original_image, max_dim=512)
-
-    cot_prompt = (
-        f"You are an industrial safety auditor. "
-        f"Answer in exactly three steps:\n\n"
-        f"STEP 1 - OBSERVATION: Describe only what you see in the image. "
-        f"For a gauge: state the numeric reading and its unit. "
-        f"For a pipe: describe the physical surface condition.\n\n"
-        f"STEP 2 - RULE APPLICATION: The safety rule is: {constraint} "
-        f"Show whether the observation from Step 1 satisfies this rule.\n\n"
-        f"STEP 3 - VERDICT: Write ONLY one of these two lines, nothing else:\n"
-        f"Final Verdict: SAFE\n"
-        f"Final Verdict: UNSAFE"
-    )
-
-    msgs = [{"role": "user", "content": cot_prompt}]
-
-    with torch.no_grad():
-        response, _, _ = model.chat(
-            image=image,
-            msgs=msgs,
-            context=None,
-            tokenizer=tokenizer,
-            sampling=False
+    # 4. Inference Loop
+    print(f"\n--- Starting Contrast CoT Run {run_i}/{N_RUNS} on {len(dataset)} images ---")
+    
+    for i, item in enumerate(dataset):
+        image_path = item.get("processed_path")
+        constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
+    
+        if not image_path or not os.path.exists(image_path):
+            continue
+    
+        original_image = Image.open(image_path).convert("RGB")
+    
+        # APPLY DUAL-CHANNEL CLAHE INNOVATION
+        # apply_clahe_and_concatenate internally enforces max_dim=512 via LANCZOS,
+        # making it completely VRAM safe without an external resizing step.
+        image = apply_clahe_and_concatenate(original_image, max_dim=512)
+    
+        cot_prompt = (
+            f"You are an industrial safety auditor. "
+            f"Answer in exactly three steps:\n\n"
+            f"STEP 1 - OBSERVATION: Describe only what you see in the image. "
+            f"For a gauge: state the numeric reading and its unit. "
+            f"For a pipe: describe the physical surface condition.\n\n"
+            f"STEP 2 - RULE APPLICATION: The safety rule is: {constraint} "
+            f"Show whether the observation from Step 1 satisfies this rule.\n\n"
+            f"STEP 3 - VERDICT: Write ONLY one of these two lines, nothing else:\n"
+            f"Final Verdict: SAFE\n"
+            f"Final Verdict: UNSAFE"
         )
+    
+        msgs = [{"role": "user", "content": cot_prompt}]
+    
+        with torch.no_grad():
+            response, _, _ = model.chat(
+                image=image,
+                msgs=msgs,
+                context=None,
+                tokenizer=tokenizer,
+                sampling=False
+            )
+    
+        # Store result
+        result_entry = item.copy()
+        result_entry["model_response"] = response
+        result_entry["run_iteration"] = run_i
+        results.append(result_entry)
+    
+        if (i + 1) % 10 == 0:
+            print(f"Processed {i + 1}/{len(dataset)} images...")
 
-    # Store result
-    result_entry = item.copy()
-    result_entry["model_response"] = response
-    results.append(result_entry)
-
-    if (i + 1) % 10 == 0:
-        print(f"Processed {i + 1}/{len(dataset)} images...")
-
-# 5. Save Results
-output_dir = "results/innovation/contrast_cot"
-os.makedirs(output_dir, exist_ok=True)
-output_path = os.path.join(output_dir, "minicpm_contrast_cot_results.csv")
-
-if results:
-    keys = results[0].keys()
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=keys)
-        writer.writeheader()
-        writer.writerows(results)
-print(f"Contrast results saved to {output_path}")
+    # 5. Save Results
+    save_results(results, "minicpm_contrast_cot", iteration=run_i, out_dir="results/innovation/contrast_cot")
 
 # Memory Hygiene
 del model, tokenizer

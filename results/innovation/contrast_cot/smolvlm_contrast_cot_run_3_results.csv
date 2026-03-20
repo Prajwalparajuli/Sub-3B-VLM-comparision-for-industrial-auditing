@@ -1,0 +1,743 @@
+index,image_id,category,artifact_tag,ground_truth_value,unit,logic_constraint,expected_value,rule_id,reasoning,hard_case_flag,expected_verdict,full_path,processed_path,constraint,model_response,run_iteration
+1,guage (1).jpg,guage,Oblique Angle,0.15,bar,Alert if pressure exceeds 0.10 bar.,0.15 bar,Rule A,Value is 0.15. 0.15 > 0.10.,1,UNSAFE,Dataset/Guages/guage (1).jpg,Data_Preprocessed/guage (1).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 0.10 bar
+STEP 2 - RULE APPLICATION: If pressure exceeds 0.10 bar, alert.
+STEP 3 - VERDICT: SAFE.",3
+2,guage (1).jpg,guage,Oblique Angle,0.15,bar,Alert if pressure exceeds 0.20 bar.,0.15 bar,Rule B,Value is 0.15. 0.15 < 0.20.,1,SAFE,Dataset/Guages/guage (1).jpg,Data_Preprocessed/guage (1).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 0.20 bar
+STEP 2 - RULE APPLICATION: If pressure exceeds 0.20 bar, alert.
+STEP 3 - VERDICT: SAFE.",3
+3,guage (10).jpg,guage,,0,bar,Alert if pressure is above 0.05 bar.,0 bar,Rule A,Value is 0. 0 < 0.05.,0,SAFE,Dataset/Guages/guage (10).jpg,Data_Preprocessed/guage (10).jpg,,"STEP 1 - OBSERVATION: 0.05 bar
+STEP 2 - RULE APPLICATION: The pressure is above 0.05 bar, so it's UNSAFE.
+STEP 3 - VERDICT: SAFE",3
+4,guage (10).jpg,guage,,0,bar,Alert if system is non-pressurized (0 bar).,0 bar,Rule B,Value is 0. System is non-pressurized.,0,UNSAFE,Dataset/Guages/guage (10).jpg,Data_Preprocessed/guage (10).jpg,,"STEP 1 - OBSERVATION: 120
+STEP 2 - RULE APPLICATION: If the system is non-pressurized (0 bar), then the observation from Step 1 satisfies the rule.
+STEP 3 - VERDICT: SAFE",3
+5,guage (11).jpg,guage,Oblique Angle,25,kPa,Normal range is < 20 kPa. Alert if over.,25 kPa,Rule A,Value is 25. 25 > 20.,1,UNSAFE,Dataset/Guages/guage (11).jpg,Data_Preprocessed/guage (11).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 20 kPa
+STEP 2 - RULE APPLICATION: The normal range is < 20 kPa. Over is alert.
+STEP 3 - VERDICT: SAFE",3
+6,guage (11).jpg,guage,Oblique Angle,25,kPa,Normal range is < 30 kPa. Alert if over.,25 kPa,Rule B,Value is 25. 25 < 30.,1,SAFE,Dataset/Guages/guage (11).jpg,Data_Preprocessed/guage (11).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 30 kPa
+STEP 2 - RULE APPLICATION: The normal range is < 30 kPa. So, the observation from Step 1 does not satisfy the rule.
+STEP 3 - VERDICT: SAFE",3
+7,guage (12).jpg,guage,Oblique Angle,100,,Alert if reading exceeds 80 NA.,100 NA,Rule A,Value is 100. 100 > 80.,1,UNSAFE,Dataset/Guages/guage (12).jpg,Data_Preprocessed/guage (12).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 95
+STEP 2 - RULE APPLICATION: The reading exceeds 80 NA.
+STEP 3 - VERDICT: SAFE",3
+8,guage (12).jpg,guage,Oblique Angle,100,,Alert if reading exceeds 120 NA.,100 NA,Rule B,Value is 100. 100 < 120.,1,SAFE,Dataset/Guages/guage (12).jpg,Data_Preprocessed/guage (12).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 125
+STEP 2 - RULE APPLICATION: If reading exceeds 120 NA, alert.
+STEP 3 - VERDICT: SAFE.",3
+9,guage (13).jpg,guage,Obstruction,2,bar,Operating limit is 1.5 bar. Alert if over.,2 bar,Rule A,Value is 2. 2 > 1.5.,1,UNSAFE,Dataset/Guages/guage (13).jpg,Data_Preprocessed/guage (13).jpg,Obstruction,"STEP 1 - OBSERVATION: 1.5 bar
+STEP 2 - RULE APPLICATION: Over 1.5 bar is not safe.
+STEP 3 - VERDICT: SAFE",3
+10,guage (13).jpg,guage,Obstruction,2,bar,Operating limit is 3.0 bar. Alert if over.,2 bar,Rule B,Value is 2. 2 < 3.0.,1,SAFE,Dataset/Guages/guage (13).jpg,Data_Preprocessed/guage (13).jpg,Obstruction,"STEP 1 - OBSERVATION: 3.0 bar
+STEP 2 - RULE APPLICATION: Operating limit is 3.0 bar. Alert if over. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+11,guage (14).jpg,guage,,18,lbf/in2,Alert if pressure exceeds 14 lbf/in2.,18 lbf/in2,Rule A,Value is 18. 18 > 14.,0,UNSAFE,Dataset/Guages/guage (14).jpg,Data_Preprocessed/guage (14).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: If pressure exceeds 14 lbf/in2, then the observation from Step 1 satisfies the rule.
+STEP 3 - VERDICT: SAFE",3
+12,guage (14).jpg,guage,,18,lbf/in2,Alert if pressure exceeds 22 lbf/in2.,18 lbf/in2,Rule B,Value is 18. 18 < 22.,0,SAFE,Dataset/Guages/guage (14).jpg,Data_Preprocessed/guage (14).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: If pressure exceeds 22 lbf/in2, then the observation from Step 1 satisfies the rule.
+STEP 3 - VERDICT: SAFE",3
+13,guage (15).jpg,guage,Low Resolution,0,,Alert if reading is above 5 NA.,0 NA,Rule A,Value is 0. 0 < 5.,1,SAFE,Dataset/Guages/guage (15).jpg,Data_Preprocessed/guage (15).jpg,Low Resolution,"STEP 1 - OBSERVATION: 60
+STEP 2 - RULE APPLICATION: The reading is above 5 NA.
+STEP 3 - VERDICT: SAFE",3
+14,guage (15).jpg,guage,Low Resolution,0,,Alert if system is at 0 NA.,0 NA,Rule B,Value is 0. System is at 0.,1,UNSAFE,Dataset/Guages/guage (15).jpg,Data_Preprocessed/guage (15).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: If the system is at 0 NA, then it is safe.
+STEP 3 - VERDICT: SAFE",3
+15,guage (16).jpg,guage,,125,kN/m2,Alert if value exceeds 100 kN/m2.,125 kN/m2,Rule A,Value is 125. 125 > 100.,0,UNSAFE,Dataset/Guages/guage (16).jpg,Data_Preprocessed/guage (16).jpg,,"STEP 1 - OBSERVATION: 650
+STEP 2 - RULE APPLICATION: If value exceeds 100 kN/m2, then the observation from Step 1 satisfies the rule.
+STEP 3 - VERDICT: SAFE",3
+16,guage (16).jpg,guage,,125,kN/m2,Alert if value exceeds 150 kN/m2.,125 kN/m2,Rule B,Value is 125. 125 < 150.,0,SAFE,Dataset/Guages/guage (16).jpg,Data_Preprocessed/guage (16).jpg,,"STEP 1 - OBSERVATION: 60
+STEP 2 - RULE APPLICATION: The value exceeds 150 kN/m2.
+STEP 3 - VERDICT: SAFE",3
+17,guage (17).jpg,guage,Oblique Angle,200,psi,Alert if pressure is > 160 psi.,200 psi,Rule A,Value is 200. 200 > 160.,1,UNSAFE,Dataset/Guages/guage (17).jpg,Data_Preprocessed/guage (17).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 160psi
+STEP 2 - RULE APPLICATION: If pressure is > 160psi, show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE",3
+18,guage (17).jpg,guage,Oblique Angle,200,psi,Alert if pressure is > 240 psi.,200 psi,Rule B,Value is 200. 200 < 240.,1,SAFE,Dataset/Guages/guage (17).jpg,Data_Preprocessed/guage (17).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 240psi
+STEP 2 - RULE APPLICATION: The pressure is above 240psi so it's unsafe.
+STEP 3 - VERDICT: SAFE",3
+19,guage (18).jpg,guage,Oblique Angle,30,,Alert if reading exceeds 24 NA.,30 NA,Rule A,Value is 30. 30 > 24.,1,UNSAFE,Dataset/Guages/guage (18).jpg,Data_Preprocessed/guage (18).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if reading exceeds 24 NA. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+20,guage (18).jpg,guage,Oblique Angle,30,,Alert if reading exceeds 36 NA.,30 NA,Rule B,Value is 30. 30 < 36.,1,SAFE,Dataset/Guages/guage (18).jpg,Data_Preprocessed/guage (18).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: If reading exceeds 36 NA, then the observation does not satisfy the rule. Therefore, the answer is UNSAFE.
+
+STEP 3 - VERDICT: SAME as above.",3
+21,guage (19).jpg,guage,Oblique Angle,2.2,liter,Alert if level is > 1.7 liter.,2.2 liter,Rule A,Value is 2.2. 2.2 > 1.7.,1,UNSAFE,Dataset/Guages/guage (19).jpg,Data_Preprocessed/guage (19).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 1.7
+STEP 2 - RULE APPLICATION: The level is > 1.7 liter.
+STEP 3 - VERDICT: SAFE.",3
+22,guage (19).jpg,guage,Oblique Angle,2.2,liter,Alert if level is > 2.7 liter.,2.2 liter,Rule B,Value is 2.2. 2.2 < 2.7.,1,SAFE,Dataset/Guages/guage (19).jpg,Data_Preprocessed/guage (19).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 2.7
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if level is > 2.7 liter.
+STEP 3 - VERDICT: SAFE",3
+23,guage (2).jpg,guage,Oblique Angle,0,kg/cm2,Alert if value exceeds 2 kg/cm2.,0 kg/cm2,Rule A,Value is 0. 0 < 2.,1,SAFE,Dataset/Guages/guage (2).jpg,Data_Preprocessed/guage (2).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 2000
+STEP 2 - RULE APPLICATION: If value exceeds 2 kg/cm2, alarm is triggered.
+STEP 3 - VERDICT: SAFE",3
+24,guage (2).jpg,guage,Oblique Angle,0,kg/cm2,Alert if system pressure drops to 0 kg/cm2.,0 kg/cm2,Rule B,Value is 0. System pressure is at 0.,1,UNSAFE,Dataset/Guages/guage (2).jpg,Data_Preprocessed/guage (2).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: If system pressure drops to 0 kg/cm2, then the observation from Step 1 satisfies the rule.
+STEP 3 - VERDICT: SAFE",3
+25,guage (20).jpg,guage,Glare,4,kgf/cm2,Alert if needle is past 3.0 kgf/cm2.,4 kgf/cm2,Rule A,Value is 4. 4 > 3.0.,1,UNSAFE,Dataset/Guages/guage (20).jpg,Data_Preprocessed/guage (20).jpg,Glare,"STEP 1 - OBSERVATION: 3.0 kgf/cm2
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if needle is past 3.0 kgf/cm2. So, we need to check if the needle is past 3.0 kgf/cm2.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+26,guage (20).jpg,guage,Glare,4,kgf/cm2,Alert if needle is past 5.0 kgf/cm2.,4 kgf/cm2,Rule B,Value is 4. 4 < 5.0.,1,SAFE,Dataset/Guages/guage (20).jpg,Data_Preprocessed/guage (20).jpg,Glare,"STEP 1 - OBSERVATION: 5.0 kgf/cm2
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if needle is past 5.0 kgf/cm2. So, we need to check if the needle is past 5.0 kgf/cm2.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+27,guage (21).jpg,guage,Low Contrast,2.5,kPa,Alert if reading exceeds 2.0 kPa.,2.5 kPa,Rule A,Value is 2.5. 2.5 > 2.0.,1,UNSAFE,Dataset/Guages/guage (21).jpg,Data_Preprocessed/guage (21).jpg,Low Contrast,"STEP 1 - OBSERVATION: 2.5 kPa
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if reading exceeds 2.0 kPa. So, the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE",3
+28,guage (21).jpg,guage,Low Contrast,2.5,kPa,Alert if reading exceeds 3.0 kPa.,2.5 kPa,Rule B,Value is 2.5. 2.5 < 3.0.,1,SAFE,Dataset/Guages/guage (21).jpg,Data_Preprocessed/guage (21).jpg,Low Contrast,"STEP 1 - OBSERVATION: 3.0 kPa
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if reading exceeds 3.0 kPa.
+STEP 3 - VERDICT: SAFE",3
+29,guage (22).jpg,guage,Oblique Angle,1.5,Pa,Alert if value > 1.2 Pa.,1.5 Pa,Rule A,Value is 1.5. 1.5 > 1.2.,1,UNSAFE,Dataset/Guages/guage (22).jpg,Data_Preprocessed/guage (22).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 1.2 Pa
+STEP 2 - RULE APPLICATION: If value > 1.2 Pa, then the observation from Step 1 satisfies the rule.
+STEP 3 - VERDICT: SAFE",3
+30,guage (22).jpg,guage,Oblique Angle,1.5,Pa,Alert if value > 1.8 Pa.,1.5 Pa,Rule B,Value is 1.5. 1.5 < 1.8.,1,SAFE,Dataset/Guages/guage (22).jpg,Data_Preprocessed/guage (22).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 1.8 Pa
+STEP 2 - RULE APPLICATION: The value > 1.8 Pa. So, it's UNSAFE.
+STEP 3 - VERDICT: SAFE",3
+31,guage (23).jpg,guage,,23,celcius,Alert if temperature exceeds 18 celcius.,23 celcius,Rule A,Value is 23. 23 > 18.,0,UNSAFE,Dataset/Guages/guage (23).jpg,Data_Preprocessed/guage (23).jpg,,"STEP 1 - OBSERVATION: 18
+STEP 2 - RULE APPLICATION: If temperature exceeds 18 celcius, alert.
+STEP 3 - VERDICT: SAFE",3
+32,guage (23).jpg,guage,,23,celcius,Alert if temperature exceeds 28 celcius.,23 celcius,Rule B,Value is 23. 23 < 28.,0,SAFE,Dataset/Guages/guage (23).jpg,Data_Preprocessed/guage (23).jpg,,"STEP 1 - OBSERVATION: 28
+STEP 2 - RULE APPLICATION: If temperature exceeds 28 celcius, alert.
+STEP 3 - VERDICT: SAFE",3
+33,guage (24).jpg,guage,,1,bar,Alert if pressure exceeds 0.8 bar.,1 bar,Rule A,Value is 1. 1 > 0.8.,0,UNSAFE,Dataset/Guages/guage (24).jpg,Data_Preprocessed/guage (24).jpg,,"STEP 1 - OBSERVATION: 0.8 bar
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as it indicates that the pressure does not exceed 0.8 bar.
+STEP 3 - VERDICT: SAFE",3
+34,guage (24).jpg,guage,,1,bar,Alert if pressure exceeds 1.2 bar.,1 bar,Rule B,Value is 1. 1 < 1.2.,0,SAFE,Dataset/Guages/guage (24).jpg,Data_Preprocessed/guage (24).jpg,,"STEP 1 - OBSERVATION: 1.2 bar
+STEP 2 - RULE APPLICATION: If pressure exceeds 1.2 bar, alert.
+STEP 3 - VERDICT: SAFE.",3
+35,guage (25).jpg,guage,Oblique Angle,0,,Alert if reading is > 5 NA.,0 NA,Rule A,Value is 0. 0 < 5.,1,SAFE,Dataset/Guages/guage (25).jpg,Data_Preprocessed/guage (25).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 5.00
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if reading is > 5 NA. So we need to check if the reading is > 5 NA.
+STEP 3 - VERDICT: SAFE",3
+36,guage (25).jpg,guage,Oblique Angle,0,,Alert if system is at 0 NA.,0 NA,Rule B,Value is 0. System is at 0.,1,UNSAFE,Dataset/Guages/guage (25).jpg,Data_Preprocessed/guage (25).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if system is at 0 NA. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+37,guage (26).jpg,guage,,400,kPa,Alert if value is > 320 kPa.,400 kPa,Rule A,Value is 400. 400 > 320.,0,UNSAFE,Dataset/Guages/guage (26).jpg,Data_Preprocessed/guage (26).jpg,,"STEP 1 - OBSERVATION: 320 kPa
+STEP 2 - RULE APPLICATION: The value is > 320 kPa.
+STEP 3 - VERDICT: SAFE.",3
+38,guage (26).jpg,guage,,400,kPa,Alert if value is > 480 kPa.,400 kPa,Rule B,Value is 400. 400 < 480.,0,SAFE,Dataset/Guages/guage (26).jpg,Data_Preprocessed/guage (26).jpg,,"STEP 1 - OBSERVATION: 480 kPa
+STEP 2 - RULE APPLICATION: If the value is > 480 kPa, then the observation from Step 1 satisfies the rule.
+STEP 3 - VERDICT: SAFE",3
+39,guage (27).jpg,guage,Oblique Angle,1000,mbar,Alert if pressure exceeds 800 mbar.,1000 mbar,Rule A,Value is 1000. 1000 > 800.,1,UNSAFE,Dataset/Guages/guage (27).jpg,Data_Preprocessed/guage (27).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 800mBar
+STEP 2 - RULE APPLICATION: If pressure exceeds 800mBar, alert.
+STEP 3 - VERDICT: SAFE.",3
+40,guage (27).jpg,guage,Oblique Angle,1000,mbar,Alert if pressure exceeds 1200 mbar.,1000 mbar,Rule B,Value is 1000. 1000 < 1200.,1,SAFE,Dataset/Guages/guage (27).jpg,Data_Preprocessed/guage (27).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 1200 mbar
+STEP 2 - RULE APPLICATION: If pressure exceeds 1200 mbar, alert.
+STEP 3 - VERDICT: SAFE",3
+41,guage (28).jpg,guage,Oblique Angle,125,psi,Alert if pressure exceeds 100 psi.,125 psi,Rule A,Value is 125. 125 > 100.,1,UNSAFE,Dataset/Guages/guage (28).jpg,Data_Preprocessed/guage (28).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 100
+STEP 2 - RULE APPLICATION: If pressure exceeds 100 psi, alert.
+STEP 3 - VERDICT: SAFE.",3
+42,guage (28).jpg,guage,Oblique Angle,125,psi,Alert if pressure exceeds 150 psi.,125 psi,Rule B,Value is 125. 125 < 150.,1,SAFE,Dataset/Guages/guage (28).jpg,Data_Preprocessed/guage (28).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 150
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if pressure exceeds 150 psi. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+43,guage (29).jpg,guage,Oblique Angle,0,in hg,Alert if vacuum > 5 in hg.,0 in hg,Rule A,Value is 0. 0 < 5.,1,SAFE,Dataset/Guages/guage (29).jpg,Data_Preprocessed/guage (29).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 500
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if vacuum > 5 in hg. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+44,guage (29).jpg,guage,Oblique Angle,0,in hg,Alert if vacuum drops to 0 in hg.,0 in hg,Rule B,Value is 0. Vacuum is at 0.,1,UNSAFE,Dataset/Guages/guage (29).jpg,Data_Preprocessed/guage (29).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: If the vacuum drops to 0 in hg, then the observation from Step 1 satisfies the rule. Therefore, the safety rule is ""Alert if vacuum drops to 0 in hg.""
+STEP 3 - VERDICT: SAFE",3
+45,guage (3).jpg,guage,Low Contrast,22,bar,Alert if pressure > 17 bar.,22 bar,Rule A,Value is 22. 22 > 17.,1,UNSAFE,Dataset/Guages/guage (3).jpg,Data_Preprocessed/guage (3).jpg,Low Contrast,"STEP 1 - OBSERVATION: 40
+STEP 2 - RULE APPLICATION: If pressure > 17 bar, alert.
+STEP 3 - VERDICT: SAFE.",3
+46,guage (3).jpg,guage,Low Contrast,22,bar,Alert if pressure > 27 bar.,22 bar,Rule B,Value is 22. 22 < 27.,1,SAFE,Dataset/Guages/guage (3).jpg,Data_Preprocessed/guage (3).jpg,Low Contrast,"STEP 1 - OBSERVATION: 400
+STEP 2 - RULE APPLICATION: If pressure > 27 bar, alert.
+STEP 3 - VERDICT: SAFE.",3
+47,guage (30).jpg,guage,Oblique Angle,22,psi,Alert if pressure > 17 psi.,22 psi,Rule A,Value is 22. 22 > 17.,1,UNSAFE,Dataset/Guages/guage (30).jpg,Data_Preprocessed/guage (30).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 175psi
+STEP 2 - RULE APPLICATION: If pressure > 17 psi, alert.
+STEP 3 - VERDICT: SAFE.",3
+48,guage (30).jpg,guage,Oblique Angle,22,psi,Alert if pressure > 27 psi.,22 psi,Rule B,Value is 22. 22 < 27.,1,SAFE,Dataset/Guages/guage (30).jpg,Data_Preprocessed/guage (30).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 27psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if pressure > 27psi. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: SAFE
+STEP 3 - VERDICT: UNSAFE",3
+49,guage (31).jpg,guage,Glare/ Oblique Angle,0.02,Mpa,Alert if > 0.01 Mpa.,0.02 Mpa,Rule A,Value is 0.02. 0.02 > 0.01.,1,UNSAFE,Dataset/Guages/guage (31).jpg,Data_Preprocessed/guage (31).jpg,Glare/ Oblique Angle,"STEP 1 - OBSERVATION: 0.01 Mpa
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 0.01 Mpa. So, we need to check if the value is greater than 0.01 Mpa.
+STEP 3 - VERDICT: SAFE",3
+50,guage (31).jpg,guage,Glare/ Oblique Angle,0.02,Mpa,Alert if > 0.03 Mpa.,0.02 Mpa,Rule B,Value is 0.02. 0.02 < 0.03.,1,SAFE,Dataset/Guages/guage (31).jpg,Data_Preprocessed/guage (31).jpg,Glare/ Oblique Angle,"STEP 1 - OBSERVATION: 0.03 Mpa
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 0.03 Mpa. So, we need to check if the pressure is greater than 0.03 Mpa.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+51,guage (32).jpg,guage,Low Resolution,0.8,bar,Alert if > 0.6 bar.,0.8 bar,Rule A,Value is 0.8. 0.8 > 0.6.,1,UNSAFE,Dataset/Guages/guage (32).jpg,Data_Preprocessed/guage (32).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0.6 bar
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 0.6 bar. So we need to check if the gauge's reading is greater than 0.6 bar.
+STEP 3 - VERDICT: SAFE",3
+52,guage (32).jpg,guage,Low Resolution,0.8,bar,Alert if > 1.0 bar.,0.8 bar,Rule B,Value is 0.8. 0.8 < 1.0.,1,SAFE,Dataset/Guages/guage (32).jpg,Data_Preprocessed/guage (32).jpg,Low Resolution,"STEP 1 - OBSERVATION: 100
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 1.0 bar. So, we need to check if the gauge's reading is greater than 1.0 bar.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+53,guage (33).jpg,guage,Glare,3.6,bar,Alert if > 2.8 bar.,3.6 bar,Rule A,Value is 3.6. 3.6 > 2.8.,1,UNSAFE,Dataset/Guages/guage (33).jpg,Data_Preprocessed/guage (33).jpg,Glare,"STEP 1 - OBSERVATION: 2.8 bar
+
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 2.8 bar. So, the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+54,guage (33).jpg,guage,Glare,3.6,bar,Alert if > 4.4 bar.,3.6 bar,Rule B,Value is 3.6. 3.6 < 4.4.,1,SAFE,Dataset/Guages/guage (33).jpg,Data_Preprocessed/guage (33).jpg,Glare,"STEP 1 - OBSERVATION: 4.4 bar
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 4.4 bar. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+55,guage (34).jpg,guage,Oblique Angle/ Low Resolution,83,kPa,Alert if pressure exceeds 66 kPa.,83 kPa,Rule A,Value is 83. 83 > 66.,1,UNSAFE,Dataset/Guages/guage (34).jpg,Data_Preprocessed/guage (34).jpg,Oblique Angle/ Low Resolution,"STEP 1 - OBSERVATION: 66 kPa
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if pressure exceeds 66 kPa. So, we need to check if the pressure exceeds 66 kPa.
+STEP 3 - VERDICT: SAFE",3
+56,guage (34).jpg,guage,Oblique Angle/ Low Resolution,83,kPa,Alert if pressure exceeds 100 kPa.,83 kPa,Rule B,Value is 83. 83 < 100.,1,SAFE,Dataset/Guages/guage (34).jpg,Data_Preprocessed/guage (34).jpg,Oblique Angle/ Low Resolution,"STEP 1 - OBSERVATION: 100 kPa
+STEP 2 - RULE APPLICATION: If pressure exceeds 100 kPa, alert.
+STEP 3 - VERDICT: SAFE.",3
+57,guage (35).jpg,guage,Obstruction,35,Psi,Alert if > 28 Psi.,35 Psi,Rule A,Value is 35. 35 > 28.,1,UNSAFE,Dataset/Guages/guage (35).jpg,Data_Preprocessed/guage (35).jpg,Obstruction,"STEP 1 - OBSERVATION: 28 PSIA
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 28 PSIA.
+STEP 3 - VERDICT: SAFE",3
+58,guage (35).jpg,guage,Obstruction,35,Psi,Alert if > 42 Psi.,35 Psi,Rule B,Value is 35. 35 < 42.,1,SAFE,Dataset/Guages/guage (35).jpg,Data_Preprocessed/guage (35).jpg,Obstruction,"STEP 1 - OBSERVATION: 450psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 42 Psi. So, we need to check if the pressure is greater than 42 psi.
+STEP 3 - VERDICT: SAFE",3
+59,guage (36).jpg,guage,Low Contrast,0.1,Mpa,Alert if > 0.08 Mpa.,0.1 Mpa,Rule A,Value is 0.1. 0.1 > 0.08.,1,UNSAFE,Dataset/Guages/guage (36).jpg,Data_Preprocessed/guage (36).jpg,Low Contrast,"STEP 1 - OBSERVATION: 450
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 0.08 Mpa. So we need to check if the pressure is greater than 0.08 Mpa.
+STEP 3 - VERDICT: SAFE",3
+60,guage (36).jpg,guage,Low Contrast,0.1,Mpa,Alert if > 0.12 Mpa.,0.1 Mpa,Rule B,Value is 0.1. 0.1 < 0.12.,1,SAFE,Dataset/Guages/guage (36).jpg,Data_Preprocessed/guage (36).jpg,Low Contrast,"STEP 1 - OBSERVATION: 4.5
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 0.12 Mpa. So we need to check if the value is greater than 0.12 Mpa.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+61,guage (37).jpg,guage,Low Contrast,160,celcius,Alert if > 128 celcius.,160 celcius,Rule A,Value is 160. 160 > 128.,1,UNSAFE,Dataset/Guages/guage (37).jpg,Data_Preprocessed/guage (37).jpg,Low Contrast,"STEP 1 - OBSERVATION: 129 celcius
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule.
+STEP 3 - VERDICT: SAFE",3
+62,guage (37).jpg,guage,Low Contrast,160,celcius,Alert if > 192 celcius.,160 celcius,Rule B,Value is 160. 160 < 192.,1,SAFE,Dataset/Guages/guage (37).jpg,Data_Preprocessed/guage (37).jpg,Low Contrast,"STEP 1 - OBSERVATION: 500
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 192 celcius.
+STEP 3 - VERDICT: SAFE",3
+63,guage (38).jpg,guage,,60,celcius,Alert if temperature exceeds 48 celcius.,60 celcius,Rule A,Value is 60. 60 > 48.,0,UNSAFE,Dataset/Guages/guage (38).jpg,Data_Preprocessed/guage (38).jpg,,"STEP 1 - OBSERVATION: 60
+STEP 2 - RULE APPLICATION: The temperature exceeds 48 celcius so alert.
+STEP 3 - VERDICT: SAFE",3
+64,guage (38).jpg,guage,,60,celcius,Alert if temperature exceeds 72 celcius.,60 celcius,Rule B,Value is 60. 60 < 72.,0,SAFE,Dataset/Guages/guage (38).jpg,Data_Preprocessed/guage (38).jpg,,"STEP 1 - OBSERVATION: 65
+STEP 2 - RULE APPLICATION: The temperature exceeds 72 celcius so alert.
+STEP 3 - VERDICT: SAFE.",3
+65,guage (39).jpg,guage,,155,psi,Alert if > 124 psi.,155 psi,Rule A,Value is 155. 155 > 124.,0,UNSAFE,Dataset/Guages/guage (39).jpg,Data_Preprocessed/guage (39).jpg,,"STEP 1 - OBSERVATION: 124psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 124psi. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+66,guage (39).jpg,guage,,155,psi,Alert if > 186 psi.,155 psi,Rule B,Value is 155. 155 < 186.,0,SAFE,Dataset/Guages/guage (39).jpg,Data_Preprocessed/guage (39).jpg,,"STEP 1 - OBSERVATION: 186psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 186 psi. So, we need to check if the pressure is greater than 186 psi.
+STEP 3 - VERDICT: SAFE",3
+67,guage (4).jpg,guage,Obstruction,90,fahrenheit,Alert if > 72 fahrenheit.,90 fahrenheit,Rule A,Value is 90. 90 > 72.,1,UNSAFE,Dataset/Guages/guage (4).jpg,Data_Preprocessed/guage (4).jpg,Obstruction,"STEP 1 - OBSERVATION: 72f
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 72f. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+
+The safety rule is to alert if > 72f. This means that the temperature should not be greater than 72f.",3
+68,guage (4).jpg,guage,Obstruction,90,fahrenheit,Alert if > 108 fahrenheit.,90 fahrenheit,Rule B,Value is 90. 90 < 108.,1,SAFE,Dataset/Guages/guage (4).jpg,Data_Preprocessed/guage (4).jpg,Obstruction,"STEP 1 - OBSERVATION: 108 fahrenheit
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 108 fahrenheit. So, the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE",3
+69,guage (40).jpg,guage,Low Contrast,53,celcius,Alert if > 42 celcius.,53 celcius,Rule A,Value is 53. 53 > 42.,1,UNSAFE,Dataset/Guages/guage (40).jpg,Data_Preprocessed/guage (40).jpg,Low Contrast,"STEP 1 - OBSERVATION: 42 celcius
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 42 celcius. So, the observation does not satisfy this rule.
+STEP 3 - VERDICT: SAFE",3
+70,guage (40).jpg,guage,Low Contrast,53,celcius,Alert if > 64 celcius.,53 celcius,Rule B,Value is 53. 53 < 64.,1,SAFE,Dataset/Guages/guage (40).jpg,Data_Preprocessed/guage (40).jpg,Low Contrast,"STEP 1 - OBSERVATION: 70
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 64 celcius. So, we need to check if the temperature exceeds 64 celcius.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+71,guage (41).jpg,guage,Glare,75,fahrenheit,Alert if > 60 fahrenheit.,75 fahrenheit,Rule A,Value is 75. 75 > 60.,1,UNSAFE,Dataset/Guages/guage (41).jpg,Data_Preprocessed/guage (41).jpg,Glare,"STEP 1 - OBSERVATION: 60
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 60 fahrenheit. So, the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE",3
+72,guage (41).jpg,guage,Glare,75,fahrenheit,Alert if > 90 fahrenheit.,75 fahrenheit,Rule B,Value is 75. 75 < 90.,1,SAFE,Dataset/Guages/guage (41).jpg,Data_Preprocessed/guage (41).jpg,Glare,"STEP 1 - OBSERVATION: 105 degrees Fahrenheit.
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 90 fahrenheit.
+STEP 3 - VERDICT: SAFE.",3
+73,guage (42).jpg,guage,,25,psi,Alert if > 20 psi.,25 psi,Rule A,Value is 25. 25 > 20.,0,UNSAFE,Dataset/Guages/guage (42).jpg,Data_Preprocessed/guage (42).jpg,,"STEP 1 - OBSERVATION: 20
+STEP 2 - RULE APPLICATION: If > 20 psi, alert.
+STEP 3 - VERDICT: SAFE.",3
+74,guage (42).jpg,guage,,25,psi,Alert if > 30 psi.,25 psi,Rule B,Value is 25. 25 < 30.,0,SAFE,Dataset/Guages/guage (42).jpg,Data_Preprocessed/guage (42).jpg,,"STEP 1 - OBSERVATION: 200psi
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as it is greater than 30psi.
+STEP 3 - VERDICT: SAFE",3
+75,guage (43).jpg,guage,,43,celcius,Alert if > 34 celcius.,43 celcius,Rule A,Value is 43. 43 > 34.,0,UNSAFE,Dataset/Guages/guage (43).jpg,Data_Preprocessed/guage (43).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 34 celcius.
+STEP 3 - VERDICT: SAFE",3
+76,guage (43).jpg,guage,,43,celcius,Alert if > 52 celcius.,43 celcius,Rule B,Value is 43. 43 < 52.,0,SAFE,Dataset/Guages/guage (43).jpg,Data_Preprocessed/guage (43).jpg,,"STEP 1 - OBSERVATION: 90
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 52 celcius. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: SAFE
+STEP 4 - PROCEDURE: The safety rule is: Alert if > 52 celcius. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 5 - PROCEDURE: The safety rule is: Alert if > 52 celcius. Show whether the observation from Step 1 satisfies this rule.",3
+77,guage (44).jpg,guage,Obstruction,50,celcius,Alert if > 40 celcius.,50 celcius,Rule A,Value is 50. 50 > 40.,1,UNSAFE,Dataset/Guages/guage (44).jpg,Data_Preprocessed/guage (44).jpg,Obstruction,"STEP 1 - OBSERVATION: 50
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 40 celcius. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+78,guage (44).jpg,guage,Obstruction,50,celcius,Alert if > 60 celcius.,50 celcius,Rule B,Value is 50. 50 < 60.,1,SAFE,Dataset/Guages/guage (44).jpg,Data_Preprocessed/guage (44).jpg,Obstruction,"STEP 1 - OBSERVATION: 58
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 60 celcius.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+79,guage (45).jpg,guage,,25,psi,Alert if > 20 psi.,25 psi,Rule A,Value is 25. 25 > 20.,0,UNSAFE,Dataset/Guages/guage (45).jpg,Data_Preprocessed/guage (45).jpg,,"STEP 1 - OBSERVATION: 20psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 20psi. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+80,guage (45).jpg,guage,,25,psi,Alert if > 30 psi.,25 psi,Rule B,Value is 25. 25 < 30.,0,SAFE,Dataset/Guages/guage (45).jpg,Data_Preprocessed/guage (45).jpg,,"STEP 1 - OBSERVATION: 30psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 30psi. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+81,guage (46).jpg,guage,Glare,2.2,bar,Alert if > 1.7 bar.,2.2 bar,Rule A,Value is 2.2. 2.2 > 1.7.,1,UNSAFE,Dataset/Guages/guage (46).jpg,Data_Preprocessed/guage (46).jpg,Glare,"STEP 1 - OBSERVATION: 1.7 bar
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 1.7 bar. So we need to check if the gauge's reading is greater than 1.7 bar.
+STEP 3 - VERDICT: SAFE",3
+82,guage (46).jpg,guage,Glare,2.2,bar,Alert if > 2.7 bar.,2.2 bar,Rule B,Value is 2.2. 2.2 < 2.7.,1,SAFE,Dataset/Guages/guage (46).jpg,Data_Preprocessed/guage (46).jpg,Glare,"STEP 1 - OBSERVATION: 2.7 bar
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 2.7 bar. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+83,guage (47).jpg,guage,Obstruction,40,psi,Alert if > 32 psi.,40 psi,Rule A,Value is 40. 40 > 32.,1,UNSAFE,Dataset/Guages/guage (47).jpg,Data_Preprocessed/guage (47).jpg,Obstruction,"STEP 1 - OBSERVATION: 240psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 32 psi. So, we have a gauge that reads 240psi.
+STEP 3 - VERDICT: SAFE",3
+84,guage (47).jpg,guage,Obstruction,40,psi,Alert if > 48 psi.,40 psi,Rule B,Value is 40. 40 < 48.,1,SAFE,Dataset/Guages/guage (47).jpg,Data_Preprocessed/guage (47).jpg,Obstruction,"STEP 1 - OBSERVATION: 48psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 48psi. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+85,guage (48).jpg,guage,Glare/ Oblique Angle,0.17,MPa,Alert if > 0.13 MPa.,0.17 MPa,Rule A,Value is 0.17. 0.17 > 0.13.,1,UNSAFE,Dataset/Guages/guage (48).jpg,Data_Preprocessed/guage (48).jpg,Glare/ Oblique Angle,"STEP 1 - OBSERVATION: 0.13 MPa
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 0.13 MPa. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+86,guage (48).jpg,guage,Glare/ Oblique Angle,0.17,MPa,Alert if > 0.21 MPa.,0.17 MPa,Rule B,Value is 0.17. 0.17 < 0.21.,1,SAFE,Dataset/Guages/guage (48).jpg,Data_Preprocessed/guage (48).jpg,Glare/ Oblique Angle,"STEP 1 - OBSERVATION: 0.21 MPa
+STEP 2 - RULE APPLICATION: Alright, so we have a gauge that's above 0.21 MPa, which means it's not safe to work with.
+STEP 3 - VERDICT: SAFE",3
+87,guage (49).jpg,guage,Low Resolution,35,psi,Alert if > 28 psi.,35 psi,Rule A,Value is 35. 35 > 28.,1,UNSAFE,Dataset/Guages/guage (49).jpg,Data_Preprocessed/guage (49).jpg,Low Resolution,"STEP 1 - OBSERVATION: 28psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 28psi. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+88,guage (49).jpg,guage,Low Resolution,35,psi,Alert if > 42 psi.,35 psi,Rule B,Value is 35. 35 < 42.,1,SAFE,Dataset/Guages/guage (49).jpg,Data_Preprocessed/guage (49).jpg,Low Resolution,"STEP 1 - OBSERVATION: 42psi
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 42psi. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+89,guage (5).jpg,guage,Low Contrast,70,bar,Alert if > 56 bar.,70 bar,Rule A,Value is 70. 70 > 56.,1,UNSAFE,Dataset/Guages/guage (5).jpg,Data_Preprocessed/guage (5).jpg,Low Contrast,"STEP 1 - OBSERVATION: 56 bar
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 56 bar. So, we need to check if the gauge's reading is greater than 56 bar.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+90,guage (5).jpg,guage,Low Contrast,70,bar,Alert if > 84 bar.,70 bar,Rule B,Value is 70. 70 < 84.,1,SAFE,Dataset/Guages/guage (5).jpg,Data_Preprocessed/guage (5).jpg,Low Contrast,"STEP 1 - OBSERVATION: 84 bar
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 84 bar. So, we have to check if the gauge's reading is greater than 84 bar.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+91,guage (50).jpg,guage,,4.8,kp/cm3,Alert if > 3.8 kp/cm3.,4.8 kp/cm3,Rule A,Value is 4.8. 4.8 > 3.8.,0,UNSAFE,Dataset/Guages/guage (50).jpg,Data_Preprocessed/guage (50).jpg,,"STEP 1 - OBSERVATION: The gauges show a reading of 4.0.
+
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 3.8 kp/cm3.
+
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+92,guage (50).jpg,guage,,4.8,kp/cm3,Alert if > 5.8 kp/cm3.,4.8 kp/cm3,Rule B,Value is 4.8. 4.8 < 5.8.,0,SAFE,Dataset/Guages/guage (50).jpg,Data_Preprocessed/guage (50).jpg,,"STEP 1 - OBSERVATION: 5.8 kp/cm3.
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 5.8 kp/cm3.
+STEP 3 - VERDICT: SAFE.",3
+93,guage (6).jpg,guage,Glare/ Oblique Angle,34,celcius,Alert if > 27 celcius.,34 celcius,Rule A,Value is 34. 34 > 27.,1,UNSAFE,Dataset/Guages/guage (6).jpg,Data_Preprocessed/guage (6).jpg,Glare/ Oblique Angle,"STEP 1 - OBSERVATION: 27
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 27 celcius. So we need to check if the temperature is greater than 27 celcius.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+94,guage (6).jpg,guage,Glare/ Oblique Angle,34,celcius,Alert if > 41 celcius.,34 celcius,Rule B,Value is 34. 34 < 41.,1,SAFE,Dataset/Guages/guage (6).jpg,Data_Preprocessed/guage (6).jpg,Glare/ Oblique Angle,"STEP 1 - OBSERVATION: 41
+STEP 2 - RULE APPLICATION: If > 41 celcius, alert.
+STEP 3 - VERDICT: SAFE.",3
+95,guage (7).jpg,guage,Oblique Angle,1.3,,Alert if > 1.0 NA.,1.3 NA,Rule A,Value is 1.3. 1.3 > 1.0.,1,UNSAFE,Dataset/Guages/guage (7).jpg,Data_Preprocessed/guage (7).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 1.0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 1.0 NA. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+96,guage (7).jpg,guage,Oblique Angle,1.3,,Alert if > 1.6 NA.,1.3 NA,Rule B,Value is 1.3. 1.3 < 1.6.,1,SAFE,Dataset/Guages/guage (7).jpg,Data_Preprocessed/guage (7).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 1050
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 1.6 NA. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final verdict: SAFE",3
+97,guage (8).jpg,guage,Oblique Angle,0,,Alert if reading > 5 NA.,0 NA,Rule A,Value is 0. 0 < 5.,1,SAFE,Dataset/Guages/guage (8).jpg,Data_Preprocessed/guage (8).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 600
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if reading > 5 NA. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: SAFE
+STEP 4 - RULE APPLICATION: The safety rule is: Alert if reading < 5 NA. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 5 - VERDICT: UNSAFE",3
+98,guage (8).jpg,guage,Oblique Angle,0,,Alert if reading is at 0 NA.,0 NA,Rule B,Value is 0. System is at 0.,1,UNSAFE,Dataset/Guages/guage (8).jpg,Data_Preprocessed/guage (8).jpg,Oblique Angle,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if reading is at 0 NA. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+99,guage (9).jpg,guage,Oblique Angle/ Obstruction,86,Pa,Alert if > 68 Pa.,86 Pa,Rule A,Value is 86. 86 > 68.,1,UNSAFE,Dataset/Guages/guage (9).jpg,Data_Preprocessed/guage (9).jpg,Oblique Angle/ Obstruction,"STEP 1 - OBSERVATION: 68 Pa>68 Pa
+STEP 2 - RULE APPLICATION: Alert if > 68 Pa. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+100,guage (9).jpg,guage,Oblique Angle/ Obstruction,86,Pa,Alert if > 104 Pa.,86 Pa,Rule B,Value is 86. 86 < 104.,1,SAFE,Dataset/Guages/guage (9).jpg,Data_Preprocessed/guage (9).jpg,Oblique Angle/ Obstruction,"STEP 1 - OBSERVATION: 104 Pa
+STEP 2 - RULE APPLICATION: The safety rule is: Alert if > 104 Pa. So, we need to check if the pressure is greater than 104 Pa.
+STEP 3 - VERDICT: SAFE",3
+101,pipe_corroded (1).jpg,pipeline,Texture Overlap,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (1).jpg,Data_Preprocessed/pipe_corroded (1).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+102,pipe_corroded (1).jpg,pipeline,Texture Overlap,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (1).jpg,Data_Preprocessed/pipe_corroded (1).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+103,pipe_corroded (10).jpg,pipeline,Texture Overlap,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (10).jpg,Data_Preprocessed/pipe_corroded (10).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+104,pipe_corroded (10).jpg,pipeline,Texture Overlap,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (10).jpg,Data_Preprocessed/pipe_corroded (10).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+105,pipe_corroded (11).jpg,pipeline,Texture Overlap,Corroded/ Damaged,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Damaged NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (11).jpg,Data_Preprocessed/pipe_corroded (11).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+106,pipe_corroded (11).jpg,pipeline,Texture Overlap,Corroded/ Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Damaged NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (11).jpg,Data_Preprocessed/pipe_corroded (11).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+107,pipe_corroded (12).jpg,pipeline,Low Resolution,Corroded/ Damaged,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Damaged NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (12).jpg,Data_Preprocessed/pipe_corroded (12).jpg,Low Resolution,"STEP 1 - OBSERVATION: 100
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible sign of surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+108,pipe_corroded (12).jpg,pipeline,Low Resolution,Corroded/ Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Damaged NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (12).jpg,Data_Preprocessed/pipe_corroded (12).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+109,pipe_corroded (13).jpg,pipeline,Glare,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (13).jpg,Data_Preprocessed/pipe_corroded (13).jpg,Glare,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+110,pipe_corroded (13).jpg,pipeline,Glare,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (13).jpg,Data_Preprocessed/pipe_corroded (13).jpg,Glare,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+111,pipe_corroded (14).jpg,pipeline,Low Resolution,Corroded/ Damaged,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Damaged NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (14).jpg,Data_Preprocessed/pipe_corroded (14).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+112,pipe_corroded (14).jpg,pipeline,Low Resolution,Corroded/ Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Damaged NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (14).jpg,Data_Preprocessed/pipe_corroded (14).jpg,Low Resolution,"STEP 1 - OBSERVATION: 500
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+113,pipe_corroded (15).jpg,pipeline,Texture Overlap,Corroded/ Crack,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Crack NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (15).jpg,Data_Preprocessed/pipe_corroded (15).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+114,pipe_corroded (15).jpg,pipeline,Texture Overlap,Corroded/ Crack,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Crack NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (15).jpg,Data_Preprocessed/pipe_corroded (15).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+115,pipe_corroded (16).jpg,pipeline,,Corroded/ Damaged,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Damaged NA,Rule A,Image shows corrosion or damage.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (16).jpg,Data_Preprocessed/pipe_corroded (16).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. So, the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE",3
+116,pipe_corroded (16).jpg,pipeline,,Corroded/ Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Damaged NA,Rule B,Critical structural defect is visible.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (16).jpg,Data_Preprocessed/pipe_corroded (16).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+117,pipe_corroded (17).jpg,pipeline,,Leak / Damaged,,Alert on any sign of surface oxidation or corrosion.,Leak / Damaged NA,Rule A,Image shows corrosion or damage.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (17).jpg,Data_Preprocessed/pipe_corroded (17).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+118,pipe_corroded (17).jpg,pipeline,,Leak / Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Leak / Damaged NA,Rule B,Critical structural defect is visible.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (17).jpg,Data_Preprocessed/pipe_corroded (17).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+119,pipe_corroded (18).jpg,pipeline,Low Resolution,Damaged,,Alert on any sign of surface oxidation or corrosion.,Damaged NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (18).jpg,Data_Preprocessed/pipe_corroded (18).jpg,Low Resolution,"STEP 1 - OBSERVATION: 400
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as it indicates surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+120,pipe_corroded (18).jpg,pipeline,Low Resolution,Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Damaged NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (18).jpg,Data_Preprocessed/pipe_corroded (18).jpg,Low Resolution,"STEP 1 - OBSERVATION: 500
+STEP 2 - RULE APPLICATION: The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+121,pipe_corroded (19).jpg,pipeline,Low Resolution,Dented,,Alert on any sign of surface oxidation or corrosion.,Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (19).jpg,Data_Preprocessed/pipe_corroded (19).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+122,pipe_corroded (19).jpg,pipeline,Low Resolution,Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (19).jpg,Data_Preprocessed/pipe_corroded (19).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+123,pipe_corroded (2).jpg,pipeline,Texture Overlap,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (2).jpg,Data_Preprocessed/pipe_corroded (2).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no indication of surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+124,pipe_corroded (2).jpg,pipeline,Texture Overlap,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (2).jpg,Data_Preprocessed/pipe_corroded (2).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+125,pipe_corroded (20).jpg,pipeline,Texture Overlap,Corroded/ Dented,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (20).jpg,Data_Preprocessed/pipe_corroded (20).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible sign of surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+126,pipe_corroded (20).jpg,pipeline,Texture Overlap,Corroded/ Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (20).jpg,Data_Preprocessed/pipe_corroded (20).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+127,pipe_corroded (21).jpg,pipeline,Low Resolution,Dented,,Alert on any sign of surface oxidation or corrosion.,Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (21).jpg,Data_Preprocessed/pipe_corroded (21).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule because there is no indication of surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+128,pipe_corroded (21).jpg,pipeline,Low Resolution,Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (21).jpg,Data_Preprocessed/pipe_corroded (21).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+129,pipe_corroded (22).jpg,pipeline,Low Resolution,Corroded/ Dented,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (22).jpg,Data_Preprocessed/pipe_corroded (22).jpg,Low Resolution,"STEP 1 - OBSERVATION: 500
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+130,pipe_corroded (22).jpg,pipeline,Low Resolution,Corroded/ Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (22).jpg,Data_Preprocessed/pipe_corroded (22).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+131,pipe_corroded (23).jpg,pipeline,Low Resolution,Corroded/ Dented,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (23).jpg,Data_Preprocessed/pipe_corroded (23).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+132,pipe_corroded (23).jpg,pipeline,Low Resolution,Corroded/ Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (23).jpg,Data_Preprocessed/pipe_corroded (23).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+133,pipe_corroded (24).jpg,pipeline,,Leak / Damaged,,Alert on any sign of surface oxidation or corrosion.,Leak / Damaged NA,Rule A,Image shows corrosion or damage.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (24).jpg,Data_Preprocessed/pipe_corroded (24).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+134,pipe_corroded (24).jpg,pipeline,,Leak / Damaged,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Leak / Damaged NA,Rule B,Critical structural defect is visible.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (24).jpg,Data_Preprocessed/pipe_corroded (24).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+135,pipe_corroded (25).jpg,pipeline,Unclear image,Corroded/ Dented,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Dented NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (25).jpg,Data_Preprocessed/pipe_corroded (25).jpg,Unclear image,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+136,pipe_corroded (25).jpg,pipeline,Unclear image,Corroded/ Dented,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Dented NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (25).jpg,Data_Preprocessed/pipe_corroded (25).jpg,Unclear image,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+137,pipe_corroded (3).jpg,pipeline,Low Resolution,Corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Rust NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (3).jpg,Data_Preprocessed/pipe_corroded (3).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+138,pipe_corroded (3).jpg,pipeline,Low Resolution,Corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Rust NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (3).jpg,Data_Preprocessed/pipe_corroded (3).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+139,pipe_corroded (4).jpg,pipeline,Low Resolution,Corroded/ Leak,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Leak NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (4).jpg,Data_Preprocessed/pipe_corroded (4).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+140,pipe_corroded (4).jpg,pipeline,Low Resolution,Corroded/ Leak,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Leak NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (4).jpg,Data_Preprocessed/pipe_corroded (4).jpg,Low Resolution,"STEP 1 - OBSERVATION: 100
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+141,pipe_corroded (5).jpg,pipeline,Texture Overlap,Corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Rust NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (5).jpg,Data_Preprocessed/pipe_corroded (5).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+142,pipe_corroded (5).jpg,pipeline,Texture Overlap,Corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Rust NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (5).jpg,Data_Preprocessed/pipe_corroded (5).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+143,pipe_corroded (6).jpg,pipeline,Low Resolution,Corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Rust NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (6).jpg,Data_Preprocessed/pipe_corroded (6).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible sign of surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+144,pipe_corroded (6).jpg,pipeline,Low Resolution,Corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Rust NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (6).jpg,Data_Preprocessed/pipe_corroded (6).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+145,pipe_corroded (7).jpg,pipeline,Texture Overlap,Corroded,,Alert on any sign of surface oxidation or corrosion.,Corroded NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (7).jpg,Data_Preprocessed/pipe_corroded (7).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+146,pipe_corroded (7).jpg,pipeline,Texture Overlap,Corroded,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (7).jpg,Data_Preprocessed/pipe_corroded (7).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+147,pipe_corroded (8).jpg,pipeline,Texture Overlap,Corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Corroded/ Rust NA,Rule A,Image shows corrosion or damage.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (8).jpg,Data_Preprocessed/pipe_corroded (8).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+148,pipe_corroded (8).jpg,pipeline,Texture Overlap,Corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Corroded/ Rust NA,Rule B,Critical structural defect is visible.,1,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (8).jpg,Data_Preprocessed/pipe_corroded (8).jpg,Texture Overlap,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+149,pipe_corroded (9).jpg,pipeline,,Rust,,Alert on any sign of surface oxidation or corrosion.,Rust NA,Rule A,Surface oxidation/rust is present.,0,UNSAFE,Dataset/Pipes/Defected/pipe_corroded (9).jpg,Data_Preprocessed/pipe_corroded (9).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+
+The safety rule states to alert on any sign of surface oxidation or corrosion. This observation from the image does not satisfy the rule as it shows no signs of oxidation or corrosion.",3
+150,pipe_corroded (9).jpg,pipeline,,Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Rust NA,Rule B,Image shows surface rust but no critical defects.,0,SAFE,Dataset/Pipes/Defected/pipe_corroded (9).jpg,Data_Preprocessed/pipe_corroded (9).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+151,pipe_non_corroded (1).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (1).jpg,Data_Preprocessed/pipe_non_corroded (1).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+
+The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.",3
+152,pipe_non_corroded (1).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (1).jpg,Data_Preprocessed/pipe_non_corroded (1).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+153,pipe_non_corroded (10).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (10).jpg,Data_Preprocessed/pipe_non_corroded (10).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+
+The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.",3
+154,pipe_non_corroded (10).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (10).jpg,Data_Preprocessed/pipe_non_corroded (10).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+155,pipe_non_corroded (11).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (11).jpg,Data_Preprocessed/pipe_non_corroded (11).jpg,,"STEP 1 - OBSERVATION: 500
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+156,pipe_non_corroded (11).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (11).jpg,Data_Preprocessed/pipe_non_corroded (11).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+157,pipe_non_corroded (12).jpg,pipeline,,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,0,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (12).jpg,Data_Preprocessed/pipe_non_corroded (12).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+158,pipe_non_corroded (12).jpg,pipeline,,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (12).jpg,Data_Preprocessed/pipe_non_corroded (12).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+159,pipe_non_corroded (13).jpg,pipeline,Glare,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (13).jpg,Data_Preprocessed/pipe_non_corroded (13).jpg,Glare,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+160,pipe_non_corroded (13).jpg,pipeline,Glare,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (13).jpg,Data_Preprocessed/pipe_non_corroded (13).jpg,Glare,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+161,pipe_non_corroded (14).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (14).jpg,Data_Preprocessed/pipe_non_corroded (14).jpg,,"STEP 1 - OBSERVATION: 150
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+162,pipe_non_corroded (14).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (14).jpg,Data_Preprocessed/pipe_non_corroded (14).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+163,pipe_non_corroded (15).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (15).jpg,Data_Preprocessed/pipe_non_corroded (15).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible sign of surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+164,pipe_non_corroded (15).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (15).jpg,Data_Preprocessed/pipe_non_corroded (15).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+
+The safety rule states that surface rust is acceptable. This means that there should be no visible signs of rust on the pipes. However, it's important to note that the presence of rust does not necessarily mean that the pipes are structurally sound. Therefore, it's essential to conduct further inspection to ensure that the pipes are safe for use.",3
+165,pipe_non_corroded (16).jpg,pipeline,Low Resolution,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (16).jpg,Data_Preprocessed/pipe_non_corroded (16).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+
+The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.",3
+166,pipe_non_corroded (16).jpg,pipeline,Low Resolution,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (16).jpg,Data_Preprocessed/pipe_non_corroded (16).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+167,pipe_non_corroded (17).jpg,pipeline,Low Resolution,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (17).jpg,Data_Preprocessed/pipe_non_corroded (17).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+168,pipe_non_corroded (17).jpg,pipeline,Low Resolution,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (17).jpg,Data_Preprocessed/pipe_non_corroded (17).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+169,pipe_non_corroded (18).jpg,pipeline,Low Resolution,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,1,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (18).jpg,Data_Preprocessed/pipe_non_corroded (18).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+170,pipe_non_corroded (18).jpg,pipeline,Low Resolution,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (18).jpg,Data_Preprocessed/pipe_non_corroded (18).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+171,pipe_non_corroded (19).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (19).jpg,Data_Preprocessed/pipe_non_corroded (19).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+172,pipe_non_corroded (19).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (19).jpg,Data_Preprocessed/pipe_non_corroded (19).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+173,pipe_non_corroded (2).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (2).jpg,Data_Preprocessed/pipe_non_corroded (2).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Write ONLY one of these two lines, nothing else:
+Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+174,pipe_non_corroded (2).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (2).jpg,Data_Preprocessed/pipe_non_corroded (2).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+175,pipe_non_corroded (20).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (20).jpg,Data_Preprocessed/pipe_non_corroded (20).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+176,pipe_non_corroded (20).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (20).jpg,Data_Preprocessed/pipe_non_corroded (20).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+
+The safety rule states that surface rust is acceptable. Therefore, we have satisfied this rule by observing no rust on any parts of the gauges or pipes.",3
+177,pipe_non_corroded (21).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (21).jpg,Data_Preprocessed/pipe_non_corroded (21).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+178,pipe_non_corroded (21).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (21).jpg,Data_Preprocessed/pipe_non_corroded (21).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+179,pipe_non_corroded (22).jpg,pipeline,,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,0,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (22).jpg,Data_Preprocessed/pipe_non_corroded (22).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+180,pipe_non_corroded (22).jpg,pipeline,,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (22).jpg,Data_Preprocessed/pipe_non_corroded (22).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+181,pipe_non_corroded (23).jpg,pipeline,Low Resolution,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,1,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (23).jpg,Data_Preprocessed/pipe_non_corroded (23).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+182,pipe_non_corroded (23).jpg,pipeline,Low Resolution,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (23).jpg,Data_Preprocessed/pipe_non_corroded (23).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+183,pipe_non_corroded (24).jpg,pipeline,,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,0,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (24).jpg,Data_Preprocessed/pipe_non_corroded (24).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+
+The safety rule is to alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.",3
+184,pipe_non_corroded (24).jpg,pipeline,,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (24).jpg,Data_Preprocessed/pipe_non_corroded (24).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+185,pipe_non_corroded (25).jpg,pipeline,Low Resolution,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (25).jpg,Data_Preprocessed/pipe_non_corroded (25).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+186,pipe_non_corroded (25).jpg,pipeline,Low Resolution,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (25).jpg,Data_Preprocessed/pipe_non_corroded (25).jpg,Low Resolution,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+187,pipe_non_corroded (3).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (3).jpg,Data_Preprocessed/pipe_non_corroded (3).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+188,pipe_non_corroded (3).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (3).jpg,Data_Preprocessed/pipe_non_corroded (3).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: SAFE
+Final Verdict:",3
+189,pipe_non_corroded (4).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (4).jpg,Data_Preprocessed/pipe_non_corroded (4).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+190,pipe_non_corroded (4).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (4).jpg,Data_Preprocessed/pipe_non_corroded (4).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+191,pipe_non_corroded (5).jpg,pipeline,Distorted,Non corroded/ Rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ Rust NA,Rule A,Surface oxidation/rust is present.,1,UNSAFE,Dataset/Pipes/Non defected/pipe_non_corroded (5).jpg,Data_Preprocessed/pipe_non_corroded (5).jpg,Distorted,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+192,pipe_non_corroded (5).jpg,pipeline,Distorted,Non corroded/ Rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ Rust NA,Rule B,Image shows surface rust but no critical defects.,1,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (5).jpg,Data_Preprocessed/pipe_non_corroded (5).jpg,Distorted,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+193,pipe_non_corroded (6).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (6).jpg,Data_Preprocessed/pipe_non_corroded (6).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+194,pipe_non_corroded (6).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (6).jpg,Data_Preprocessed/pipe_non_corroded (6).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+
+STEP 3 - VERDICT: Final Verdict: SAFE
+Final Verdict: UNSAFE",3
+195,pipe_non_corroded (7).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (7).jpg,Data_Preprocessed/pipe_non_corroded (7).jpg,,"STEP 1 - OBSERVATION: 500
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule because there is no visible sign of surface oxidation or corrosion.
+STEP 3 - VERDICT: SAFE",3
+196,pipe_non_corroded (7).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (7).jpg,Data_Preprocessed/pipe_non_corroded (7).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+197,pipe_non_corroded (8).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (8).jpg,Data_Preprocessed/pipe_non_corroded (8).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The observation from Step 1 satisfies the rule as there is no visible oxidation or corrosion on the gauge.
+STEP 3 - VERDICT: SAFE",3
+198,pipe_non_corroded (8).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (8).jpg,Data_Preprocessed/pipe_non_corroded (8).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3
+199,pipe_non_corroded (9).jpg,pipeline,,Non corroded/ No rust,,Alert on any sign of surface oxidation or corrosion.,Non corroded/ No rust NA,Rule A,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (9).jpg,Data_Preprocessed/pipe_non_corroded (9).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: The safety rule is: Alert on any sign of surface oxidation or corrosion. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: Final Verdict: SAFE",3
+200,pipe_non_corroded (9).jpg,pipeline,,Non corroded/ No rust,,"Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks.",Non corroded/ No rust NA,Rule B,Surface is clean and nominal.,0,SAFE,Dataset/Pipes/Non defected/pipe_non_corroded (9).jpg,Data_Preprocessed/pipe_non_corroded (9).jpg,,"STEP 1 - OBSERVATION: 0
+STEP 2 - RULE APPLICATION: Surface rust is acceptable. Alert only for structural defects, dents, cracks, or leaks. Show whether the observation from Step 1 satisfies this rule.
+STEP 3 - VERDICT: SAFE
+Final Verdict: SAFE",3

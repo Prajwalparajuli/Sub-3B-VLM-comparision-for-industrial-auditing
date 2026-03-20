@@ -73,63 +73,71 @@ print(f"Model loaded successfully on {device}.")
 
 # 4. Load Data
 dataset = load_preprocessed_metadata()
-results = []
 
-# 5. Inference Loop
-print(f"Starting inference on {len(dataset)} images...")
-for i, item in enumerate(dataset):
-    image_path = item.get("processed_path")
-    constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
-    
-    if not image_path or not os.path.exists(image_path):
-        print(f"WARNING: Skipping missing image: {image_path}")
-        continue
-    
-    # Load Image
-    image = Image.open(image_path).convert("RGB")
-    
-    # Prepare Prompt
-    standard_prompt = get_standard_prompt(constraint)
-    messages = [
-        {
-            "role": "User",
-            "content": f"<image_placeholder>\n{standard_prompt}",
-            "images": [image],
-        },
-        {"role": "Assistant", "content": ""},
-    ]
-    
-    # Use the official processor to handle the formatting
-    prepare_inputs = vl_chat_processor(
-        conversations=messages, images=[image], force_batchify=True
-    ).to(vl_gpt.device, torch.float16 if device.startswith("cuda") else torch.float32)
-    
-    # Generate
-    with torch.no_grad():
-        outputs = vl_gpt.language_model.generate(
-            inputs_embeds=vl_gpt.prepare_inputs_embeds(**prepare_inputs),
-            attention_mask=prepare_inputs.attention_mask,
-            pad_token_id=tokenizer.eos_token_id,
-            bos_token_id=tokenizer.bos_token_id,
-            eos_token_id=tokenizer.eos_token_id,
-            max_new_tokens=256,
-            do_sample=False, # Fair Greedy comparison
-            repetition_penalty=1.1, # SGP Standard
-            use_cache=True,
-        )
-    
-    response = tokenizer.decode(outputs[0].cpu().tolist(), skip_special_tokens=True)
-    
-    # Store result
-    result_entry = item.copy()
-    result_entry["model_response"] = response
-    results.append(result_entry)
-    
-    if (i + 1) % 10 == 0:
-        print(f"Processed {i + 1}/{len(dataset)} images...")
+# Number of evaluation runs to capture generation variance
+N_RUNS = 3
 
-# 6. Save Results
-save_results(results, "janus")
+for run_i in range(1, N_RUNS + 1):
+    results = []
+    # Seed control for reproducibility across runs
+    torch.manual_seed(42 + run_i)
+
+    # 5. Inference Loop
+    print(f"\n--- Starting Run {run_i}/{N_RUNS} on {len(dataset)} images ---")
+    for i, item in enumerate(dataset):
+        image_path = item.get("processed_path")
+        constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
+        
+        if not image_path or not os.path.exists(image_path):
+            print(f"WARNING: Skipping missing image: {image_path}")
+            continue
+        
+        # Load Image
+        image = Image.open(image_path).convert("RGB")
+        
+        # Prepare Prompt
+        standard_prompt = get_standard_prompt(constraint)
+        messages = [
+            {
+                "role": "User",
+                "content": f"<image_placeholder>\n{standard_prompt}",
+                "images": [image],
+            },
+            {"role": "Assistant", "content": ""},
+        ]
+        
+        # Use the official processor to handle the formatting
+        prepare_inputs = vl_chat_processor(
+            conversations=messages, images=[image], force_batchify=True
+        ).to(vl_gpt.device, torch.float16 if device.startswith("cuda") else torch.float32)
+        
+        # Generate
+        with torch.no_grad():
+            outputs = vl_gpt.language_model.generate(
+                inputs_embeds=vl_gpt.prepare_inputs_embeds(**prepare_inputs),
+                attention_mask=prepare_inputs.attention_mask,
+                pad_token_id=tokenizer.eos_token_id,
+                bos_token_id=tokenizer.bos_token_id,
+                eos_token_id=tokenizer.eos_token_id,
+                max_new_tokens=256,
+                do_sample=False, # Fair Greedy comparison
+                repetition_penalty=1.1, # SGP Standard
+                use_cache=True,
+            )
+        
+        response = tokenizer.decode(outputs[0].cpu().tolist(), skip_special_tokens=True)
+        
+        # Store result
+        result_entry = item.copy()
+        result_entry["model_response"] = response
+        result_entry["run_iteration"] = run_i  # Track which run this is
+        results.append(result_entry)
+        
+        if (i + 1) % 10 == 0:
+            print(f"Processed {i + 1}/{len(dataset)} images...")
+
+    # 6. Save Results
+    save_results(results, "janus", iteration=run_i)
 
 # Cleanup
 del vl_gpt, vl_chat_processor

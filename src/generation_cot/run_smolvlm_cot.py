@@ -35,112 +35,105 @@ print(f"Model loaded on {device}.")
 
 # 3. Load Data
 dataset = load_preprocessed_metadata()
-results = []
+N_RUNS = 3
 
-# 4. Inference Loop
-print(f"Starting CoT inference on {len(dataset)} images...")
+for run_i in range(1, N_RUNS + 1):
+    results = []
+    torch.manual_seed(42 + run_i)
 
-for i, item in enumerate(dataset):
-    image_path = item.get("processed_path")
-    constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
-
-    if not image_path or not os.path.exists(image_path):
-        print(f"WARNING: Skipping missing image: {image_path}")
-        continue
-
-    # Load Image
-    image = Image.open(image_path).convert("RGB")
-
-    # Chain-of-Thought prompt: three explicit steps force the model to
-    # commit to a perception reading before applying logic.
-    #
-    # STEP 1 forces the model to state what it sees (numeric value or
-    # physical condition) before it knows what verdict is expected.
-    # STEP 2 applies the safety rule to that stated observation.
-    # STEP 3 forces a single-word verdict derived from step 2 only.
-    #
-    # This is the key difference from the baseline, which asked for
-    # observation, reasoning, and verdict all in one go.
-    cot_prompt = (
-        f"You are an industrial safety auditor. "
-        f"Answer in exactly three steps:\n\n"
-        f"STEP 1 - OBSERVATION: Describe only what you see in the image. "
-        f"For a gauge: state the numeric reading and its unit. "
-        f"For a pipe: describe the physical surface condition.\n\n"
-        f"STEP 2 - RULE APPLICATION: The safety rule is: {constraint} "
-        f"Show whether the observation from Step 1 satisfies this rule.\n\n"
-        f"STEP 3 - VERDICT: Write ONLY one of these two lines, nothing else:\n"
-        f"Final Verdict: SAFE\n"
-        f"Final Verdict: UNSAFE"
-    )
-
-    messages = [
-        {
-            "role": "user",
-            "content": [
-                {"type": "image"},
-                {"type": "text", "text": cot_prompt}
-            ]
-        }
-    ]
-
-    # Apply the chat template
-    prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
-
-    # Nudge the model to start with Step 1 (same SRN trick as baseline
-    # but aligned to the CoT structure)
-    prompt_with_nudge = prompt + "STEP 1 - OBSERVATION: "
-    inputs = processor(text=prompt_with_nudge, images=image, return_tensors="pt").to(device)
-
-    # Generate — max_new_tokens raised from 128 to 384 because the
-    # three-step format is naturally longer than a single verdict
-    with torch.no_grad():
-        generate_ids = model.generate(
-            **inputs,
-            max_new_tokens=384,
-            do_sample=True,
-            temperature=0.2,
-            repetition_penalty=1.1
+    # 4. Inference Loop
+    print(f"\n--- Starting CoT Run {run_i}/{N_RUNS} on {len(dataset)} images ---")
+    
+    for i, item in enumerate(dataset):
+        image_path = item.get("processed_path")
+        constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
+    
+        if not image_path or not os.path.exists(image_path):
+            print(f"WARNING: Skipping missing image: {image_path}")
+            continue
+    
+        # Load Image
+        image = Image.open(image_path).convert("RGB")
+    
+        # Chain-of-Thought prompt: three explicit steps force the model to
+        # commit to a perception reading before applying logic.
+        #
+        # STEP 1 forces the model to state what it sees (numeric value or
+        # physical condition) before it knows what verdict is expected.
+        # STEP 2 applies the safety rule to that stated observation.
+        # STEP 3 forces a single-word verdict derived from step 2 only.
+        #
+        # This is the key difference from the baseline, which asked for
+        # observation, reasoning, and verdict all in one go.
+        cot_prompt = (
+            f"You are an industrial safety auditor. "
+            f"Answer in exactly three steps:\n\n"
+            f"STEP 1 - OBSERVATION: Describe only what you see in the image. "
+            f"For a gauge: state the numeric reading and its unit. "
+            f"For a pipe: describe the physical surface condition.\n\n"
+            f"STEP 2 - RULE APPLICATION: The safety rule is: {constraint} "
+            f"Show whether the observation from Step 1 satisfies this rule.\n\n"
+            f"STEP 3 - VERDICT: Write ONLY one of these two lines, nothing else:\n"
+            f"Final Verdict: SAFE\n"
+            f"Final Verdict: UNSAFE"
         )
-
-    # Trim the prompt tokens so we only decode the new output
-    generated_ids_trimmed = [
-        out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generate_ids)
-    ]
-    output_text = processor.batch_decode(
-        generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
-    )[0]
-
-    # Clean stray "Assistant:" prefix if the model adds it
-    output_text = output_text.strip()
-    if output_text.lower().startswith("assistant:"):
-        output_text = output_text[len("assistant:"):].strip()
-
-    # Prepend the nudge so the saved CSV shows the full three-step response
-    output_text = "STEP 1 - OBSERVATION: " + output_text
-
-    # Store result — same fields as baseline so parse_results.py works unchanged
-    result_entry = item.copy()
-    result_entry["model_response"] = output_text
-    results.append(result_entry)
-
-    if (i + 1) % 10 == 0:
-        print(f"Processed {i + 1}/{len(dataset)} images...")
-
-# 5. Save Results
-# Output goes to results/innovation/cot/ to keep baseline results untouched
-output_dir = "results/innovation/cot"
-os.makedirs(output_dir, exist_ok=True)
-
-import csv
-output_path = os.path.join(output_dir, "smolvlm_cot_results.csv")
-if results:
-    keys = results[0].keys()
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=keys)
-        writer.writeheader()
-        writer.writerows(results)
-print(f"CoT results saved to {output_path}")
+    
+        messages = [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image"},
+                    {"type": "text", "text": cot_prompt}
+                ]
+            }
+        ]
+    
+        # Apply the chat template
+        prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
+    
+        # Nudge the model to start with Step 1 (same SRN trick as baseline
+        # but aligned to the CoT structure)
+        prompt_with_nudge = prompt + "STEP 1 - OBSERVATION: "
+        inputs = processor(text=prompt_with_nudge, images=image, return_tensors="pt").to(device)
+    
+        # Generate — max_new_tokens raised from 128 to 384 because the
+        # three-step format is naturally longer than a single verdict
+        with torch.no_grad():
+            generate_ids = model.generate(
+                **inputs,
+                max_new_tokens=384,
+                do_sample=True,
+                temperature=0.2,
+                repetition_penalty=1.1
+            )
+    
+        # Trim the prompt tokens so we only decode the new output
+        generated_ids_trimmed = [
+            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generate_ids)
+        ]
+        output_text = processor.batch_decode(
+            generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+        )[0]
+    
+        # Clean stray "Assistant:" prefix if the model adds it
+        output_text = output_text.strip()
+        if output_text.lower().startswith("assistant:"):
+            output_text = output_text[len("assistant:"):].strip()
+    
+        # Prepend the nudge so the saved CSV shows the full three-step response
+        output_text = "STEP 1 - OBSERVATION: " + output_text
+    
+        # Store result — same fields as baseline so parse_results.py works unchanged
+        result_entry = item.copy()
+        result_entry["model_response"] = output_text
+        result_entry["run_iteration"] = run_i
+        results.append(result_entry)
+    
+        if (i + 1) % 10 == 0:
+            print(f"Processed {i + 1}/{len(dataset)} images...")
+            
+    # 5. Save Results
+    save_results(results, "smolvlm_cot", iteration=run_i, out_dir="results/innovation/cot")
 
 # Cleanup
 del model, processor

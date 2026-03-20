@@ -172,48 +172,56 @@ print("Model Ready.")
 
 # 6. Load Data
 dataset = load_preprocessed_metadata()
-results = []
 
-# 7. Inference Loop
-print(f"Starting inference on {len(dataset)} images...")
-for i, item in enumerate(dataset):
-    image_path = item.get("processed_path")
-    # Use logic_constraint (the actual safety rule, e.g. "Alert if pressure exceeds 0.10 bar.")
-    # NOT constraint (the artifact_tag like "Oblique Angle") which causes the model to
-    # reason about image quality instead of reading the gauge/inspecting the surface.
-    constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
+# Number of evaluation runs to capture generation variance
+N_RUNS = 3
 
-    if not image_path or not os.path.exists(image_path):
-        print(f"WARNING: Skipping missing image: {image_path}")
-        continue
+for run_i in range(1, N_RUNS + 1):
+    results = []
+    # Seed control for reproducibility across runs
+    torch.manual_seed(42 + run_i)
 
-    image = Image.open(image_path).convert("RGB")
+    # 7. Inference Loop
+    print(f"\n--- Starting Run {run_i}/{N_RUNS} on {len(dataset)} images ---")
+    for i, item in enumerate(dataset):
+        image_path = item.get("processed_path")
+        # Use logic_constraint (the actual safety rule, e.g. "Alert if pressure exceeds 0.10 bar.")
+        # NOT constraint (the artifact_tag like "Oblique Angle") which causes the model to
+        # reason about image quality instead of reading the gauge/inspecting the surface.
+        constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
 
-    w, h = image.size
-    MAX_EDGE = 384
-    scale = MAX_EDGE / max(w, h)
-    proc_image = image.resize((int(w * scale), int(h * scale)), resample=Image.LANCZOS)
+        if not image_path or not os.path.exists(image_path):
+            print(f"WARNING: Skipping missing image: {image_path}")
+            continue
 
-    msgs = [{'role': 'user', 'content': get_standard_prompt(constraint)}]
+        image = Image.open(image_path).convert("RGB")
 
-    with torch.no_grad():
-        response, context, _ = model.chat(
-            image=proc_image,
-            msgs=msgs,
-            context=None,
-            tokenizer=tokenizer,
-            sampling=False
-        )
+        w, h = image.size
+        MAX_EDGE = 384
+        scale = MAX_EDGE / max(w, h)
+        proc_image = image.resize((int(w * scale), int(h * scale)), resample=Image.LANCZOS)
 
-    result_entry = item.copy()
-    result_entry["model_response"] = response
-    results.append(result_entry)
+        msgs = [{'role': 'user', 'content': get_standard_prompt(constraint)}]
 
-    if (i + 1) % 10 == 0:
-        print(f"Processed {i + 1}/{len(dataset)} images...")
+        with torch.no_grad():
+            response, context, _ = model.chat(
+                image=proc_image,
+                msgs=msgs,
+                context=None,
+                tokenizer=tokenizer,
+                sampling=False
+            )
 
-# 8. Save Results
-save_results(results, "minicpm")
+        result_entry = item.copy()
+        result_entry["model_response"] = response
+        result_entry["run_iteration"] = run_i  # Track which run this is
+        results.append(result_entry)
+
+        if (i + 1) % 10 == 0:
+            print(f"Processed {i + 1}/{len(dataset)} images...")
+
+    # 8. Save Results
+    save_results(results, "minicpm", iteration=run_i)
 
 # 9. Memory Hygiene
 del model, tokenizer

@@ -18,13 +18,17 @@ def get_standard_prompt(constraint):
             f"determine if it violates the following safety constraint: {constraint}. "
             f"Provide a concise audit reasoning followed by a verdict [SAFE/UNSAFE].")
 
-def save_results(results, model_name):
+def save_results(results, model_name, iteration=None, out_dir="results/baseline"):
     """Saves the VLM responses to a CSV for final analysis."""
-    output_dir = "results/baseline"
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
 
-    output_path = os.path.join(output_dir, f"{model_name}_results.csv")
+    if iteration is not None:
+        filename = f"{model_name}_run_{iteration}_results.csv"
+    else:
+        filename = f"{model_name}_results.csv"
+        
+    output_path = os.path.join(out_dir, filename)
     
     if results:
         keys = results[0].keys()

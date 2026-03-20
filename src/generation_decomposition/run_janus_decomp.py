@@ -71,91 +71,90 @@ print(f"Model loaded successfully on {device}.")
 
 # 4. Load Data
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "generation_baseline"))
+from inference_utils import load_preprocessed_metadata, save_results
 dataset = load_preprocessed_metadata()
-results = []
 
-# 5. Inference Loop
-print(f"Starting CoT inference on {len(dataset)} images...")
+# Number of evaluation runs to capture generation variance
+N_RUNS = 3
 
-for i, item in enumerate(dataset):
-    image_path = item.get("processed_path")
-    constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
+for run_i in range(1, N_RUNS + 1):
+    results = []
+    # Seed control for reproducibility across runs
+    torch.manual_seed(42 + run_i)
 
-    if not image_path or not os.path.exists(image_path):
-        print(f"WARNING: Skipping missing image: {image_path}")
-        continue
-
-    # Load Image
-    image = Image.open(image_path).convert("RGB")
-
-    # Chain-of-Thought prompt -- identical to all other CoT scripts.
-    # No per-model tuning so results are directly comparable.
-    # Janus uses <image_placeholder> in the user turn.
-    decomp_prompt = (
-        f"<image_placeholder>\n"
-        f"You are an AI industrial safety auditor.\n"
-        f"Safety Rule: '{constraint}'\n\n"
-        f"Identify the current reading or condition shown in the image, then evaluate it against the rule.\n"
-        f"Answer the following three questions exactly in order:\n\n"
-        f"Q1: Observation: What is the exact numeric reading or visible physical condition shown in the image?\n"
-        f"Q2: Evaluation: Does the observation from Q1 violate the Safety Rule? (Answer Yes or No)\n"
-        f"Q3: Final Verdict: If Q2 is Yes, output UNSAFE. If Q2 is No, output SAFE.\n\n"
-        f"Format your response exactly as:\n"
-        f"Q1: Observation: [Your observation here]\n"
-        f"Q2: Evaluation: [Yes or No]\n"
-        f"Q3: Final Verdict: [SAFE or UNSAFE]"
-    )
-
-    messages = [
-        {
-            "role": "User",
-            "content": decomp_prompt,
-            "images": [image],
-        },
-        {"role": "Assistant", "content": ""},
-    ]
-
-    # Use the official Janus processor to format inputs
-    prepare_inputs = vl_chat_processor(
-        conversations=messages, images=[image], force_batchify=True
-    ).to(vl_gpt.device, torch.float16 if device.startswith("cuda") else torch.float32)
-
-    # Generate -- max_new_tokens raised to 384 for the 3-step response
-    with torch.no_grad():
-        outputs = vl_gpt.language_model.generate(
-            inputs_embeds=vl_gpt.prepare_inputs_embeds(**prepare_inputs),
-            attention_mask=prepare_inputs.attention_mask,
-            pad_token_id=tokenizer.eos_token_id,
-            bos_token_id=tokenizer.bos_token_id,
-            eos_token_id=tokenizer.eos_token_id,
-            max_new_tokens=512,
-            do_sample=False,
-            repetition_penalty=1.1,
-            use_cache=True,
+    # 5. Inference Loop
+    print(f"\n--- Starting Decomp Run {run_i}/{N_RUNS} on {len(dataset)} images ---")
+    
+    for i, item in enumerate(dataset):
+        image_path = item.get("processed_path")
+        constraint = item.get("logic_constraint") or item.get("constraint") or "Inspect this image for any safety concern."
+    
+        if not image_path or not os.path.exists(image_path):
+            print(f"WARNING: Skipping missing image: {image_path}")
+            continue
+    
+        # Load Image
+        image = Image.open(image_path).convert("RGB")
+    
+        # Chain-of-Thought prompt -- identical to all other CoT scripts.
+        # No per-model tuning so results are directly comparable.
+        # Janus uses <image_placeholder> in the user turn.
+        decomp_prompt = (
+            f"<image_placeholder>\n"
+            f"You are an AI industrial safety auditor.\n"
+            f"Safety Rule: '{constraint}'\n\n"
+            f"Identify the current reading or condition shown in the image, then evaluate it against the rule.\n"
+            f"Answer the following three questions exactly in order:\n\n"
+            f"Q1: Observation: What is the exact numeric reading or visible physical condition shown in the image?\n"
+            f"Q2: Evaluation: Does the observation from Q1 violate the Safety Rule? (Answer Yes or No)\n"
+            f"Q3: Final Verdict: If Q2 is Yes, output UNSAFE. If Q2 is No, output SAFE.\n\n"
+            f"Format your response exactly as:\n"
+            f"Q1: Observation: [Your observation here]\n"
+            f"Q2: Evaluation: [Yes or No]\n"
+            f"Q3: Final Verdict: [SAFE or UNSAFE]"
         )
+    
+        messages = [
+            {
+                "role": "User",
+                "content": decomp_prompt,
+                "images": [image],
+            },
+            {"role": "Assistant", "content": ""},
+        ]
+    
+        # Use the official Janus processor to format inputs
+        prepare_inputs = vl_chat_processor(
+            conversations=messages, images=[image], force_batchify=True
+        ).to(vl_gpt.device, torch.float16 if device.startswith("cuda") else torch.float32)
+    
+        # Generate -- max_new_tokens raised to 384 for the 3-step response
+        with torch.no_grad():
+            outputs = vl_gpt.language_model.generate(
+                inputs_embeds=vl_gpt.prepare_inputs_embeds(**prepare_inputs),
+                attention_mask=prepare_inputs.attention_mask,
+                pad_token_id=tokenizer.eos_token_id,
+                bos_token_id=tokenizer.bos_token_id,
+                eos_token_id=tokenizer.eos_token_id,
+                max_new_tokens=512,
+                do_sample=False,
+                repetition_penalty=1.1,
+                use_cache=True,
+            )
+    
+        response = tokenizer.decode(outputs[0].cpu().tolist(), skip_special_tokens=True)
+    
+        # Store result -- same fields as baseline so parse_results.py works unchanged
+        result_entry = item.copy()
+        result_entry["model_response"] = response
+        result_entry["run_iteration"] = run_i
+        results.append(result_entry)
+    
+        if (i + 1) % 10 == 0:
+            print(f"Processed {i + 1}/{len(dataset)} images...")
 
-    response = tokenizer.decode(outputs[0].cpu().tolist(), skip_special_tokens=True)
-
-    # Store result -- same fields as baseline so parse_results.py works unchanged
-    result_entry = item.copy()
-    result_entry["model_response"] = response
-    results.append(result_entry)
-
-    if (i + 1) % 10 == 0:
-        print(f"Processed {i + 1}/{len(dataset)} images...")
-
-# 6. Save Results
-output_dir = "results/innovation/decomposition"
-os.makedirs(output_dir, exist_ok=True)
-output_path = os.path.join(output_dir, "janus_decomp_results.csv")
-
-if results:
-    keys = results[0].keys()
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=keys)
-        writer.writeheader()
-        writer.writerows(results)
-print(f"Decomp results saved to {output_path}")
+    # 6. Save Results
+    save_results(results, "janus_decomp", iteration=run_i, out_dir="results/innovation/decomposition")
 
 # Cleanup
 del vl_gpt, vl_chat_processor
