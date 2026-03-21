@@ -43,61 +43,61 @@ if args.mode == "cot":
     PARSED_DIR  = "results/innovation/cot/parsed"
     OUTPUT_DIR  = "results/innovation/cot/failure_analysis"
     MODEL_FILES = {
-        "SmolVLM":   "smolvlm_cot_parsed.csv",
-        "InternVL2": "internvl2_cot_parsed.csv",
-        "Janus":     "janus_cot_parsed.csv",
-        "Qwen2-VL":  "qwen2_vl_cot_parsed.csv",
-        "MiniCPM":   "minicpm_cot_parsed.csv",
+        "SmolVLM":   "smolvlm_cot_run_1_parsed.csv",
+        "InternVL2": "internvl2_cot_run_1_parsed.csv",
+        "Janus":     "janus_cot_run_1_parsed.csv",
+        "Qwen2-VL":  "qwen2_vl_cot_run_1_parsed.csv",
+        "MiniCPM":   "minicpm_cot_run_1_parsed.csv",
     }
 elif args.mode == "decomp":
     PARSED_DIR  = "results/innovation/decomposition/parsed"
     OUTPUT_DIR  = "results/innovation/decomposition/failure_analysis"
     MODEL_FILES = {
-        "SmolVLM":   "smolvlm_decomp_parsed.csv",
-        "InternVL2": "internvl2_decomp_parsed.csv",
-        "Janus":     "janus_decomp_parsed.csv",
-        "Qwen2-VL":  "qwen2_vl_decomp_parsed.csv",
-        "MiniCPM":   "minicpm_decomp_parsed.csv",
+        "SmolVLM":   "smolvlm_decomp_run_1_parsed.csv",
+        "InternVL2": "internvl2_decomp_run_1_parsed.csv",
+        "Janus":     "janus_decomp_run_1_parsed.csv",
+        "Qwen2-VL":  "qwen2_vl_decomp_run_1_parsed.csv",
+        "MiniCPM":   "minicpm_decomp_run_1_parsed.csv",
     }
 elif args.mode == "multiturn":
     PARSED_DIR  = "results/innovation/multiturn/parsed"
     OUTPUT_DIR  = "results/innovation/multiturn/failure_analysis"
     MODEL_FILES = {
-        "SmolVLM":   "smolvlm_multiturn_parsed.csv",
-        "InternVL2": "internvl2_multiturn_parsed.csv",
-        "Janus":     "janus_multiturn_parsed.csv",
-        "Qwen2-VL":  "qwen2_vl_multiturn_parsed.csv",
-        "MiniCPM":   "minicpm_multiturn_parsed.csv",
+        "SmolVLM":   "smolvlm_multiturn_run_1_parsed.csv",
+        "InternVL2": "internvl2_multiturn_run_1_parsed.csv",
+        "Janus":     "janus_multiturn_run_1_parsed.csv",
+        "Qwen2-VL":  "qwen2_vl_multiturn_run_1_parsed.csv",
+        "MiniCPM":   "minicpm_multiturn_run_1_parsed.csv",
     }
 elif args.mode == "contrast":
     PARSED_DIR  = "results/innovation/contrast/parsed"
     OUTPUT_DIR  = "results/innovation/contrast/failure_analysis"
     MODEL_FILES = {
-        "SmolVLM":   "smolvlm_contrast_parsed.csv",
-        "InternVL2": "internvl2_contrast_parsed.csv",
-        "Janus":     "janus_contrast_parsed.csv",
-        "Qwen2-VL":  "qwen2_vl_contrast_parsed.csv",
-        "MiniCPM":   "minicpm_contrast_parsed.csv",
+        "SmolVLM":   "smolvlm_contrast_run_1_parsed.csv",
+        "InternVL2": "internvl2_contrast_run_1_parsed.csv",
+        "Janus":     "janus_contrast_run_1_parsed.csv",
+        "Qwen2-VL":  "qwen2_vl_contrast_run_1_parsed.csv",
+        "MiniCPM":   "minicpm_contrast_run_1_parsed.csv",
     }
 elif args.mode == "contrast_cot":
     PARSED_DIR  = "results/innovation/contrast_cot/parsed"
     OUTPUT_DIR  = "results/innovation/contrast_cot/failure_analysis"
     MODEL_FILES = {
-        "SmolVLM":   "smolvlm_contrast_cot_parsed.csv",
-        "InternVL2": "internvl2_contrast_cot_parsed.csv",
-        "Janus":     "janus_contrast_cot_parsed.csv",
-        "Qwen2-VL":  "qwen2_vl_contrast_cot_parsed.csv",
-        "MiniCPM":   "minicpm_contrast_cot_parsed.csv",
+        "SmolVLM":   "smolvlm_contrast_cot_run_1_parsed.csv",
+        "InternVL2": "internvl2_contrast_cot_run_1_parsed.csv",
+        "Janus":     "janus_contrast_cot_run_1_parsed.csv",
+        "Qwen2-VL":  "qwen2_vl_contrast_cot_run_1_parsed.csv",
+        "MiniCPM":   "minicpm_contrast_cot_run_1_parsed.csv",
     }
 else:
     PARSED_DIR  = "results/baseline/parsed"
     OUTPUT_DIR  = "results/baseline/failure_analysis"
     MODEL_FILES = {
-        "SmolVLM":   "smolvlm_parsed.csv",
-        "InternVL2": "internvl2_parsed.csv",
-        "Janus":     "janus_parsed.csv",
-        "Qwen2-VL":  "qwen2_vl_parsed.csv",
-        "MiniCPM":   "minicpm_parsed.csv",
+        "SmolVLM":   "smolvlm_run_1_parsed.csv",
+        "InternVL2": "internvl2_run_1_parsed.csv",
+        "Janus":     "janus_run_1_parsed.csv",
+        "Qwen2-VL":  "qwen2_vl_run_1_parsed.csv",
+        "MiniCPM":   "minicpm_run_1_parsed.csv",
     }
 
 MODELS = list(MODEL_FILES.keys())

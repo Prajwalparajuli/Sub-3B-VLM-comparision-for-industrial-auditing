@@ -1,0 +1,6 @@
+model,total_wrong,short_circuit,perception_failure,short_circuit_pct
+SmolVLM,105,11,94,0.1048
+InternVL2,73,6,67,0.0822
+Janus,84,6,78,0.0714
+Qwen2-VL,67,8,59,0.1194
+MiniCPM,82,9,73,0.1098

@@ -26,7 +26,7 @@ def compute_confidence_interval(data, confidence=0.95):
 def main():
     parser = argparse.ArgumentParser(description="Aggregate metrics across N runs.")
     parser.add_argument("--runs", type=int, default=3, help="Number of runs to aggregate")
-    parser.add_argument("--mode", choices=["baseline", "cot", "decomp", "multiturn"], default="baseline")
+    parser.add_argument("--mode", choices=["baseline", "cot", "decomp", "contrast", "contrast_cot"], default="baseline")
     args = parser.parse_args()
 
     models = ["smolvlm", "internvl2", "janus", "qwen2_vl", "minicpm"]
@@ -38,10 +38,19 @@ def main():
         "minicpm": "MiniCPM"
     }
 
-    base_dir = f"results/{args.mode}/parsed"
+    # Mode-aware directory and filename resolution
+    MODE_CONFIG = {
+        "baseline":     ("results/baseline/parsed",                        ""),
+        "cot":          ("results/innovation/cot/parsed",                  "_cot"),
+        "decomp":       ("results/innovation/decomposition/parsed",        "_decomp"),
+        "contrast":     ("results/innovation/contrast/parsed",             "_contrast"),
+        "contrast_cot": ("results/innovation/contrast_cot/parsed",         "_contrast_cot"),
+    }
+    base_dir, suffix = MODE_CONFIG[args.mode]
     
     print(f"\n==================================================")
     print(f"Aggregating {args.runs} runs for {args.mode.upper()} mode")
+    print(f"Base dir: {base_dir}")
     print(f"==================================================")
 
     aggregated_results = []
@@ -59,7 +68,7 @@ def main():
         valid_runs = 0
 
         for i in range(1, args.runs + 1):
-            file_name = f"{model_key}_run_{i}_parsed.csv"
+            file_name = f"{model_key}{suffix}_run_{i}_parsed.csv"
             file_path = os.path.join(base_dir, file_name)
 
             if not os.path.exists(file_path):
@@ -122,7 +131,7 @@ def main():
     print(df_display.to_markdown(index=False))
     
     # Save the aggregated summary
-    out_dir = f"results/{args.mode}/metrics"
+    out_dir = os.path.join(os.path.dirname(base_dir), "metrics")
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "aggregated_multi_run_metrics.csv")
     df.to_csv(out_path, index=False)

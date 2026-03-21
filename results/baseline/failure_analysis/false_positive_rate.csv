@@ -1,0 +1,11 @@
+model,category,safe_expected_n,false_positives,fp_rate
+SmolVLM,guage,42,21,0.5
+SmolVLM,pipeline,19,6,0.3158
+InternVL2,guage,50,2,0.04
+InternVL2,pipeline,45,7,0.1556
+Janus,guage,50,6,0.12
+Janus,pipeline,44,4,0.0909
+Qwen2-VL,guage,50,9,0.18
+Qwen2-VL,pipeline,45,2,0.0444
+MiniCPM,guage,49,13,0.2653
+MiniCPM,pipeline,40,1,0.025
