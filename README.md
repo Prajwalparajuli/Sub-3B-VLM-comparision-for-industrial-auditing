@@ -1,5 +1,8 @@
 # Sub-3B VLM Comparison for Industrial Auditing
 
+    QR Link to this GitHUb Repository:
+![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/Prajwalparajuli/Sub-3B-VLM-comparision-for-industrial-auditing)
+
 A modular research pipeline for evaluating Vision-Language Models (VLMs) under strict hardware constraints (6GB VRAM). This project compares five sub-3B parameter models on industrial safety auditing tasks involving analog gauges and pipeline integrity assessment.
 
 ## Tech Stack
@@ -127,5 +130,6 @@ No additional data ingestion is needed. The dataset and preprocessed images are 
 - **Decoding**: Greedy search with repetition penalty 1.1
 - **Evaluation**: ANLS (reading accuracy), LCR (logic compliance), F1, Accuracy
 
+                            
 ## License
 Refer to the individual model cards or official repositories for specific licensing information.
