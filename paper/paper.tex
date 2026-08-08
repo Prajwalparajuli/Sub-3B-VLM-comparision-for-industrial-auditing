@@ -18,15 +18,15 @@
 \title{A Comparative Analysis of Edge Native Vision Language Model Architectures for Autonomous Decision Support in Asset Integrity Management in Industries}
 
 \author{
-  Anonymous Authors \\
-  NeurIPS 2024 Submission \\
+  Prajwal Parajuli \quad Scott Clayton \\
+  University of Houston-Downtown \\
 }
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Oil and gas plants still use legacy analog gauges and pipelines requiring manual inspection. Replacing them with networked digital sensors is financially unviable. Offline Vision Language Models (VLMs) offer a potential retrofit solution. Existing benchmarks test general visual question answering rather than industrial Standard Operating Procedure (SOP) compliance under constrained edge memory environments. We evaluate six edge-native VLMs with fewer than three billion parameters using a custom dual-rule dataset designed to measure strict logic compliance over default visual priors. Across 15,000 evaluations, we test zero-shot accuracy against prompt decomposition and dual-channel CLAHE optical preprocessing. McNemar’s testing proves that forcing step-by-step logic actively degrades some baseline architectures while rescuing others. Imposing text constraints triggers total modality collapse in SmolVLM. Its false negative rate hits 100 percent. Janus breaks format entirely and generates 115 unparseable outputs. Applying the exact same constraints to Qwen2-VL prevents baseline failure. Unified models like Gemma 4 ignore optical contrast enhancements. Attempting to cure modality collapse via Parameter-Efficient Fine-Tuning (LoRA) causes Optimization Saturation. Restoring logic compliance requires structural optical grounding through Agentic Foveation. Our results categorize the engineering trade-offs required for scaling VLMs for offline industrial audits.
+Oil and gas plants still use legacy analog gauges and pipelines requiring manual inspection. Replacing them with networked digital sensors is financially unviable. Offline Vision Language Models (VLMs) offer a potential retrofit solution. Existing benchmarks test general visual question answering rather than industrial Standard Operating Procedure (SOP) compliance under constrained edge memory environments. We evaluate six edge-native VLMs with fewer than three billion parameters using a custom dual-rule dataset designed to measure strict logic compliance over default visual priors. Across 18,000 evaluations, we test zero-shot accuracy against prompt decomposition and dual-channel CLAHE optical preprocessing. McNemar’s testing proves that forcing step-by-step logic actively degrades some baseline architectures while rescuing others. Imposing text constraints triggers total modality collapse in SmolVLM. Its false negative rate hits 100 percent. Janus breaks format entirely and generates 115 unparseable outputs. Applying the exact same constraints to Qwen2-VL prevents baseline failure. Unified models like Gemma 4 ignore optical contrast enhancements. Attempting to cure modality collapse via Parameter-Efficient Fine-Tuning (LoRA) causes Optimization Saturation. Agentic Foveation, our spatial grounding intervention, significantly improves the constrained Chain-of-Thought pathway but regresses under Rule Decomposition, where stripping peripheral context induces hyper-vigilant false positives. Rule Decomposition alone yields the highest logic compliance. Our results categorize the engineering trade-offs required for scaling VLMs for offline industrial audits.
 \end{abstract}
 
 
@@ -49,7 +49,7 @@ Our primary contributions are:
     \item We introduce the Golden 100 Benchmark, an evaluation framework pairing analog industrial imagery with conflicting dual-rule logic protocols to measure strict conditional reasoning.
     \item We define the Formatting Penalty boundary. McNemar's testing proves that imposing structural logic constraints (Chain-of-Thought) induces complete modality collapse in smaller architectures but prevents failure in larger decoupled architectures.
     \item We demonstrate through Parameter-Efficient Fine-Tuning (LoRA) that adapting the visual encoder and multimodal projector fails to cure Modality Collapse. The reasoning bottleneck in sub-3B architectures is fundamentally linguistic rather than strictly visual.
-    \item We introduce Agentic Foveation, an automated spatial-cropping pipeline that bypasses the hardware token-density ceiling. By algorithmically forcing the physical anomaly to dominate the context window, we provide a deployable mechanism for restoring logic compliance in hardware-constrained edge environments.
+    \item We introduce Agentic Foveation, an automated spatial-cropping pipeline that bypasses the hardware token-density ceiling. By algorithmically forcing the physical anomaly to dominate the context window, it relieves token-density pressure. We characterize its asymmetric effect: Foveation improves the constrained Chain-of-Thought pathway but degrades Rule Decomposition, because sub-3B encoders require full-frame context to calibrate against false positives.
 \end{itemize}
 
 
@@ -125,14 +125,14 @@ The pipeline bounded operations to an 8GB Total VRAM limit, achieving peak infer
     \item \textbf{Unified Multimodal Architectures:} Represented by Gemma-4-E2B-it (2B), natively unified architectures share the embedding space completely between visual and text tokens rather than passing visual data through a dedicated projector. This shared space makes the network highly susceptible to "Structural Modality Collapse," where underlying LLM safety or conversational priors overpower the visual signal.
 \end{itemize}
 
-Our framework enforces a three-pass evaluation protocol. Every model ran three independent physical inference passes across all five paradigm interventions, producing 9,000 recorded broad evaluations (excluding the targeted LoRA and Foveation runs on Qwen2-VL). We disabled random generation to guarantee that logic variance resulted from architectural processing limits rather than hyperparameter drift. A fault-tolerant regex compiling engine processed broken text structures, flagging syntax failures or physical hallucination loops universally as a failure to render a verdict. Significance across all paired-row cross-validations computed strictly via McNemar's Test for paired nominal data [11], executing rigorous multiple hypothesis corrections [12].
+Our framework enforces a three-pass evaluation protocol. Every model ran three independent physical inference passes across all five paradigm interventions, producing 18,000 recorded broad evaluations (200 dual-rule inference rows $\times$ 6 models $\times$ 5 interventions $\times$ 3 runs), excluding the targeted LoRA and Foveation runs on Qwen2-VL. We disabled random generation to guarantee that logic variance resulted from architectural processing limits rather than hyperparameter drift. A fault-tolerant regex compiling engine processed broken text structures, flagging syntax failures or physical hallucination loops universally as a failure to render a verdict. Significance across all paired-row cross-validations computed strictly via McNemar's Test for paired nominal data [11], executing rigorous multiple hypothesis corrections [12].
 
 
 \section*{Experimental Results and Architectural Diagnostics}
 
 
 
-\input{../docs/results_table.tex}
+\input{results_table.tex}
 
 
 \subsection*{The Reality of Zero-Shot Modality Collapse}
