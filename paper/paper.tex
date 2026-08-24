@@ -18,8 +18,11 @@
 \title{A Comparative Analysis of Edge Native Vision Language Model Architectures for Autonomous Decision Support in Asset Integrity Management in Industries}
 
 \author{
-  Anonymous Authors \\
-  NeurIPS 2024 Submission \\
+  \textbf{Prajwal Parajuli} \\
+  \texttt{prajwalparajuli2017@gmail.com} \\
+  \And
+  \textbf{Scott Clayton} \\
+  \texttt{ledscottc@yahoo.com} \\
 }
 
 \begin{document}
@@ -33,8 +36,12 @@ Oil and gas plants still use legacy analog gauges and pipelines requiring manual
 \section*{Introduction}
 
 
-\textbf{[Proposed Figure 1: Horizontal Evaluation Pipeline Diagram]}
-\textit{(To be generated externally - see prompt provided)}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{paper_assets/pipeline_schematic.png}
+    \caption{Overview of the Sub-3B VLM industrial auditing and intervention evaluation pipeline. The framework decouples optical preprocessing (CLAHE) and textual reasoning (Rule Decomposition) to bypass token-density bottlenecks and mitigate structural modality collapse.}
+    \label{fig:pipeline_schematic}
+\end{figure}
 
 Industrial environments, such as oil refineries and chemical plants, depend on thousands of legacy analog gauges and complex pipeline manifolds to monitor systemic health. Automating the supervision of these physical assets remains a critical bottleneck in facility maintenance. Replacing every analog gauge with a networked digital sensor is technically possible, but the scale of legacy infrastructure renders this approach cost-prohibitive. Vision Language Models offer a retrofit solution by extracting operational states directly from simple camera feeds. Cloud-based application programming interfaces (APIs) provide massive computational capacity. Industrial auditing prohibits their use. Remote sites suffer from latency, unreliable internet connectivity, and severe data privacy regulations surrounding proprietary infrastructure. Auditing systems must run locally on-device. Deploying server-grade models holding billions of parameters to remote edges creates immediate hardware barriers. Remote edge server environments throttle available memory bandwidth, making standard massive architectures computationally impractical. This hardware ceiling dictates a need to validate the industrial capabilities of high-efficiency models designed to operate near the three-billion parameter boundary without extreme, unstable compression frameworks.
 
@@ -132,7 +139,7 @@ Our framework enforces a three-pass evaluation protocol. Every model ran three i
 
 
 
-\input{../docs/results_table.tex}
+\input{results_table.tex}
 
 
 \subsection*{The Reality of Zero-Shot Modality Collapse}
@@ -141,7 +148,7 @@ Our framework enforces a three-pass evaluation protocol. Every model ran three i
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{paper_assets/charts/baseline_danger_bar.png}
-    \caption{Baseline Danger Grouped Bar Chart}
+    \caption{Zero-shot baseline evaluation across six sub-3B VLM architectures. All evaluated models exhibit severe structural modality collapse, characterized by suppressed Logic Compliance Rates (LCR $\le 27.0\%$) and catastrophic False Negative Rates (FNR $> 58\%$) on industrial SOP reasoning.}
     \label{fig:chart1}
 \end{figure}
 Under unconstrained zero-shot evaluation, the entire sub-3B cohort exhibited structural modality collapse. The models defaulted to conversational safety priors and ignored quantitative Standard Operating Procedure (SOP) logic. Qwen2-VL (2.2B) yielded a Logic Compliance Rate (LCR) of 19.0\% and an 81.0\% False Negative Rate (FNR), assuming environments were safe regardless of physical defect boundaries. InternVL2 (1.0B) mirrored this blind safety bias with a 70.2\% FNR. Unified multimodal architectures like Gemma-4-E2B-it (2B) suffered deep modality collapse, prioritizing pre-trained conversational output over visual reasoning. Decoupled architectures like Janus (1.3B) achieved an 18.0\% baseline LCR but struggled to reach End-of-Sequence tokens. Larger models approaching the 3B boundary, such as MiniCPM (2.8B), demonstrated base logical continuity but still failed to reliably apply quantitative thresholds zero-shot. Smaller architectures, such as SmolVLM (0.6B), suffered visual starvation. They ignored the image tensor entirely when challenged with complex instructions. This universal baseline failure across all six architectures confirms zero-shot prompting fails for industrial auditing at the network edge.
@@ -152,7 +159,7 @@ Under unconstrained zero-shot evaluation, the entire sub-3B cohort exhibited str
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{paper_assets/charts/modality_collapse_slope.png}
-    \caption{Modality Collapse Slope Graph}
+    \caption{Impact of structured linguistic prompting paradigms (Chain-of-Thought vs. Rule Decomposition) on Logic Compliance Rates. While CoT induces severe format-handling regression in sub-1.5B models, isolated Rule Decomposition doubles compliance in decoupled and dynamic resolution architectures like Qwen2-VL.}
     \label{fig:chart2}
 \end{figure}
 Structured linguistic reasoning pathways exposed divergent architectural vulnerabilities. Chain-of-Thought (CoT) prompting improved MiniCPM to a 34.0\% LCR and SmolVLM to 19.0\%, but it caused structural fragility in Janus, dropping its logic compliance from 18.0\% to 15.0\%. \textbf{Rule Decomposition} isolates visual observations from logical evaluation and proved the most effective intervention for the highest-performing models. By breaking complex SOPs into sequential binary queries, it prevented cross-attention token overload. Under this paradigm, Qwen2-VL more than doubled its baseline compliance to peak at 40.0\% LCR, a statistically significant improvement over zero-shot (McNemar's test, $p < 0.0001$). It reduced its False Negative Rate to 47.6\% without triggering runaway false alarms. InternVL2 required sequential isolation to prevent projector saturation, pushing its LCR to 36.0\% under Decomposition. Gemma-4-E2B-it (22.7\% LCR) and Janus (14.0\% LCR) failed to cross the 25\% threshold with structural prompting, confirming intractable modality collapse.
@@ -167,7 +174,7 @@ Qwen2-VL yielded the highest empirical baseline for logical reasoning, peaking a
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{paper_assets/charts/foveation_vs_baseline.png}
-    \caption{Foveation vs Baseline Performance}
+    \caption{Empirical comparison of Agentic Foveation versus zero-shot Rule Decomposition on Qwen2-VL. While spatial cropping reduces False Negatives, the loss of peripheral contextual grounding induces an architectural ``Tunnel Vision'' effect, nearly doubling the False Positive Rate (from 17.9\% to 31.6\%).}
     \label{fig:chart3}
 \end{figure}
 To test the limits of spatial resolution, we implemented Agentic Foveation by enforcing a cropped coordinate boundary around the identified defect. 
@@ -176,7 +183,7 @@ To test the limits of spatial resolution, we implemented Agentic Foveation by en
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{paper_assets/foveation_demo.png}
-    \caption{The Agentic Foveation intervention demonstrating the "Tunnel Vision" effect. The localized crop strips away peripheral background context, inducing hyper-vigilance under strict quantitative evaluation.}
+    \caption{Qualitative demonstration of the Agentic Foveation pipeline on an analog pressure gauge. The localized crop physically isolates the dial face to maximize visual token density but eliminates the surrounding pipe context required to establish baseline safety norms.}
     \label{fig:foveation_demo}
 \end{figure}
 
@@ -192,7 +199,7 @@ Parameter-efficient fine-tuning depressed Logic Compliance Rates against the zer
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{paper_assets/charts/hardware_bubble_vram.png}
-    \caption{Hardware Bubble Chart VRAM}
+    \caption{Edge hardware viability and memory footprint envelope. All six sub-3B architectures operate reliably beneath the 8\,GB VRAM edge deployment threshold under 4-bit quantization, with Qwen2-VL and InternVL2 providing the strongest operational balance between footprint and reasoning capability.}
     \label{fig:chart4}
 \end{figure}
 We bounded operations to consumer hardware limits throughout all evaluations. Peak physical VRAM consumption across the baseline cohort hit 4.6 GB (Qwen2-VL) and 5.0 GB (InternVL2) using 4-bit quantization. The physical and parametric interventions applied to Qwen2-VL did not violate these edge constraints. Agentic Foveation reduced spatial token density by cropping the image, subtly decreasing latency. The LoRA adapters added negligible parameter overhead, keeping the peak VRAM safely under the 8GB ceiling. Highly reliable logical auditing runs at the network edge without off-loading data to cloud APIs, provided the engineering architecture relies on zero-shot Rule Decomposition rather than invasive physical or parametric interventions.
